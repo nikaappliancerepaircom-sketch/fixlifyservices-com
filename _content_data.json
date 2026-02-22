@@ -1,0 +1,291 @@
+{
+  "CITY": {
+    "toronto": {
+      "display": "Toronto",
+      "region": "the GTA",
+      "housing": "a dense urban mix of high-rise condos and post-war detached homes built between the 1950s and 1970s",
+      "water": "hard water from Lake Ontario accelerates mineral buildup in appliances faster than in most Ontario cities",
+      "brands": "all major brands are common here. Budget Whirlpool and GE fill older homes while premium Samsung and LG dominate downtown towers",
+      "density": "With 2.9 million residents across dense neighbourhoods from the Annex to Scarborough Village",
+      "localRef": "Building superintendents across East York, Etobicoke, and North York call us regularly for same-day suite repairs",
+      "tip": "Toronto hard water deposits limescale in pump filters and inlet valves roughly twice as fast as softer-water cities. Flush your appliance filter every 6 months.",
+      "svcAngle": "In a city where a repair call costs half a workday, our 2-hour arrival windows and live GPS tracking let you stay at your desk until we knock."
+    },
+    "north-york": {
+      "display": "North York",
+      "region": "York Region",
+      "housing": "a suburban mix of 1960s to 1980s ranch bungalows along Yonge and modern high-rise condos near Sheppard Avenue",
+      "water": "Toronto water is moderately hard and causes gradual limescale buildup in heating elements and inlet valves",
+      "brands": "Whirlpool and Maytag dominate older bungalows, while Samsung and LG fill the newer Yonge-Sheppard condo units",
+      "density": "Serving York Mills Road north to Finch Avenue and west to Jane Street",
+      "localRef": "Condo owners near Yonge and Sheppard and homeowners in Willowdale and Bathurst Manor call us most often",
+      "tip": "North York mixes 60-year-old plumbing with modern appliances, causing pressure fluctuations. Check the building shutoff valve before booking if your washer shows a fill error.",
+      "svcAngle": "Our North York technicians are area-based and routinely reach addresses between Lawrence and Steeles within 90 minutes."
+    },
+    "etobicoke": {
+      "display": "Etobicoke",
+      "region": "west Toronto",
+      "housing": "1950s and 1960s bungalows defining Bloor West Village, Mimico, and Long Branch, many with original laundry rooms and tighter kitchen layouts",
+      "water": "proximity to the Humber River watershed means some areas see slightly elevated iron content affecting appliance components over years",
+      "brands": "Whirlpool and Maytag dominate older stock, with GE Profile refrigerators popular in post-renovation Kingsway homes",
+      "density": "Covering Mimico waterfront and New Toronto to Rexdale near Pearson Airport",
+      "localRef": "Homeowners in Sunnylea, Princess Anne Manor, and Stonegate-Queensway call us regularly for washer and fridge work in original appliance nooks",
+      "tip": "Many Etobicoke bungalows have stackable units in poorly ventilated closets. Clean that exhaust duct annually to prevent the overheating calls we see most often here.",
+      "svcAngle": "Our technicians know the compact spaces in 1950s Etobicoke bungalows and carry parts sized for tighter installations."
+    },
+    "scarborough": {
+      "display": "Scarborough",
+      "region": "east Toronto",
+      "housing": "a diverse mix of 1960s to 1980s bungalows and semis in the west end, high-rise rental towers toward Kennedy Road, and communities near Rouge Valley",
+      "water": "Toronto supply is consistent city-wide, but aging pipes in parts of Scarborough introduce sediment that shortens water inlet valve life",
+      "brands": "Samsung and LG are extremely popular across Scarborough, especially in the large South Asian and Caribbean communities here",
+      "density": "Reaching customers from Agincourt and Malvern to Guildwood and West Hill",
+      "localRef": "Tenants in Warden Woods and Lawrence Avenue East high-rises call us when the superintendent cannot respond quickly enough",
+      "tip": "In-suite washers in older Scarborough buildings often face low water pressure from aging infrastructure. Ask the building to check the floor supply valve before booking.",
+      "svcAngle": "Fixlify dispatches from east-end locations so Scarborough customers get genuine same-day arrival, not an end-of-day slot from a Mississauga hub."
+    },
+    "mississauga": {
+      "display": "Mississauga",
+      "region": "Peel Region",
+      "housing": "newer construction from the 1980s through early 2000s, with large detached homes in Meadowvale, Streetsville, and Lakeview alongside Square One condo towers",
+      "water": "Region of Peel water is moderately soft compared to Toronto. High-efficiency appliances still benefit from annual filter checks",
+      "brands": "Bosch dishwashers and Samsung french-door refrigerators are disproportionately common in newer Mississauga builds, alongside LG front-load washers",
+      "density": "Covering all of Mississauga from Lakeshore Road north to Brampton and from Highway 427 west to Oakville",
+      "localRef": "Homeowners in Port Credit, Clarkson, and City Centre book us most often for same-day fridge and dishwasher service",
+      "tip": "Mississauga Bosch dishwashers on integrated circuits: if the unit will not start, check the GFI outlet under the sink first. This resolves about 20 percent of calls at zero cost.",
+      "svcAngle": "Fixlify real-time tracking helps in Mississauga sprawl. Knowing an exact arrival time lets you plan around school pickups and remote meetings."
+    },
+    "brampton": {
+      "display": "Brampton",
+      "region": "Peel Region",
+      "housing": "one of the fastest-growing suburbs in Canada, dominated by homes built from 2000 to the mid-2010s in Springdale, Sandalwood, and Vales of Castlemore",
+      "water": "Region of Peel supply is treated and relatively soft, but high-volume laundry in large households accelerates drum bearing wear in front-load machines",
+      "brands": "LG and Samsung are the most popular brands in the large South Asian community. Whirlpool and Maytag appear in older Bramalea stock",
+      "density": "Serving Bramalea, Heart Lake, Mount Pleasant Village, and Bram West communities",
+      "localRef": "Large families in Springdale and Sandalwood Parkway call us most often. High weekly laundry volume wears belts and bearings faster than manufacturer averages",
+      "tip": "Brampton households running ten-plus loads per week should inspect the door seal monthly. A worn gasket is a 90-dollar fix today versus a 400-dollar floor damage repair tomorrow.",
+      "svcAngle": "Our Brampton technicians stock extra-capacity LG and Samsung washer parts as routine because high-load usage is the norm here, not the exception."
+    },
+    "vaughan": {
+      "display": "Vaughan",
+      "region": "York Region",
+      "housing": "an upscale suburb developed in the 1990s and early 2000s, with large custom homes in Woodbridge, Maple, and Kleinburg where premium appliance suites were standard",
+      "water": "York Region water is treated Lake Ontario supply. Premium control boards are sensitive to voltage fluctuations from older neighbourhood transformers",
+      "brands": "Miele, Bosch, Wolf, and Viking are far more common in Vaughan than anywhere else in the GTA, alongside Samsung Bespoke and LG Signature",
+      "density": "Covering Woodbridge, Maple, Concord, and Kleinburg in the City of Vaughan",
+      "localRef": "Custom-home owners near Rutherford Road and Major Mackenzie call us because we stock parts for premium European brands that most services decline",
+      "tip": "Vaughan Miele and Bosch owners: note any E-code sequences on the display when you call. Our technician arrives pre-diagnosed and prepared with the right components.",
+      "svcAngle": "Fixlify maintains factory-trained technicians for Miele and Wolf. We never send a generalist to a high-end appliance call in Vaughan."
+    },
+    "markham": {
+      "display": "Markham",
+      "region": "York Region",
+      "housing": "a tech-corridor suburb with newer subdivisions in Cornell, Unionville, and Wismer Commons from the late 1990s onward, and established communities near Thornhill",
+      "water": "York Region supply is consistent and moderately soft, though Samsung and LG electronics still benefit from periodic descaling cycles",
+      "brands": "Samsung and LG are disproportionately popular in the large tech-forward Asian community in Markham, which has the highest smart-appliance density in the GTA",
+      "density": "Reaching from Milliken Mills and Unionville east through Cornell and new communities near Ninth Line",
+      "localRef": "Tech-savvy Unionville and Cornell homeowners ask about remote diagnostics before booking. On supported Samsung and LG models we can pull error logs before dispatching",
+      "tip": "If your Samsung or LG smart appliance shows a Wi-Fi error, do a network module factory reset first. This solves roughly 30 percent of control panel complaints without a technician visit.",
+      "svcAngle": "Fixlify digital-first booking fits Markham culture: schedule in 60 seconds, get a real-time ETA, and track your technician on a live map from your phone."
+    },
+    "richmond-hill": {
+      "display": "Richmond Hill",
+      "region": "York Region",
+      "housing": "an affluent community blending 1970s to 1980s homes near the historic Mill Pond area with newer subdivisions in Bayview Hill and Jefferson Forest",
+      "water": "York Region water quality is consistently good. Older homes with galvanized pipes occasionally see sediment that clogs pump filters earlier than expected",
+      "brands": "Older Mill Pond and Crosby homes run Whirlpool and Maytag. Newer Bayview Hill builds increasingly favour Bosch dishwashers and LG refrigerators",
+      "density": "Serving Richmond Hill from Langstaff and Crosby south to Jefferson Forest and Elgin Mills north",
+      "localRef": "Heritage-area homes near Mill Pond often have original 1970s laundry hookups. Our technicians check for outdated 3-prong dryer outlets before new equipment arrives",
+      "tip": "Front-load washers retrofitted into original Richmond Hill laundry closets need a standpipe at least 34 inches tall or you will get recurring siphon-back errors.",
+      "svcAngle": "Same-day bookings before noon in Richmond Hill consistently arrive by afternoon. Most customers do not need to block an entire workday."
+    },
+    "ajax": {
+      "display": "Ajax",
+      "region": "Durham Region",
+      "housing": "a growing commuter town with 1980s semis near Lake Ontario and newer 2000s detached subdivisions expanding through the north end",
+      "water": "Durham Region Lake Ontario water is consistently treated. Mineral deposits build gradually but rarely cause the sudden failures seen in harder-water cities",
+      "brands": "Whirlpool and Maytag dominate older south-end stock. Newer Ajax builds increasingly feature Samsung and LG french-door and front-load units",
+      "density": "Covering Ajax from the Rotary Park waterfront north through Salem Road and Taunton Road into the Duffins Creek communities",
+      "localRef": "Commuter households in Ajax need repairs done before the evening rush. A 7 am call gets a morning technician through our priority same-day slots",
+      "tip": "Ajax proximity to Lake Ontario means humidity runs slightly higher than inland suburbs. Check behind your refrigerator annually for moisture near the compressor.",
+      "svcAngle": "Ajax commuters cannot afford days without working appliances. Our same-day guarantee and 8 pm evening availability means repairs happen around your schedule."
+    },
+    "whitby": {
+      "display": "Whitby",
+      "region": "Durham Region",
+      "housing": "a rapidly expanding suburb with 1990s to 2000s subdivisions in Pringle Creek and Rolling Acres alongside new communities still being built north of Taunton Road",
+      "water": "Durham Region water is Lake Ontario-derived and consistently treated. Newer PEX plumbing in Whitby subdivisions produces fewer sediment issues than older Durham towns",
+      "brands": "Newer Whitby builds come with Samsung, LG, and Frigidaire appliance packages. Older Pringle Creek homes tend toward Whirlpool and Kenmore",
+      "density": "Serving all of Whitby from Dundas Street south to the waterfront and north through Taunton Road and Coronation Road",
+      "localRef": "Growing Whitby families frequently need warranty-gap repairs on appliances that fail just past the 12-month manufacturer coverage",
+      "tip": "Whitby newest homes often have builder-grade appliances with mid-tier components. At three to five years old, repair is almost always far more economical than replacement.",
+      "svcAngle": "We serve Durham Region from an east-GTA dispatch point, so Whitby gets central-GTA response times without remote-area surcharges."
+    },
+    "oakville": {
+      "display": "Oakville",
+      "region": "Halton Region",
+      "housing": "one of the most affluent communities in the GTA, with upscale homes across Old Oakville, Bronte, and River Oaks, many renovated with premium European appliance suites",
+      "water": "Halton Region water is among the softest in the GTA, which explains the exceptional longevity of Miele and Bosch appliances in this market",
+      "brands": "Miele, Bosch, Wolf, Sub-Zero, and Viking are standard across upscale Oakville homes. We service brands that other GTA providers decline",
+      "density": "Covering all of Oakville from the Lakeshore Road waterfront north through Glen Abbey and Joshua Creek to Dundas Street",
+      "localRef": "Oakville homeowners invest in premium appliances and expect premium service. Our technicians arrive on schedule, dressed professionally, and protect surfaces during every repair",
+      "tip": "Oakville Sub-Zero and Viking owners: these luxury brands require annual professional servicing of condenser coils and door gaskets to maintain warranty validity.",
+      "svcAngle": "Fixlify maintains a Halton Region team trained on premium European and luxury American brands. No Oakville customer gets a generalist technician on a Miele or Wolf repair."
+    },
+    "burlington": {
+      "display": "Burlington",
+      "region": "Halton Region",
+      "housing": "a mix of 1950s to 1970s homes in historic Aldershot and along New Street alongside 1990s and 2000s developments in Tyandaga and Millcroft",
+      "water": "Halton Region water is softer than Toronto supply. Older Aldershot homes with copper pipes occasionally produce mineral deposits at water connections",
+      "brands": "Aldershot and New Street homes run Whirlpool, Kenmore, and GE. Tyandaga and Millcroft communities increasingly favour LG, Samsung, and Bosch",
+      "density": "Covering Burlington from Aldershot GO Station west through downtown and south along the Lake Ontario waterfront",
+      "localRef": "Burlington waterfront homes experience higher ambient humidity affecting dryer exhaust efficiency. Our technicians verify airflow at lakefront addresses as part of every diagnostic",
+      "tip": "Older Burlington Aldershot homes have original 1960s 240V dryer outlets. Verify the receptacle is NEMA 14-30 before your new dryer is delivered.",
+      "svcAngle": "Burlington is at the edge of our Halton coverage but we maintain dedicated local technicians. Residents get the same priority as central GTA customers."
+    },
+    "pickering": {
+      "display": "Pickering",
+      "region": "Durham Region",
+      "housing": "a smaller Durham city with 1970s to 1980s subdivisions in Rosebank and West Shore near the waterfront and 2000s Duffin Heights developments in the north",
+      "water": "Durham Region water is Lake Ontario-sourced. Waterfront proximity creates slightly elevated humidity that can accelerate corrosion on older appliances in uninsulated garages",
+      "brands": "Older Pickering homes run Whirlpool, GE, and Frigidaire. Newer Duffin Heights builds feature Samsung and LG, with Bosch in higher-end finishes",
+      "density": "Reaching from Frenchman Bay waterfront north through Kingston Road and Brock Road into the growing Duffin Heights community",
+      "localRef": "Pickering Nuclear employees on rotating shifts book us for early-morning and evening slots that fit non-standard work schedules",
+      "tip": "Pickering lakefront properties with garage-installed refrigerators: the compressor works 20 percent harder in summer heat. Move that appliance to a temperature-controlled space.",
+      "svcAngle": "Pickering is a full priority zone in our Durham Region coverage. Same-day booking means same-day service, not a next-day callback from a distant centre."
+    },
+    "oshawa": {
+      "display": "Oshawa",
+      "region": "Durham Region",
+      "housing": "Durham Region largest city, split between 1940s to 1970s homes in the downtown core and McLaughlin neighbourhood and newer suburbs north of Taunton Road from the 1990s",
+      "water": "Durham Region treated water is consistent. Older downtown homes with aging infrastructure occasionally see sediment that clogs water inlet valves prematurely",
+      "brands": "Older Oshawa homes run heavily toward Maytag, GE, and Frigidaire, tied to the city industrial heritage. Newer north-end communities increasingly feature Samsung and LG",
+      "density": "Serving Oshawa from downtown and Lakeview north through McLaughlin and Pinecrest to Kedron and Windfields near Ontario Tech University",
+      "localRef": "Older McLaughlin and O Neill district homes often have non-standard basement laundry hookups. Our technicians carry adapter hoses for original-era standpipe setups",
+      "tip": "Oshawa downtown rental properties frequently have Maytag or Frigidaire appliances past 15 years old. Get a full diagnostic first; if two or more systems need repair, replacement math often wins.",
+      "svcAngle": "Oshawa is our easternmost priority zone. Our technicians are Durham Region-based, not routed through a Mississauga or Toronto hub."
+    }
+  },
+  "SVC": {
+    "washer": {
+      "display": "washer",
+      "full": "washing machine",
+      "fails": [
+        "drum bearing failure",
+        "blocked pump filters",
+        "door seal deterioration",
+        "control board faults"
+      ],
+      "hf": "Front-load LG and Samsung units commonly develop drum bearing noise after 5 to 7 years, particularly in households with high weekly load counts.",
+      "parts": "drain pumps, door gaskets, drive belts, main control boards, and water inlet valves",
+      "emerg": "An active washer leak can damage floors within hours. We prioritize water-related failures for same-day dispatch."
+    },
+    "dryer": {
+      "display": "dryer",
+      "full": "dryer",
+      "fails": [
+        "clogged exhaust duct",
+        "failed heating element",
+        "worn drum seal",
+        "blown thermal fuse"
+      ],
+      "hf": "Restricted airflow from a kinked or lint-blocked exhaust duct is the most common dryer complaint we receive, and entirely preventable with annual maintenance.",
+      "parts": "heating elements, thermal fuses, drum support rollers, drive belts, and door switches",
+      "emerg": "A dryer that runs but produces no heat is almost always a blown thermal fuse or failed element. Both are standard parts on every Fixlify truck."
+    },
+    "fridge": {
+      "display": "refrigerator",
+      "full": "refrigerator",
+      "fails": [
+        "dirty condenser coils",
+        "failed compressor start relay",
+        "defrost system failure",
+        "door gasket failure"
+      ],
+      "hf": "Most refrigerator-not-cooling calls involve dirty condenser coils or a failed start relay costing under 20 dollars, not the 600-dollar compressor replacement owners fear.",
+      "parts": "compressor start relays, defrost heaters, evaporator fan motors, door gaskets, and thermostats",
+      "emerg": "A failed refrigerator means food spoilage within hours. We treat active cooling failures as urgent and hold priority same-day slots for these calls."
+    },
+    "dishwasher": {
+      "display": "dishwasher",
+      "full": "dishwasher",
+      "fails": [
+        "blocked drain pump",
+        "clogged spray arms",
+        "faulty door latch",
+        "water inlet valve restriction"
+      ],
+      "hf": "Dishwasher drainage failures are our most frequent call type, usually a blocked filter basket or clogged pump impeller that a technician clears in under an hour.",
+      "parts": "drain pumps, water inlet valves, door latch assemblies, spray arm sets, and control panels",
+      "emerg": "Standing water from a drainage failure creates bacteria growth risk quickly. Fixlify treats dishwasher drain faults as priority same-day appointments."
+    },
+    "stove": {
+      "display": "stove",
+      "full": "stove",
+      "fails": [
+        "failed igniter assembly",
+        "burnt burner element",
+        "broken control switch",
+        "oven temperature sensor drift"
+      ],
+      "hf": "Gas stove igniter modules and electric burner elements account for most stove failures we repair, and both are typically resolved in a single same-day visit.",
+      "parts": "igniter assemblies, burner elements, infinite switch controllers, and oven temperature sensors",
+      "emerg": "A stove that will not ignite safely is a cooking and safety concern. We treat stove failures as urgent same-day bookings."
+    },
+    "oven": {
+      "display": "oven",
+      "full": "oven",
+      "fails": [
+        "failed bake element",
+        "inaccurate temperature sensor",
+        "broken door hinge",
+        "control board error"
+      ],
+      "hf": "Electric oven bake elements fail suddenly and visibly. Replacing one is among our fastest repairs, often completed in under 45 minutes.",
+      "parts": "bake and broil elements, oven temperature sensors, door hinge assemblies, and control boards",
+      "emerg": "An oven that will not heat disrupts household meal planning. Common bake elements are stocked on every truck for same-day resolution."
+    }
+  },
+  "SPECIALS": {
+    "emergency-fridge-repair-mississauga": {
+      "service": "fridge",
+      "city": "mississauga",
+      "special": "emergency"
+    },
+    "emergency-fridge-repair-toronto": {
+      "service": "fridge",
+      "city": "toronto",
+      "special": "emergency"
+    },
+    "emergency-washer-repair-mississauga": {
+      "service": "washer",
+      "city": "mississauga",
+      "special": "emergency"
+    },
+    "emergency-washer-repair-toronto": {
+      "service": "washer",
+      "city": "toronto",
+      "special": "emergency"
+    },
+    "same-day-appliance-repair-brampton": {
+      "service": "washer",
+      "city": "brampton",
+      "special": "sameday"
+    },
+    "same-day-appliance-repair-markham": {
+      "service": "washer",
+      "city": "markham",
+      "special": "sameday"
+    },
+    "same-day-appliance-repair-north-york": {
+      "service": "washer",
+      "city": "north-york",
+      "special": "sameday"
+    },
+    "same-day-appliance-repair-scarborough": {
+      "service": "washer",
+      "city": "scarborough",
+      "special": "sameday"
+    }
+  }
+}
