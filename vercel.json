@@ -109,15 +109,15 @@
     },
     {
       "source": "/brands/kenmore",
-      "destination": "/kenmore-repair"
+      "destination": "/kenmore-appliance-repair"
     },
     {
       "source": "/brands/maytag",
-      "destination": "/maytag-repair"
+      "destination": "/maytag-appliance-repair"
     },
     {
       "source": "/brands/kitchenaid",
-      "destination": "/kitchenaid-repair"
+      "destination": "/kitchenaid-appliance-repair"
     },
     {
       "source": "/locations/toronto",
