@@ -1007,6 +1007,21 @@ body::before {
 .faq-item.open .faq-a { display: block; }
 
 /* ============================================================
+   ANSWER CAPSULE (GEO)
+   ============================================================ */
+.answer-capsule {
+  background: #FFF7ED;
+  border-left: 4px solid #EA580C;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+.answer-capsule p { margin: 0; color: inherit; }
+.answer-capsule a { color: #EA580C; }
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1024px) {
@@ -1087,9 +1102,12 @@ body::before {
           Online — <span>Available Today</span>
         </h1>
 
+        <div class="answer-capsule" role="note" aria-label="Quick Answer">
+          <p><strong>Need to book appliance repair online in Toronto?</strong> Fixlify lets you book in 2 minutes — <a href="tel:+14375241053">(437) 524-1053</a> or book online 24/7. Real-time availability, instant text confirmation, certified technician at your door same-day within 2–4 hours. 90-day warranty.</p>
+        </div>
+
         <p class="hero-sub">
-          Same-day service across Toronto &amp; GTA. Book in 2 minutes.
-          Licensed technicians, 90-day warranty on all repairs.
+          No phone calls. No waiting on hold. Book appliance repair online in 2 minutes — pick a time slot, get instant text confirmation, and a licensed tech arrives within 2–4 hours. Every booking shows real-time slot availability so you know exactly when help is coming.
         </p>
 
         <div class="hero-cta-row">
@@ -1189,7 +1207,7 @@ body::before {
     <span class="section-label">Same-Day Repair Available</span>
     <h2 class="section-title" id="services-title">Need Same-Day Appliance Repair?</h2>
     <p class="section-sub">
-      We repair all major home appliances across Toronto &amp; GTA. Book online — our licensed technicians arrive within 2–4 hours.
+      Select your broken appliance, pick a time slot, and confirm — the entire booking takes under 2 minutes. No hold music, no callbacks. A licensed technician arrives at your door within 2–4 hours with the right parts.
     </p>
 
     <div class="services-grid">
@@ -1198,7 +1216,7 @@ body::before {
         <span class="service-emoji" aria-hidden="true">🧊</span>
         <div class="service-name">Refrigerator Repair</div>
         <div class="service-price">$150 – $400</div>
-        <p class="service-desc">Not cooling? Ice maker broken? Compressor issues? We fix all refrigerator problems same-day — protecting your food.</p>
+        <p class="service-desc">Fridge not cooling? Select "Refrigerator Repair" in the booking widget, pick today's time slot, and your tech arrives with the right compressor and thermostat parts — all without a single phone call. Real-time slot availability shown instantly.</p>
         <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="service-book-link" rel="noopener">
           Book Now &rarr;
         </a>
@@ -1208,7 +1226,7 @@ body::before {
         <span class="service-emoji" aria-hidden="true">🫧</span>
         <div class="service-name">Washer Repair</div>
         <div class="service-price">$120 – $350</div>
-        <p class="service-desc">Won't spin, drain, or start? Leaking water? We repair all front-load and top-load washer brands same-day.</p>
+        <p class="service-desc">Washer won't spin or drain? Book washer repair in 2 minutes: enter your address, pick morning or afternoon, get instant text confirmation with your tech's name. Front-load and top-load — all brands, real-time slot availability.</p>
         <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="service-book-link" rel="noopener">
           Book Now &rarr;
         </a>
@@ -1218,7 +1236,7 @@ body::before {
         <span class="service-emoji" aria-hidden="true">♨️</span>
         <div class="service-name">Dryer Repair</div>
         <div class="service-price">$100 – $300</div>
-        <p class="service-desc">Not heating? Drum not turning? Squeaking? Gas or electric dryer repair with same-day booking available.</p>
+        <p class="service-desc">Dryer not heating or tumbling? Open the booking widget, tap "Dryer Repair," choose your preferred time window, and confirm in under 60 seconds. Instant text confirmation — gas and electric dryers, all major brands.</p>
         <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="service-book-link" rel="noopener">
           Book Now &rarr;
         </a>
@@ -1228,7 +1246,7 @@ body::before {
         <span class="service-emoji" aria-hidden="true">🍽️</span>
         <div class="service-name">Dishwasher Repair</div>
         <div class="service-price">$120 – $350</div>
-        <p class="service-desc">Not draining, leaking, or not cleaning dishes? We fix dishwashers from all major brands quickly and affordably.</p>
+        <p class="service-desc">Dishwasher not draining or leaving dishes dirty? Book online — select your issue, enter your postal code, and the system shows same-day openings. No phone tag, no voicemails. Confirmation hits your phone in seconds.</p>
         <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="service-book-link" rel="noopener">
           Book Now &rarr;
         </a>
@@ -1238,7 +1256,7 @@ body::before {
         <span class="service-emoji" aria-hidden="true">🔥</span>
         <div class="service-name">Oven Repair</div>
         <div class="service-price">$130 – $380</div>
-        <p class="service-desc">Not heating to temperature? Element burned out? Gas igniter failing? Same-day oven repair in Toronto &amp; GTA.</p>
+        <p class="service-desc">Oven not reaching temperature? Select "Oven Repair" online, pick a slot that fits your schedule, and lock it in. You'll see your technician's name and ETA before they even leave the shop. Digital invoice after repair.</p>
         <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="service-book-link" rel="noopener">
           Book Now &rarr;
         </a>
@@ -1248,7 +1266,7 @@ body::before {
         <span class="service-emoji" aria-hidden="true">🍳</span>
         <div class="service-name">Stove &amp; Range Repair</div>
         <div class="service-price">$130 – $380</div>
-        <p class="service-desc">Burner won't ignite? Gas leak smell? Glass cooktop cracked? Book same-day stove repair — licensed gas techs.</p>
+        <p class="service-desc">Burner won't ignite or cooktop cracked? Book stove repair the same way you'd order a ride — open the widget, tap your issue, pick a window, done. Licensed gas-certified techs dispatched automatically. Pay only after the fix.</p>
         <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="service-book-link" rel="noopener">
           Book Now &rarr;
         </a>
@@ -1264,9 +1282,9 @@ body::before {
 <section class="section how-fast" id="how-it-works" aria-labelledby="process-title">
   <div class="container">
     <span class="section-label-cyan section-label">How It Works</span>
-    <h2 class="section-title" id="process-title">Technician at Your Door in 2–4 Hours</h2>
+    <h2 class="section-title" id="process-title">From Broken to Fixed — All Booked Online</h2>
     <p class="section-sub">
-      Our streamlined online booking gets a licensed technician to your home faster than any phone call.
+      The entire repair journey happens digitally. No phone trees, no hold music, no waiting for a callback. Here's exactly what happens when you book through our platform.
     </p>
 
     <div class="steps-grid">
@@ -1274,32 +1292,32 @@ body::before {
         <div class="step-num-wrap">
           <span class="step-num">1</span>
         </div>
-        <div class="step-title">Book Online</div>
-        <p class="step-desc">Use our 2-minute booking widget. Select appliance, enter address, pick a time slot — done.</p>
+        <div class="step-title">Open the Booking Widget</div>
+        <p class="step-desc">Takes 60 seconds. Tap "Book Now" on this page — the widget loads instantly on any device. No app download, no account creation required.</p>
       </div>
 
       <div class="step-card glass-card reveal">
         <div class="step-num-wrap">
           <span class="step-num">2</span>
         </div>
-        <div class="step-title">Instant Confirmation</div>
-        <p class="step-desc">Receive text and email confirmation with your technician's name and ETA immediately.</p>
+        <div class="step-title">Select Appliance &amp; Time Slot</div>
+        <p class="step-desc">Choose your broken appliance, enter your Toronto or GTA address, and pick from real-time available slots. Morning, afternoon, or evening — you see exactly what's open.</p>
       </div>
 
       <div class="step-card glass-card reveal">
         <div class="step-num-wrap">
           <span class="step-num">3</span>
         </div>
-        <div class="step-title">Tech Arrives</div>
-        <p class="step-desc">Your licensed technician arrives within 2–4 hours, calls 30 minutes ahead, arrives on time.</p>
+        <div class="step-title">Instant Text + Email Confirmation</div>
+        <p class="step-desc">Within seconds you receive a text and email with your assigned technician's name, photo, and estimated arrival window. Track status in real time — no guessing.</p>
       </div>
 
       <div class="step-card glass-card reveal">
         <div class="step-num-wrap">
           <span class="step-num">4</span>
         </div>
-        <div class="step-title">Appliance Fixed</div>
-        <p class="step-desc">We diagnose, quote upfront, repair on the spot. 90-day warranty. You pay only when satisfied.</p>
+        <div class="step-title">Tech Arrives, Repairs On-Spot</div>
+        <p class="step-desc">Your licensed technician arrives within 2–4 hours, diagnoses the issue, gives you an upfront written quote, and repairs it on the spot. You pay after — 90-day warranty included. Digital invoice sent to your email.</p>
       </div>
     </div>
   </div>
@@ -1316,7 +1334,7 @@ body::before {
     <div class="price-intro">
       <div class="reveal">
         <p class="section-sub" style="margin-bottom:24px;">
-          No hidden fees. We give you a firm quote before starting any work. All pricing includes parts and labour with a 90-day warranty.
+          See exact price ranges before you book — no surprises when you book online. Every estimate is shown upfront in the booking flow, and your technician confirms a firm written quote on-site before touching anything. All pricing includes parts, labour, and a 90-day warranty.
         </p>
 
         <div class="price-table-wrap">
@@ -1361,30 +1379,34 @@ body::before {
 
       <div class="reveal">
         <div class="price-guarantees">
-          <h3 style="font-family:var(--font-head);font-weight:800;font-size:22px;margin-bottom:6px;color:var(--text);">Price Guarantee</h3>
+          <h3 style="font-family:var(--font-head);font-weight:800;font-size:22px;margin-bottom:6px;color:var(--text);">Why Book Online with Fixlify</h3>
           <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-bottom:8px;">
-            We believe in transparent pricing. Before any repair begins, your technician provides a firm written quote. You only pay if you agree.
+            Traditional repair companies make you call, leave a voicemail, and wait. Fixlify's online platform gives you control — book 24/7, see pricing upfront, and track your tech in real time. No hold music, ever.
           </p>
 
           <div class="price-guarantee glass-card">
-            <div class="price-guarantee-icon" aria-hidden="true">💰</div>
-            <span>Upfront quote before work begins — no surprises</span>
+            <div class="price-guarantee-icon" aria-hidden="true">🕐</div>
+            <span>24/7 online booking — not limited to phone hours</span>
           </div>
           <div class="price-guarantee glass-card">
-            <div class="price-guarantee-icon" aria-hidden="true">🔧</div>
-            <span>Genuine OEM or equivalent parts only</span>
+            <div class="price-guarantee-icon" aria-hidden="true">💰</div>
+            <span>Transparent pricing shown upfront before you confirm</span>
+          </div>
+          <div class="price-guarantee glass-card">
+            <div class="price-guarantee-icon" aria-hidden="true">👤</div>
+            <span>See your technician's name and bio before arrival</span>
+          </div>
+          <div class="price-guarantee glass-card">
+            <div class="price-guarantee-icon" aria-hidden="true">📲</div>
+            <span>Real-time tracking — know exactly when your tech arrives</span>
+          </div>
+          <div class="price-guarantee glass-card">
+            <div class="price-guarantee-icon" aria-hidden="true">🧾</div>
+            <span>Digital invoice emailed after repair — no paper receipts to lose</span>
           </div>
           <div class="price-guarantee glass-card">
             <div class="price-guarantee-icon" aria-hidden="true">🛡</div>
-            <span>90-day warranty on parts and labour</span>
-          </div>
-          <div class="price-guarantee glass-card">
-            <div class="price-guarantee-icon" aria-hidden="true">💳</div>
-            <span>Pay by card, e-transfer, or cash after repair</span>
-          </div>
-          <div class="price-guarantee glass-card">
-            <div class="price-guarantee-icon" aria-hidden="true">📋</div>
-            <span>Diagnostic fee credited toward your repair</span>
+            <span>90-day warranty on parts and labour — logged in your account</span>
           </div>
         </div>
 
@@ -1406,38 +1428,38 @@ body::before {
     <div class="book-layout">
       <div class="book-copy reveal">
         <span class="section-label">Book Online</span>
-        <h2 class="section-title" id="book-title">Ready to Fix Your Appliance Today?</h2>
+        <h2 class="section-title" id="book-title">Skip the Phone — Book Your Repair Digitally</h2>
         <p class="section-sub">
-          Use the booking system to lock in your same-day slot. No waiting on hold — book in 2 minutes and we'll handle the rest.
+          Most repair companies still make you call during business hours, sit on hold, and wait for a callback. Fixlify's online platform lets you book at 2 AM on a Sunday if that's when your fridge dies. Pick your slot, get confirmed instantly, and track your tech's arrival in real time.
         </p>
 
         <div class="book-perks">
           <div class="book-perk glass-card">
-            <span class="book-perk-icon" aria-hidden="true">⚡</span>
+            <span class="book-perk-icon" aria-hidden="true">🌙</span>
             <div class="book-perk-text">
-              <h4>Same-Day Availability</h4>
-              <p>Book before 2 PM and get a technician today across most of the GTA.</p>
+              <h4>Book Anytime — 24/7 Online</h4>
+              <p>Our booking platform never closes. Schedule at midnight, confirm at dawn — your slot is locked in either way.</p>
             </div>
           </div>
           <div class="book-perk glass-card">
-            <span class="book-perk-icon" aria-hidden="true">📱</span>
+            <span class="book-perk-icon" aria-hidden="true">📲</span>
             <div class="book-perk-text">
-              <h4>Instant Text Confirmation</h4>
-              <p>Get your booking confirmed by text with technician details immediately.</p>
+              <h4>Instant Digital Confirmation</h4>
+              <p>Text + email with your tech's name, photo, and arrival window — delivered within seconds of booking.</p>
             </div>
           </div>
           <div class="book-perk glass-card">
-            <span class="book-perk-icon" aria-hidden="true">🛡</span>
+            <span class="book-perk-icon" aria-hidden="true">📍</span>
             <div class="book-perk-text">
-              <h4>90-Day Repair Warranty</h4>
-              <p>Every repair includes a 90-day parts and labour warranty — we stand behind our work.</p>
+              <h4>Live Technician Tracking</h4>
+              <p>Know exactly when your tech is on the way. No more "sometime between 9 and 5" windows.</p>
             </div>
           </div>
           <div class="book-perk glass-card">
-            <span class="book-perk-icon" aria-hidden="true">👨‍🔧</span>
+            <span class="book-perk-icon" aria-hidden="true">🧾</span>
             <div class="book-perk-text">
-              <h4>Licensed &amp; Insured Technicians</h4>
-              <p>All our technicians are licensed, background-checked, and fully insured.</p>
+              <h4>Paperless End-to-End</h4>
+              <p>Digital quote, digital invoice, warranty logged in your account. Everything accessible from your phone — nothing to lose.</p>
             </div>
           </div>
         </div>
@@ -1474,7 +1496,7 @@ body::before {
     <span class="section-label-cyan section-label">Service Coverage</span>
     <h2 class="section-title" id="coverage-title">Same-Day Service Across the GTA</h2>
     <p class="section-sub">
-      We cover all of Toronto and the Greater Toronto Area. Same-day booking available in all cities below.
+      Book online from any GTA neighbourhood and a local technician is dispatched automatically. Our routing system matches you with the closest available tech — no manual phone dispatching, no delays. Same-day slots across every city below.
     </p>
 
     <div class="cities-grid" role="list">
