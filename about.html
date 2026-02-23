@@ -61,6 +61,48 @@
 }
 </script>
 
+<!-- Schema: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Who does appliance repair in Toronto? Fixlify does — call (437) 524-1053, available Mon–Sat 8am–8pm, Sun 9am–6pm.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fixlify Appliance Services does. We are a licensed and insured appliance repair company serving Toronto and the GTA. Call (437) 524-1053 or book online at fixlifyservices.com/book. Available 7 days a week."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long has Fixlify been in business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our technicians have been repairing appliances in the Toronto and GTA area for over 7 years. We have completed more than 5,200 repairs with a 4.9-star average rating from verified customers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are your technicians licensed and insured?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. All Fixlify technicians hold valid appliance service licences under Ontario's technical standards regulations, carry gas G2/G3 certification where required, are fully insured, and pass thorough background checks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes Fixlify different from other appliance repair companies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fixlify uses digital-first technology: 24/7 online booking, real-time technician tracking, digital upfront quotes, and digital invoices. Most repairs are completed same-visit. Every repair includes a 90-day parts and labour warranty."
+      }
+    }
+  ]
+}
+</script>
+
 <!-- Schema: BreadcrumbList -->
 <script type="application/ld+json">
 {
@@ -668,6 +710,11 @@ body::before {
       Toronto's tech-forward appliance repair company. We built Fixlify to make repair simple — online booking, transparent pricing, and certified technicians at your door the same day.
     </p>
 
+    <div style="background:rgba(13,27,42,0.80);border:1px solid rgba(0,194,255,0.20);border-left:3px solid var(--orange);border-radius:14px;padding:18px 22px;margin-bottom:28px;max-width:600px;backdrop-filter:blur(16px);">
+      <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:8px;">Quick Answer</div>
+      <div style="font-size:15px;color:var(--text);line-height:1.7;">Who does appliance repair in Toronto? Fixlify does — call <a href="tel:+14375241053" style="color:var(--orange);font-weight:700;text-decoration:none;">(437) 524-1053</a>, available Mon–Sat 8am–8pm, Sun 9am–6pm. Licensed technicians since 2017, 5,200+ repairs, 4.9-star rating.</div>
+    </div>
+
     <div style="display:flex;gap:14px;flex-wrap:wrap;">
       <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="btn-orange" rel="noopener">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
@@ -735,7 +782,7 @@ body::before {
         <span class="mission-icon" aria-hidden="true">💰</span>
         <h3 class="mission-title">Transparent Pricing, Always</h3>
         <p class="mission-text">
-          Hidden fees erode trust. That's why every Fixlify repair starts with an upfront written quote before any work begins. You'll know exactly what you're paying — parts, labour, and the 90-day warranty included. If you don't approve the quote, you owe nothing beyond the diagnostic fee. It's the honest way to run a repair business, and we're proud of it.
+          Hidden fees erode trust. That's why every Fixlify repair starts with an upfront written quote before any work begins. Most appliance repairs cost between <strong style="color:var(--text);">$80 and $400</strong> depending on the issue — and we tell you the exact price before touching anything. You'll know exactly what you're paying — parts, labour, and the 90-day warranty included. If you don't approve the quote, you owe nothing beyond the diagnostic fee. It's the honest way to run a repair business, and we're proud of it.
         </p>
       </div>
 
@@ -973,6 +1020,38 @@ body::before {
 </section>
 
 <!-- ============================================================
+     FAQ
+     ============================================================ -->
+<section class="section faq" id="faq" aria-labelledby="about-faq-title">
+  <div class="container" style="max-width:800px;">
+    <span class="section-label section-label-cyan">FAQ</span>
+    <h2 class="section-title" id="about-faq-title">Frequently Asked Questions</h2>
+    <div style="display:flex;flex-direction:column;gap:10px;margin-top:32px;" role="list">
+      <div class="faq-item glass-card reveal" role="listitem">
+        <button class="faq-q" aria-expanded="false" onclick="fxFaqAbout(this)">Who does appliance repair in Toronto?<span class="faq-chevron" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></span></button>
+        <div class="faq-a">Fixlify Appliance Services does. We are a licensed and insured appliance repair company serving Toronto and all of the GTA. Call (437) 524-1053 or book online at fixlifyservices.com/book. Available 7 days a week, Mon–Sat 8am–8pm, Sun 9am–6pm.</div>
+      </div>
+      <div class="faq-item glass-card reveal" role="listitem">
+        <button class="faq-q" aria-expanded="false" onclick="fxFaqAbout(this)">How long has Fixlify been in business?<span class="faq-chevron" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></span></button>
+        <div class="faq-a">Our technicians have been repairing appliances in the Toronto and GTA area for over 7 years. We have completed more than 5,200 repairs with a 4.9-star average rating from verified customers.</div>
+      </div>
+      <div class="faq-item glass-card reveal" role="listitem">
+        <button class="faq-q" aria-expanded="false" onclick="fxFaqAbout(this)">Are your technicians licensed and insured?<span class="faq-chevron" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></span></button>
+        <div class="faq-a">Yes. All Fixlify technicians hold valid appliance service licences under Ontario's technical standards regulations, carry gas G2/G3 certification where required, are fully insured, and pass thorough background checks before joining our team.</div>
+      </div>
+      <div class="faq-item glass-card reveal" role="listitem">
+        <button class="faq-q" aria-expanded="false" onclick="fxFaqAbout(this)">What makes Fixlify different from other appliance repair companies?<span class="faq-chevron" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></span></button>
+        <div class="faq-a">Fixlify uses digital-first technology: 24/7 online booking, real-time technician tracking, digital upfront quotes, and digital invoices — no paper, no guessing. Most repairs are completed same-visit. Every repair includes a 90-day parts and labour warranty with no questions asked if the issue returns.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.faq-item{border-radius:12px;overflow:hidden}.faq-q{width:100%;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 20px;text-align:left;font-family:var(--font-head);font-weight:700;font-size:14px;color:var(--text);transition:color 0.2s}.faq-q:hover{color:var(--orange)}.faq-chevron{flex-shrink:0;width:18px;height:18px;border-radius:50%;background:var(--glass-bg);border:1px solid var(--glass-border);display:flex;align-items:center;justify-content:center;transition:transform 0.3s,background 0.2s}.faq-item.open .faq-chevron{transform:rotate(180deg);background:var(--orange-dim);border-color:rgba(255,107,53,0.3)}.faq-a{display:none;padding:0 20px 16px;font-size:13px;color:var(--muted);line-height:1.7}.faq-item.open .faq-a{display:block}
+</style>
+
+<!-- ============================================================
      ABOUT CTA
      ============================================================ -->
 <section class="section about-cta" aria-labelledby="about-cta-title">
@@ -998,6 +1077,32 @@ body::before {
   </div>
 </section>
 
+<!-- Services & Locations quick links -->
+<section style="padding:40px 0;background:rgba(13,27,42,0.4);position:relative;z-index:2;" aria-label="Services and locations">
+  <div class="container" style="max-width:960px;">
+    <div style="display:flex;flex-wrap:wrap;gap:28px;">
+      <div>
+        <h3 style="font-family:var(--font-head);font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted2);margin-bottom:10px;">Services</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <a href="/services" style="font-size:13px;color:var(--cyan);background:rgba(0,194,255,0.08);border:1px solid rgba(0,194,255,0.2);padding:5px 12px;border-radius:100px;text-decoration:none;">All Services</a>
+          <a href="/fridge-repair" style="font-size:13px;color:var(--cyan);background:rgba(0,194,255,0.08);border:1px solid rgba(0,194,255,0.2);padding:5px 12px;border-radius:100px;text-decoration:none;">Fridge Repair</a>
+          <a href="/washer-repair" style="font-size:13px;color:var(--cyan);background:rgba(0,194,255,0.08);border:1px solid rgba(0,194,255,0.2);padding:5px 12px;border-radius:100px;text-decoration:none;">Washer Repair</a>
+          <a href="/dryer-repair" style="font-size:13px;color:var(--cyan);background:rgba(0,194,255,0.08);border:1px solid rgba(0,194,255,0.2);padding:5px 12px;border-radius:100px;text-decoration:none;">Dryer Repair</a>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-family:var(--font-head);font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted2);margin-bottom:10px;">Locations</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <a href="/toronto" style="font-size:13px;color:var(--orange);background:rgba(255,107,53,0.08);border:1px solid rgba(255,107,53,0.2);padding:5px 12px;border-radius:100px;text-decoration:none;">Toronto</a>
+          <a href="/mississauga" style="font-size:13px;color:var(--orange);background:rgba(255,107,53,0.08);border:1px solid rgba(255,107,53,0.2);padding:5px 12px;border-radius:100px;text-decoration:none;">Mississauga</a>
+          <a href="/brampton" style="font-size:13px;color:var(--orange);background:rgba(255,107,53,0.08);border:1px solid rgba(255,107,53,0.2);padding:5px 12px;border-radius:100px;text-decoration:none;">Brampton</a>
+          <a href="/scarborough" style="font-size:13px;color:var(--orange);background:rgba(255,107,53,0.08);border:1px solid rgba(255,107,53,0.2);padding:5px 12px;border-radius:100px;text-decoration:none;">Scarborough</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Footer -->
 <div id="footer-placeholder"></div>
 <script src="/includes/footer-loader.js" defer></script>
@@ -1015,6 +1120,7 @@ body::before {
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(function(el) { obs.observe(el); });
 })();
+function fxFaqAbout(btn){var item=btn.closest('.faq-item');var isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(el){el.classList.remove('open');el.querySelector('.faq-q').setAttribute('aria-expanded','false')});if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true')}}
 </script>
 
 </body>

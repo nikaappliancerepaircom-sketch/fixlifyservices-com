@@ -42,6 +42,43 @@
       }
     },
     {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I book same-day appliance repair online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the booking calendar on this page to select a same-day or next-day slot. Book before 2 PM for same-day service. You'll receive instant text and email confirmation. Or call (437) 524-1053 Mon–Sat 8am–8pm, Sun 9am–6pm."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens after I book online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "After booking, you receive an instant confirmation. A certified technician arrives within your chosen 2-hour window. They diagnose the appliance, give you an upfront written quote, and complete most repairs same-visit with a 90-day warranty."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is online booking available 24/7?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The Fixlify online booking calendar is available 24 hours a day, 7 days a week. You can book a morning appointment at midnight if needed. Same-day slots show up automatically based on technician availability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to pay to book online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No payment is required to book. You pay only after the repair is complete and you've approved the upfront quote. Payment accepted by Visa, Mastercard, Amex, debit, Interac e-transfer, or cash."
+          }
+        }
+      ]
+    },
+    {
       "@type": "BreadcrumbList",
       "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://fixlifyservices.com/"},
@@ -234,7 +271,7 @@ body {
 <section class="book-hero">
   <div class="book-hero-inner">
     <h1>Book Same-Day Appliance Repair</h1>
-    <p>Choose your time slot — a certified technician arrives in 1–3 hours. Serving Toronto, Mississauga, Brampton &amp; all GTA.</p>
+    <p>Choose your time slot — a certified technician arrives in 1–3 hours. Serving Toronto, Mississauga, Brampton &amp; all GTA. Call <a href="tel:+14375241053" style="color:#fff;font-weight:700;">(437) 524-1053</a> — Mon–Sat 8am–8pm, Sun 9am–6pm.</p>
     <div class="hero-badges">
       <span class="hero-badge">⚡ Same-day service</span>
       <span class="hero-badge">✓ 90-day warranty</span>
@@ -347,7 +384,68 @@ body {
       </div>
     </div>
   </section>
+
+  <!-- Why Book Online section -->
+  <section style="max-width:1200px;margin:0 auto;padding:0 24px 56px;">
+    <h2 style="font-size:1.5rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:20px;">Why Book Appliance Repair Online with Fixlify?</h2>
+    <p style="font-size:0.9375rem;color:#374151;line-height:1.75;margin-bottom:14px;">Booking appliance repair online with Fixlify takes less than two minutes. You select your appliance type, enter your Toronto or GTA address, choose a 2-hour arrival window that fits your schedule, and receive instant text and email confirmation. There are no phone queues, no waiting for callbacks, and no uncertainty about whether your booking was received. The entire process is handled digitally through the Fixlify platform.</p>
+    <p style="font-size:0.9375rem;color:#374151;line-height:1.75;margin-bottom:14px;">Same-day slots are available seven days a week when you book before 2 PM. Our technicians are dispatched from locations throughout Toronto, Scarborough, North York, Etobicoke, Mississauga, Brampton, Vaughan, Markham, Richmond Hill, and Oakville, so arrival times are typically 1–3 hours. If you book the night before, morning slots often open up the following day. The calendar above updates in real time to reflect actual technician availability in your area.</p>
+    <p style="font-size:0.9375rem;color:#374151;line-height:1.75;margin-bottom:14px;">Typical appliance repair costs range from $80 to $400 depending on the appliance type and the nature of the fault. Refrigerator compressor relay replacements, washer drain pump repairs, dryer heating element swaps, dishwasher pump seal jobs, and oven igniter replacements are among the most common calls we handle. For most of these, our technicians carry the required parts on the truck, allowing same-visit completion. Pricing is provided upfront before any work begins — you only pay if you approve the repair.</p>
+    <p style="font-size:0.9375rem;color:#374151;line-height:1.75;margin-bottom:14px;">Every repair completed by Fixlify includes a 90-day warranty on both parts and labour. If the same issue recurs within the warranty period, we return at no additional cost. Our technicians are fully licensed under Ontario's technical standards, carry current liability insurance, and pass thorough background screening. The same care that goes into your repair also goes into the billing — you receive a digital invoice immediately after the job, with a clear breakdown of parts and labour.</p>
+    <p style="font-size:0.9375rem;color:#374151;line-height:1.75;margin-bottom:14px;">Fixlify serves all major brands: Samsung, LG, Whirlpool, GE, Bosch, Frigidaire, Kenmore, Miele, Maytag, and KitchenAid. Whether you have a French-door Samsung refrigerator in a Yonge Street condo, a Whirlpool top-load washer in a Brampton detached home, or a Bosch dishwasher in a Mississauga townhouse, our technicians are trained and equipped for your specific appliance. Call <a href="tel:+14375241053" style="color:#7C3AED;font-weight:600;">(437) 524-1053</a> Monday to Saturday 8am–8pm or Sunday 9am–6pm if you prefer to speak with someone before booking.</p>
+  </section>
+
+  <!-- FAQ Section -->
+  <section style="max-width:1200px;margin:0 auto;padding:0 24px 64px;" id="faq" aria-labelledby="book-faq-title">
+    <h2 id="book-faq-title" style="font-size:1.5rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:24px;">Frequently Asked Questions</h2>
+
+    <style>
+    .bk-faq-item { border: 1px solid #E5E7EB; border-radius: 8px; margin-bottom: 10px; overflow: hidden; }
+    .bk-faq-q { width: 100%; background: #fff; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 16px 20px; text-align: left; font-size: 0.9375rem; font-weight: 600; color: #111827; transition: background 0.15s; }
+    .bk-faq-q:hover { background: #F9FAFB; }
+    .bk-faq-chevron { flex-shrink: 0; width: 20px; height: 20px; background: #F3F4F6; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: transform 0.3s; }
+    .bk-faq-item.open .bk-faq-chevron { transform: rotate(180deg); background: #EDE9FE; }
+    .bk-faq-a { display: none; padding: 0 20px 16px; font-size: 0.875rem; color: #6B7280; line-height: 1.75; }
+    .bk-faq-item.open .bk-faq-a { display: block; }
+    </style>
+
+    <div class="bk-faq-item" id="bfaq1">
+      <button class="bk-faq-q" aria-expanded="false" onclick="bkFaq(this)">
+        How do I book same-day appliance repair online?
+        <span class="bk-faq-chevron" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></span>
+      </button>
+      <div class="bk-faq-a">Use the booking calendar on this page to select a same-day or next-day slot. Book before 2 PM for same-day service — a technician arrives within 1–3 hours. You receive instant text and email confirmation. Or call <a href="tel:+14375241053" style="color:#7C3AED;font-weight:600;">(437) 524-1053</a> Mon–Sat 8am–8pm, Sun 9am–6pm.</div>
+    </div>
+
+    <div class="bk-faq-item" id="bfaq2">
+      <button class="bk-faq-q" aria-expanded="false" onclick="bkFaq(this)">
+        What happens after I book online?
+        <span class="bk-faq-chevron" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></span>
+      </button>
+      <div class="bk-faq-a">After booking, you receive instant confirmation by text and email. A certified technician arrives within your chosen 2-hour window, diagnoses the appliance, and provides an upfront written quote. Most repairs are completed same-visit with a 90-day parts and labour warranty.</div>
+    </div>
+
+    <div class="bk-faq-item" id="bfaq3">
+      <button class="bk-faq-q" aria-expanded="false" onclick="bkFaq(this)">
+        Is online booking available 24/7?
+        <span class="bk-faq-chevron" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></span>
+      </button>
+      <div class="bk-faq-a">Yes. The Fixlify online booking calendar is available 24 hours a day, 7 days a week. You can book a morning appointment at midnight if needed. Same-day slots show up automatically based on technician availability in your area.</div>
+    </div>
+
+    <div class="bk-faq-item" id="bfaq4">
+      <button class="bk-faq-q" aria-expanded="false" onclick="bkFaq(this)">
+        Do I need to pay to book online?
+        <span class="bk-faq-chevron" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></span>
+      </button>
+      <div class="bk-faq-a">No payment is required to book. You pay only after the repair is complete and you have approved the upfront quote. Payment accepted by Visa, Mastercard, Amex, debit, Interac e-transfer, or cash.</div>
+    </div>
+  </section>
 </main>
+
+<script>
+function bkFaq(btn){var item=btn.closest('.bk-faq-item');var isOpen=item.classList.contains('open');document.querySelectorAll('.bk-faq-item.open').forEach(function(el){el.classList.remove('open');el.querySelector('.bk-faq-q').setAttribute('aria-expanded','false')});if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true')}}
+</script>
 
 <!-- Footer -->
 <div id="footer-placeholder"></div>
