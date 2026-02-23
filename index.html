@@ -1011,7 +1011,9 @@ body::before {
    ============================================================ */
 @media (max-width: 1024px) {
   .hero-grid { grid-template-columns: 1fr; }
-  .hero-right { position: static; order: -1; }
+  .hero-right { position: static; order: 2; }
+  .hero-left { order: 1; }
+  .hero-grid { min-height: auto; }
   .hero-content { padding-top: 90px; }
   .hero-headline { font-size: clamp(30px, 5vw, 48px); }
   .trust-grid { grid-template-columns: repeat(2, 1fr); }
