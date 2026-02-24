@@ -11,10 +11,20 @@ Online Booking: https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce
 Refrigerator repair, washer/washing machine repair, dryer repair, dishwasher repair, oven repair, stove/range repair. Same-day and emergency service available.
 
 ## Brands
-Samsung, LG, Whirlpool, GE, Bosch, Frigidaire, Kenmore, Maytag, KitchenAid
+Samsung, LG, Whirlpool, GE, Bosch, Frigidaire, Kenmore, Maytag, KitchenAid, Miele, Sub-Zero, Wolf, Electrolux, Fisher & Paykel
+
+## Brand Repair Pages
+- Samsung: /samsung-repair, /samsung-repair-toronto, /samsung-washer-repair, /samsung-fridge-repair, /samsung-dishwasher-repair
+- LG: /lg-repair, /lg-repair-toronto, /lg-washer-repair, /lg-fridge-repair, /lg-dishwasher-repair
+- Whirlpool: /whirlpool-repair, /whirlpool-repair-toronto, /whirlpool-washer-repair, /whirlpool-fridge-repair
+- Bosch: /bosch-appliance-repair, /bosch-repair-toronto, /bosch-dishwasher-repair, /bosch-washer-repair
+- GE, Frigidaire, KitchenAid, Maytag, Miele: brand pages available
 
 ## Service Area
 Toronto, Scarborough, North York, Etobicoke, Mississauga, Brampton, Vaughan, Richmond Hill, Markham, Oakville, Burlington, Pickering, Ajax, Whitby, Oshawa
+
+## Toronto Neighbourhoods Served
+East York, The Beaches, Midtown, Bloor West Village, High Park, Greektown, Little Italy, Little Portugal, Corso Italia, Dufferin Grove, Trinity Bellwoods, Chinatown, Ossington, Roncesvalles, Wychwood, Thorncliffe Park, St. Lawrence, King West, Swansea, Etobicoke Village, Willowdale, Bayview Village, Don Mills, Forest Hill, Rosedale, The Annex, Leslieville, Liberty Village, Riverdale, Danforth Village, Parkdale, The Junction, Leaside, Lawrence Park, Davisville Village, Cabbagetown, Islington Village, Humber Valley, Birchcliff, Scarborough Village
 
 ## Pricing
 Refrigerator $150–$400, Washer $120–$350, Dryer $100–$300, Dishwasher $120–$350, Oven/Stove $130–$380. All prices include parts and labor. 90-day warranty.
