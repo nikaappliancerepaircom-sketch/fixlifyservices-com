@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- v2 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://fixlifyservices.com/</loc>
@@ -344,6 +343,11 @@
   <url>
     <loc>https://fixlifyservices.com/blog/online-appliance-repair-booking-guide</loc>
     <lastmod>2026-02-10</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fixlifyservices.com/blog/dishwasher-repair-cost-toronto-2026</loc>
+    <lastmod>2026-03-01</lastmod>
     <priority>0.7</priority>
   </url>
 </urlset>
