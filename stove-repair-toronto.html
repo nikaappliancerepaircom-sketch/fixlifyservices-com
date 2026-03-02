@@ -23,8 +23,7 @@
 <link rel="stylesheet" href="/tokens.css">
 
 <!-- Schema JSON-LD -->
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -52,16 +51,29 @@
     },
     {
       "@type": "Service",
+      "serviceType": "Stove Repair",
       "name": "Stove Repair in Toronto",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Fixlify Appliance Services"
       },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Toronto",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional stove repair service in Toronto. Same-day appointments available.",
       "offers": {
-        "@type": "Offer",
-        "priceRange": "$100–$350",
-        "description": "Stove repair — same-day service, 90-day warranty, all brands"
-      }
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "130",
+        "highPrice": "400"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",
@@ -93,8 +105,7 @@
       ]
     }
   ]
-}
-</script>
+}</script>
 
 <style>
 /* ============================================================

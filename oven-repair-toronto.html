@@ -23,8 +23,7 @@
 <link rel="stylesheet" href="/tokens.css">
 
 <!-- Schema JSON-LD -->
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -52,16 +51,29 @@
     },
     {
       "@type": "Service",
+      "serviceType": "Oven Repair",
       "name": "Oven Repair in Toronto",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Fixlify Appliance Services"
       },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Toronto",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional oven repair service in Toronto. Same-day appointments available.",
       "offers": {
-        "@type": "Offer",
-        "priceRange": "$130–$380",
-        "description": "Oven repair — same-day service, 90-day warranty, all brands"
-      }
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "130",
+        "highPrice": "400"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",
@@ -90,12 +102,10 @@
             "text": "Samsung and LG slide-in ranges in Toronto condos frequently develop control board failures after building power interruptions. A control board replacement costs $180–$360 and is the most common oven call in downtown Toronto condos. Door hinge failures on frequently used ovens in Liberty Village and King West are also common — $110–$200 to repair."
           }
         }
-      
       ]
     }
   ]
-}
-</script>
+}</script>
 
 <style>
 /* ============================================================

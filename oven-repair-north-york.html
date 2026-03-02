@@ -23,8 +23,7 @@
 <link rel="stylesheet" href="/tokens.css">
 
 <!-- Schema JSON-LD -->
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -52,16 +51,29 @@
     },
     {
       "@type": "Service",
+      "serviceType": "Oven Repair",
       "name": "Oven Repair in North York",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Fixlify Appliance Services"
       },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "North York",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional oven repair service in North York. Same-day appointments available.",
       "offers": {
-        "@type": "Offer",
-        "priceRange": "$130–$380",
-        "description": "Oven repair — same-day service, 90-day warranty, all brands"
-      }
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "130",
+        "highPrice": "400"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",
@@ -90,12 +102,10 @@
             "text": "GE Profile and Whirlpool ranges in Willowdale and Bayview bungalows commonly develop bake element burnout and temperature sensor failure from years of intensive cooking use. Control board failures from power surge events on older North York electrical panels are also common. Our technicians carry GE Profile and Whirlpool control boards and elements on North York dispatches."
           }
         }
-      
       ]
     }
   ]
-}
-</script>
+}</script>
 
 <style>
 /* ============================================================

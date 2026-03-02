@@ -23,8 +23,7 @@
 <link rel="stylesheet" href="/tokens.css">
 
 <!-- Schema JSON-LD -->
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -52,24 +51,53 @@
     },
     {
       "@type": "Service",
+      "serviceType": "Refrigerator Repair",
       "name": "Refrigerator Repair in Markham",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Fixlify Appliance Services"
       },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Markham",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional refrigerator repair service in Markham. Same-day appointments available.",
       "offers": {
-        "@type": "Offer",
-        "priceRange": "$150–$400",
-        "description": "Refrigerator repair — same-day service, 90-day warranty, all brands"
-      }
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "150",
+        "highPrice": "450"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",
-      "mainEntity": [{"@type": "Question", "name": "How much does fridge repair cost in Markham?", "acceptedAnswer": {"@type": "Answer", "text": "Fridge repair in Markham costs $120-$400. Samsung French-door fridge ice maker failures run $130-$280. LG linear compressor faults run $200-$400. Bosch counter-depth fridge repairs in Angus Glen run $160-$380. Fixlify shows the price range for your specific fridge on fixlifyservices.com before you confirm."}}, {"@type": "Question", "name": "What fridge brands are most common in Markham?", "acceptedAnswer": {"@type": "Answer", "text": "Cornell and Wismer communities are heavily Samsung and LG smart refrigerators with SmartThings and ThinQ connectivity. Unionville older homes frequently have KitchenAid and Whirlpool. Angus Glen homes often have Miele or Bosch counter-depth units."}}]
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does fridge repair cost in Markham?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fridge repair in Markham costs $120-$400. Samsung French-door fridge ice maker failures run $130-$280. LG linear compressor faults run $200-$400. Bosch counter-depth fridge repairs in Angus Glen run $160-$380. Fixlify shows the price range for your specific fridge on fixlifyservices.com before you confirm."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What fridge brands are most common in Markham?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cornell and Wismer communities are heavily Samsung and LG smart refrigerators with SmartThings and ThinQ connectivity. Unionville older homes frequently have KitchenAid and Whirlpool. Angus Glen homes often have Miele or Bosch counter-depth units."
+          }
+        }
+      ]
     }
   ]
-}
-</script>
+}</script>
 
 <style>
 /* ============================================================

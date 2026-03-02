@@ -23,8 +23,7 @@
 <link rel="stylesheet" href="/tokens.css">
 
 <!-- Schema JSON-LD -->
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -52,20 +51,29 @@
     },
     {
       "@type": "Service",
-      "name": "Washer Repair in Willowdale",
+      "serviceType": "Washing Machine Repair",
+      "name": "Washing Machine Repair in Willowdale",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Fixlify Appliance Services"
       },
       "areaServed": {
-        "@type": "Place",
-        "name": "Willowdale, North York, Ontario"
+        "@type": "AdministrativeArea",
+        "name": "Willowdale",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
       },
+      "description": "Professional washing machine repair service in Willowdale. Same-day appointments available.",
       "offers": {
-        "@type": "Offer",
-        "priceRange": "$120–$350",
-        "description": "Washer Repair in Willowdale — same-day service, 90-day warranty, all brands"
-      }
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "130",
+        "highPrice": "380"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",
@@ -121,8 +129,7 @@
       ]
     }
   ]
-}
-</script>
+}</script>
 
 <style>
 :root {

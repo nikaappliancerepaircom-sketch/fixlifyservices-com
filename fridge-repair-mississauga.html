@@ -23,8 +23,7 @@
 <link rel="stylesheet" href="/tokens.css">
 
 <!-- Schema JSON-LD -->
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -52,16 +51,29 @@
     },
     {
       "@type": "Service",
+      "serviceType": "Refrigerator Repair",
       "name": "Refrigerator Repair in Mississauga",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Fixlify Appliance Services"
       },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Mississauga",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional refrigerator repair service in Mississauga. Same-day appointments available.",
       "offers": {
-        "@type": "Offer",
-        "priceRange": "$150–$400",
-        "description": "Refrigerator repair — same-day service, 90-day warranty, all brands"
-      }
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "150",
+        "highPrice": "450"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",
@@ -90,12 +102,10 @@
             "text": "Samsung and LG fridges in Square One and City Centre condos frequently develop ice maker inlet valve scale from Mississauga water and control board faults after power interruptions in the building. Both are same-visit repairs when booked through Fixlify. Condo building access and elevator hours are captured at booking checkout."
           }
         }
-      
       ]
     }
   ]
-}
-</script>
+}</script>
 
 <style>
 /* ============================================================

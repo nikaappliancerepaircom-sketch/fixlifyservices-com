@@ -23,8 +23,7 @@
 <link rel="stylesheet" href="/tokens.css">
 
 <!-- Schema JSON-LD -->
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -52,16 +51,29 @@
     },
     {
       "@type": "Service",
+      "serviceType": "Dishwasher Repair",
       "name": "Dishwasher Repair in Toronto",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Fixlify Appliance Services"
       },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Toronto",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional dishwasher repair service in Toronto. Same-day appointments available.",
       "offers": {
-        "@type": "Offer",
-        "priceRange": "$120–$350",
-        "description": "Dishwasher repair — same-day service, 90-day warranty, all brands"
-      }
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "120",
+        "highPrice": "350"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",
@@ -90,12 +102,10 @@
             "text": "Toronto tap water runs at 120–145 mg/L calcium. That scale coats spray arm nozzles within 18–24 months, reducing wash pressure and leaving cloudy residue on glasses. Monthly citric acid wash cycles slow build-up. When spray arms are already clogged, our Toronto technicians soak and flush them on-site — most cleared in under 30 minutes without replacement."
           }
         }
-      
       ]
     }
   ]
-}
-</script>
+}</script>
 
 <style>
 /* ============================================================

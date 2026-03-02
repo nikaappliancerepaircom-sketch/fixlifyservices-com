@@ -23,8 +23,7 @@
 <link rel="stylesheet" href="/tokens.css">
 
 <!-- Schema JSON-LD -->
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -52,16 +51,29 @@
     },
     {
       "@type": "Service",
+      "serviceType": "Refrigerator Repair",
       "name": "Refrigerator Repair in North York",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Fixlify Appliance Services"
       },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "North York",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional refrigerator repair service in North York. Same-day appointments available.",
       "offers": {
-        "@type": "Offer",
-        "priceRange": "$150–$400",
-        "description": "Refrigerator repair — same-day service, 90-day warranty, all brands"
-      }
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "150",
+        "highPrice": "450"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",
@@ -90,12 +102,10 @@
             "text": "Samsung and LG fridges in Yonge-Sheppard and Bayview condos frequently develop ice maker failures from North York's moderately hard water (120–140 mg/L) scaling inlet valves within 2–3 years. LG linear compressor issues are also a known concern — LG extended the compressor warranty to 10 years; our technicians check warranty status before recommending replacement."
           }
         }
-      
       ]
     }
   ]
-}
-</script>
+}</script>
 
 <style>
 /* ============================================================

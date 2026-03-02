@@ -23,8 +23,7 @@
 <link rel="stylesheet" href="/tokens.css">
 
 <!-- Schema JSON-LD -->
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -52,24 +51,53 @@
     },
     {
       "@type": "Service",
+      "serviceType": "Stove Repair",
       "name": "Stove Repair in Brampton",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Fixlify Appliance Services"
       },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Brampton",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional stove repair service in Brampton. Same-day appointments available.",
       "offers": {
-        "@type": "Offer",
-        "priceRange": "$100–$350",
-        "description": "Stove repair — same-day service, 90-day warranty, all brands"
-      }
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "130",
+        "highPrice": "400"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",
-      "mainEntity": [{"@type": "Question", "name": "How much does stove repair cost in Brampton?", "acceptedAnswer": {"@type": "Answer", "text": "Stove repair in Brampton costs $75-$340. Gas igniter replacement runs $75-$170. Burner valve replacement runs $120-$230. Control board replacements run $160-$360. Price shown on fixlifyservices.com before you confirm."}}, {"@type": "Question", "name": "Why are gas igniters the most common stove repair in Brampton?", "acceptedAnswer": {"@type": "Answer", "text": "Brampton has one of the highest concentrations of gas range households in the GTA, particularly in Springdale and Castlemore. High cooking frequency accelerates igniter wear and grease fouling. We stock igniter assemblies for Whirlpool, Samsung, LG, and GE on every Brampton truck."}}]
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does stove repair cost in Brampton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Stove repair in Brampton costs $75-$340. Gas igniter replacement runs $75-$170. Burner valve replacement runs $120-$230. Control board replacements run $160-$360. Price shown on fixlifyservices.com before you confirm."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why are gas igniters the most common stove repair in Brampton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Brampton has one of the highest concentrations of gas range households in the GTA, particularly in Springdale and Castlemore. High cooking frequency accelerates igniter wear and grease fouling. We stock igniter assemblies for Whirlpool, Samsung, LG, and GE on every Brampton truck."
+          }
+        }
+      ]
     }
   ]
-}
-</script>
+}</script>
 
 <style>
 /* ============================================================

@@ -23,8 +23,7 @@
 <link rel="stylesheet" href="/tokens.css">
 
 <!-- Schema JSON-LD -->
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -52,16 +51,29 @@
     },
     {
       "@type": "Service",
-      "name": "Washer Repair in Etobicoke",
+      "serviceType": "Washing Machine Repair",
+      "name": "Washing Machine Repair in Etobicoke",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Fixlify Appliance Services"
       },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Etobicoke",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional washing machine repair service in Etobicoke. Same-day appointments available.",
       "offers": {
-        "@type": "Offer",
-        "priceRange": "$120–$350",
-        "description": "Washer repair — same-day service, 90-day warranty, all brands"
-      }
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "130",
+        "highPrice": "380"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",
@@ -90,12 +102,10 @@
             "text": "Etobicoke's post-war split-levels have a high proportion of older Kenmore and Whirlpool washers, many from the 1990s still running on aging galvanized plumbing. Inlet valve screens in these homes clog faster than average due to sediment from galvanized mains. Lid switch failure, drive belt wear, and inlet valve clogging are the three most common Etobicoke washer calls."
           }
         }
-      
       ]
     }
   ]
-}
-</script>
+}</script>
 
 <style>
 /* ============================================================

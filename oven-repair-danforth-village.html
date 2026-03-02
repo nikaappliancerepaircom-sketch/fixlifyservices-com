@@ -23,8 +23,7 @@
 <link rel="stylesheet" href="/tokens.css">
 
 <!-- Schema JSON-LD -->
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -52,20 +51,29 @@
     },
     {
       "@type": "Service",
+      "serviceType": "Oven Repair",
       "name": "Oven Repair in Danforth Village",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Fixlify Appliance Services"
       },
       "areaServed": {
-        "@type": "Place",
-        "name": "Danforth Village, Toronto, Ontario"
+        "@type": "AdministrativeArea",
+        "name": "Danforth Village",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
       },
+      "description": "Professional oven repair service in Danforth Village. Same-day appointments available.",
       "offers": {
-        "@type": "Offer",
-        "priceRange": "$130–$400",
-        "description": "Oven Repair in Danforth Village — same-day service, 90-day warranty, all brands"
-      }
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "130",
+        "highPrice": "400"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",
@@ -121,8 +129,7 @@
       ]
     }
   ]
-}
-</script>
+}</script>
 
 <style>
 :root {

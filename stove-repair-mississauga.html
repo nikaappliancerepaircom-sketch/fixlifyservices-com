@@ -23,8 +23,7 @@
 <link rel="stylesheet" href="/tokens.css">
 
 <!-- Schema JSON-LD -->
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -52,24 +51,53 @@
     },
     {
       "@type": "Service",
+      "serviceType": "Stove Repair",
       "name": "Stove Repair in Mississauga",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Fixlify Appliance Services"
       },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Mississauga",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional stove repair service in Mississauga. Same-day appointments available.",
       "offers": {
-        "@type": "Offer",
-        "priceRange": "$100–$350",
-        "description": "Stove repair — same-day service, 90-day warranty, all brands"
-      }
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "130",
+        "highPrice": "400"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",
-      "mainEntity": [{"@type": "Question", "name": "How much does stove repair cost in Mississauga?", "acceptedAnswer": {"@type": "Answer", "text": "Stove repair in Mississauga typically costs $80-$340. Gas range igniter repairs run $80-$175. Whirlpool and LG glass-top element replacement runs $110-$250. Control board repairs on Samsung models run $160-$360. Fixlify shows the price range before you confirm."}}, {"@type": "Question", "name": "Do you offer same-day stove repair in Mississauga?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Fixlify dispatches from the Peel Region zone - locally stationed in Mississauga. Book before 2 PM for same-day service. Call (437) 524-1053 for priority dispatch."}}]
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does stove repair cost in Mississauga?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Stove repair in Mississauga typically costs $80-$340. Gas range igniter repairs run $80-$175. Whirlpool and LG glass-top element replacement runs $110-$250. Control board repairs on Samsung models run $160-$360. Fixlify shows the price range before you confirm."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer same-day stove repair in Mississauga?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Fixlify dispatches from the Peel Region zone - locally stationed in Mississauga. Book before 2 PM for same-day service. Call (437) 524-1053 for priority dispatch."
+          }
+        }
+      ]
     }
   ]
-}
-</script>
+}</script>
 
 <style>
 /* ============================================================

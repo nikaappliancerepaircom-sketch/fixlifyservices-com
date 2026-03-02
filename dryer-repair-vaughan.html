@@ -23,8 +23,7 @@
 <link rel="stylesheet" href="/tokens.css">
 
 <!-- Schema JSON-LD -->
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -52,16 +51,29 @@
     },
     {
       "@type": "Service",
+      "serviceType": "Dryer Repair",
       "name": "Dryer Repair in Vaughan",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Fixlify Appliance Services"
       },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Vaughan",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional dryer repair service in Vaughan. Same-day appointments available.",
       "offers": {
-        "@type": "Offer",
-        "priceRange": "$100–$300",
-        "description": "Dryer repair — same-day service, 90-day warranty, all brands"
-      }
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "120",
+        "highPrice": "350"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",
@@ -90,12 +102,10 @@
             "text": "Woodbridge's Italian-heritage households favour Miele and Bosch heat-pump dryers for their gentle fabric care and energy efficiency. Miele heat-pump units require condenser cleaning every 12 months in York Region's very hard water environment (200–250 mg/L) — mineral deposits on the heat exchanger reduce efficiency and eventually trigger error codes. Our technicians carry Miele-specific condenser cleaning tools and OEM service kits."
           }
         }
-      
       ]
     }
   ]
-}
-</script>
+}</script>
 
 <style>
 /* ============================================================

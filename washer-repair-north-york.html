@@ -23,8 +23,7 @@
 <link rel="stylesheet" href="/tokens.css">
 
 <!-- Schema JSON-LD -->
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -52,16 +51,29 @@
     },
     {
       "@type": "Service",
-      "name": "Washer Repair in North York",
+      "serviceType": "Washing Machine Repair",
+      "name": "Washing Machine Repair in North York",
       "provider": {
         "@type": "LocalBusiness",
         "name": "Fixlify Appliance Services"
       },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "North York",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional washing machine repair service in North York. Same-day appointments available.",
       "offers": {
-        "@type": "Offer",
-        "priceRange": "$120–$350",
-        "description": "Washer repair — same-day service, 90-day warranty, all brands"
-      }
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "130",
+        "highPrice": "380"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",
@@ -90,12 +102,10 @@
             "text": "Samsung and LG front-loaders in Yonge-Sheppard condos develop drain errors (5E/OE) from clogged pump filters — North York's hard water (120–140 mg/L) accelerates mineral deposits in filter mesh. Door boot seal deterioration in humidity-prone mechanical rooms is also a frequent call. Both are same-visit repairs through Fixlify."
           }
         }
-      
       ]
     }
   ]
-}
-</script>
+}</script>
 
 <style>
 /* ============================================================

@@ -23,26 +23,69 @@
 <link rel="stylesheet" href="/tokens.css">
 
 <!-- Schema JSON-LD -->
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "LocalBusiness",
       "name": "Fixlify Appliance Services",
       "telephone": "(437) 524-1053",
-      "address": {"@type": "PostalAddress", "addressLocality": "Toronto", "addressRegion": "Ontario", "addressCountry": "CA"},
-      "openingHours": ["Mo-Sa 08:00-20:00", "Su 09:00-18:00"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toronto",
+        "addressRegion": "Ontario",
+        "addressCountry": "CA"
+      },
+      "openingHours": [
+        "Mo-Sa 08:00-20:00",
+        "Su 09:00-18:00"
+      ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Appliance Repair Services",
         "itemListElement": [
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Refrigerator Repair"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Washer Repair"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Dryer Repair"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Dishwasher Repair"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Oven Repair"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Stove Repair"}}
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Refrigerator Repair"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Washer Repair"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Dryer Repair"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Dishwasher Repair"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Oven Repair"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Stove Repair"
+            }
+          }
         ]
       },
       "url": "https://fixlifyservices.com",
@@ -105,10 +148,35 @@
           }
         }
       ]
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Stove Repair",
+      "name": "Stove Repair in Cost",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Fixlify Appliance Services"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Cost",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional stove repair service in Cost. Same-day appointments available.",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "130",
+        "highPrice": "400"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     }
   ]
-}
-</script>
+}</script>
 
 <style>
 /* ============================================================
