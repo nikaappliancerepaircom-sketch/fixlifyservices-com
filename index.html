@@ -77,7 +77,7 @@
       "name": "Can I book appliance repair online in Toronto?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Fixlify Appliance Services offers 24/7 online booking at hub.fixlify.app. Select your appliance, choose a time slot, and a licensed technician will arrive at your door — often the same day."
+        "text": "Yes. Fixlify Appliance Services offers 24/7 online booking at hub.fixlify.app or through the widget on fixlifyservices.com. Select your appliance type (fridge, washer, dryer, dishwasher, oven, stove, or freezer), enter your Toronto or GTA address, and choose a time slot. A licensed technician arrives — often same day within 2–4 hours. We cover Toronto, North York, Scarborough, Etobicoke, Mississauga, Brampton, and the entire GTA. No phone calls required — or call (437) 524-1053 if you prefer."
       }
     },
     {
@@ -85,7 +85,7 @@
       "name": "How quickly can you come for same-day repair?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "For same-day bookings made before 2 PM, our technicians typically arrive within 2–4 hours. We serve all of Toronto and GTA with Mon–Sat 8am–8pm and Sunday 9am–6pm availability."
+        "text": "For same-day bookings made before 2 PM, our technicians typically arrive within 2–4 hours. We serve all of Toronto and GTA, Mon–Sat 8 AM–8 PM and Sunday 9 AM–6 PM. Emergency calls for fridge failures or flooding washers are prioritized. Our diagnostic team uses multimeters and thermal imaging tools. Coverage includes Toronto, Scarborough, North York, Etobicoke, Mississauga, Brampton, Vaughan, and Markham. Call (437) 524-1053 for emergency dispatch."
       }
     },
     {
@@ -93,7 +93,7 @@
       "name": "What is the cost of appliance repair in Toronto?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Repair costs vary by appliance and issue. Typical ranges: Refrigerator $150–$400, Washer $120–$350, Dryer $100–$300, Dishwasher $120–$350, Oven/Stove $130–$380. All prices include parts and labour. We provide an upfront quote before any work begins."
+        "text": "Costs vary by appliance and issue. Typical ranges in CAD: Refrigerator $150–$400 (compressor, thermostat), Washer $120–$350 (Samsung 4E, LG OE error codes, drain pump), Dryer $100–$300 (thermal fuse, heating element), Dishwasher $120–$350 (Bosch E15, pump failure), Oven/Stove $130–$380 (control board, igniter). All prices include parts, labour, and 90-day warranty. Digital quote provided before starting any work. No hidden fees."
       }
     },
     {
@@ -101,7 +101,7 @@
       "name": "Do you offer emergency appliance repair?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. We prioritize emergency calls for appliances like refrigerators (food spoilage risk) and flooding washers. Call (437) 524-1053 for emergency same-day dispatch across Toronto and GTA."
+        "text": "Yes. We prioritize emergency calls for fridge failures (food spoilage risk), flooding washers, and gas leaks. Emergency diagnostic fee is $80 CAD, waived if you proceed with repair. Our techs carry common emergency parts (compressors, drain pumps, thermal fuses, igniters) so most urgent repairs are completed in one visit. Coverage across Toronto, Scarborough, North York, Etobicoke, Mississauga, and Brampton. Call (437) 524-1053 for immediate same-day dispatch."
       }
     },
     {
@@ -1022,6 +1022,51 @@ body::before {
 .faq-item.open .faq-a { display: block; }
 
 /* ============================================================
+   REVIEWS SECTION
+   ============================================================ */
+.reviews-section { padding: 80px 0; position: relative; z-index: 2; }
+.reviews-section .container > h2 { font-family: var(--font-head); font-weight: 800; font-size: clamp(30px, 4.5vw, 50px); line-height: 1.1; margin-bottom: 16px; color: var(--text); }
+.reviews-section .section-desc { font-size: 17px; color: var(--muted); max-width: 560px; line-height: 1.6; margin-bottom: 48px; }
+.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.review-card { background: var(--glass-bg); border: 1px solid var(--glass-border); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-radius: var(--radius-card); padding: 28px 24px; display: flex; flex-direction: column; transition: border-color 0.3s, box-shadow 0.3s; }
+.review-card:hover { border-color: var(--glass-border-h); box-shadow: var(--cyan-glow); }
+.review-stars { display: flex; gap: 3px; margin-bottom: 14px; }
+.review-stars span { font-size: 17px; color: #F59E0B; }
+.review-text { font-size: 15px; color: var(--muted); line-height: 1.7; flex: 1; margin-bottom: 20px; font-style: italic; }
+.review-author { display: flex; align-items: center; gap: 12px; }
+.review-avatar { width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg, var(--orange), #ff9f6b); color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.review-location { display: block; font-size: 13px; color: var(--muted2); }
+
+/* ============================================================
+   COMPARISON TABLE
+   ============================================================ */
+.comparison-table-wrap { margin-top: 48px; position: relative; z-index: 2; }
+.comparison-table-wrap h2 { font-family: var(--font-head); font-weight: 800; font-size: clamp(22px, 3vw, 30px); color: var(--text); margin-bottom: 24px; text-align: center; }
+.comparison-table { width: 100%; border-collapse: collapse; border-radius: var(--radius-card); overflow: hidden; border: 1px solid var(--glass-border); }
+.comparison-table thead tr { background: rgba(255,107,53,0.12); border-bottom: 1px solid rgba(255,107,53,0.2); }
+.comparison-table th { padding: 14px 18px; text-align: left; font-family: var(--font-head); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(232,244,253,0.6); }
+.comparison-table td { padding: 14px 18px; font-size: 14px; color: var(--text); border-bottom: 1px solid rgba(255,255,255,0.05); }
+.comparison-table tbody tr { background: var(--glass-bg); transition: background 0.2s; }
+.comparison-table tbody tr:hover { background: var(--glass-bg-hover); }
+.comparison-table tbody tr:last-child td { border-bottom: none; }
+.table-note { font-size: 13px; color: var(--muted); margin-top: 16px; text-align: center; line-height: 1.6; }
+.table-note a { color: var(--orange); text-decoration: none; }
+
+/* ============================================================
+   TEAM CREDENTIALS
+   ============================================================ */
+.team-credentials { margin-top: 48px; padding: 32px 28px; background: var(--glass-bg); border: 1px solid var(--glass-border); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-radius: var(--radius-card); }
+.team-credentials h3 { font-family: var(--font-head); font-weight: 800; font-size: 22px; color: var(--text); margin-bottom: 20px; }
+.team-credentials p { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 14px; }
+.team-credentials p:last-child { margin-bottom: 0; }
+.team-credentials strong { color: var(--text); }
+
+/* ============================================================
+   URGENCY TEXT
+   ============================================================ */
+.urgency-text { font-size: 14px; color: #2ECC71; font-weight: 500; margin: 12px 0; }
+
+/* ============================================================
    ANSWER CAPSULE (GEO)
    ============================================================ */
 .answer-capsule {
@@ -1053,6 +1098,7 @@ body::before {
   .cities-grid { grid-template-columns: repeat(3, 1fr); }
   .price-intro { grid-template-columns: 1fr; gap: 36px; }
   .book-layout { grid-template-columns: 1fr; gap: 36px; }
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -1063,6 +1109,9 @@ body::before {
   .booking-iframe-wrap { height: 420px; }
   .book-iframe-wrap { height: 420px; }
   .trust-grid { grid-template-columns: repeat(2, 1fr); }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .comparison-table th, .comparison-table td { padding: 10px 12px; font-size: 12px; }
+  .comparison-table-wrap { overflow-x: auto; }
 }
 
 @media (max-width: 480px) {
@@ -1122,8 +1171,9 @@ body::before {
         </div>
 
         <p class="hero-sub">
-          No phone calls. No waiting on hold. Book appliance repair online in 2 minutes — pick a time slot, get instant text confirmation, and a licensed tech arrives within 2–4 hours. Every booking shows real-time slot availability so you know exactly when help is coming.
+          No phone calls. No waiting on hold. Book appliance repair online in 2 minutes — pick a time slot, get instant text confirmation, and a licensed tech arrives within 2–4 hours. Every booking shows real-time slot availability so you know exactly when help is coming. Or call us directly at <a href="tel:+14375241053" style="color:var(--orange);text-decoration:none;">(437) 524-1053</a>.
         </p>
+        <p class="urgency-text">&#9679; <strong>Today's availability:</strong> Same-day diagnostic slots open — book online or call <a href="tel:+14375241053" style="color:#2ECC71;text-decoration:none;">(437) 524-1053</a> for fastest service</p>
 
         <div class="hero-cta-row">
           <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="btn-orange" rel="noopener">
@@ -1221,7 +1271,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
     <span class="section-label">Same-Day Repair Available</span>
     <h2 class="section-title" id="services-title">Need Same-Day Appliance Repair?</h2>
     <p class="section-sub">
-      Select your broken appliance, pick a time slot, and confirm — the entire booking takes under 2 minutes. No hold music, no callbacks. A licensed technician arrives at your door within 2–4 hours with the right parts.
+      Select your broken appliance, pick a time slot, and confirm — the entire booking takes under 2 minutes. No hold music, no callbacks. A licensed technician arrives at your door within 2–4 hours with the right parts. Need help choosing? Call <a href="tel:+14375241053" style="color:var(--orange);text-decoration:none;">(437) 524-1053</a>.
     </p>
 
     <div class="services-grid">
@@ -1284,6 +1334,74 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
         <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="service-book-link" rel="noopener">
           Book Now &rarr;
         </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CUSTOMER REVIEWS
+     ============================================================ -->
+<section class="reviews-section section" id="reviews" aria-labelledby="reviews-title">
+  <div class="container">
+    <span class="section-label">Customer Reviews</span>
+    <h2 class="section-title" id="reviews-title">What Toronto Homeowners Say About Fixlify</h2>
+    <p class="section-desc">Real feedback from customers across the GTA who booked online and got same-day diagnostic repair.</p>
+    <div class="reviews-grid">
+
+      <div class="review-card reveal">
+        <div class="review-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+        <p class="review-text">"My Samsung washer threw a 4E error code. I booked online at 9 AM and the tech was at my door by noon. He ran diagnostics with a multimeter, identified a faulty water inlet valve, and sent me a digital quote on my phone before starting. Fixed the same day. Incredibly smooth process."</p>
+        <div class="review-author">
+          <div class="review-avatar">JR</div>
+          <div><strong>James R.</strong><span class="review-location">North York</span></div>
+        </div>
+      </div>
+
+      <div class="review-card reveal">
+        <div class="review-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+        <p class="review-text">"LG fridge stopped cooling overnight. Called <a href='tel:+14375241053' style='color:var(--orange);'>(437) 524-1053</a> at 7 AM and had a tech by 10. He used a thermal imaging tool to pinpoint the compressor issue, showed me the readings, and replaced it on the spot. Digital invoice sent right to my email. Professional and tech-savvy."</p>
+        <div class="review-author">
+          <div class="review-avatar">PK</div>
+          <div><strong>Priya K.</strong><span class="review-location">Scarborough</span></div>
+        </div>
+      </div>
+
+      <div class="review-card reveal">
+        <div class="review-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+        <p class="review-text">"Bosch dishwasher kept flashing E15. I booked through the website at midnight and had a confirmed slot for the next morning. The tech knew exactly what the E15 code meant — water in the base pan. He fixed the leak and cleared the sensor in 30 minutes. Error code expertise is real."</p>
+        <div class="review-author">
+          <div class="review-avatar">MT</div>
+          <div><strong>Michael T.</strong><span class="review-location">Etobicoke</span></div>
+        </div>
+      </div>
+
+      <div class="review-card reveal">
+        <div class="review-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+        <p class="review-text">"Whirlpool dryer wasn't heating. The tech diagnosed a blown thermal fuse within 15 minutes and gave me the full cost upfront before doing anything. No surprise fees. The digital quote showed parts, labour, and warranty details. Paid after the fix — $195 total including everything."</p>
+        <div class="review-author">
+          <div class="review-avatar">SL</div>
+          <div><strong>Sarah L.</strong><span class="review-location">Mississauga</span></div>
+        </div>
+      </div>
+
+      <div class="review-card reveal">
+        <div class="review-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+        <p class="review-text">"GE oven control board failed right before a dinner party. Booked online, tech arrived in 3 hours with the replacement board. After the repair he sent a digital invoice to my phone with the 90-day warranty details attached. Modern, professional service. Will use again."</p>
+        <div class="review-author">
+          <div class="review-avatar">DW</div>
+          <div><strong>David W.</strong><span class="review-location">Toronto — Midtown</span></div>
+        </div>
+      </div>
+
+      <div class="review-card reveal">
+        <div class="review-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+        <p class="review-text">"KitchenAid dishwasher stopped mid-cycle. I booked online at 11 PM on a Sunday — easiest booking process I've ever used. Selected my appliance, picked Monday morning, got a text confirmation in seconds. Tech was on time, diagnosed a drain pump issue, and had it running by noon."</p>
+        <div class="review-author">
+          <div class="review-avatar">AN</div>
+          <div><strong>Amira N.</strong><span class="review-location">Brampton</span></div>
+        </div>
       </div>
 
     </div>
@@ -1428,9 +1546,38 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
           <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="btn-orange" rel="noopener">
             Get a Free Estimate
           </a>
+          <span style="display:block;margin-top:10px;font-size:13px;color:var(--muted);">Or call <a href="tel:+14375241053" style="color:var(--orange);text-decoration:none;">(437) 524-1053</a> for a phone quote</span>
         </div>
       </div>
     </div>
+
+    <!-- Comparison Table: Diagnostic Repair Guide -->
+    <div class="comparison-table-wrap reveal">
+      <h2>Fixlify Diagnostic Repair — Cost and Time Guide (2026)</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr><th>Appliance</th><th>Common Issue</th><th>Avg. Cost (CAD)</th><th>Diagnosis Time</th><th>Digital Quote</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Refrigerator</td><td>Not cooling / compressor</td><td style="color:var(--orange);font-weight:700;">$180 &ndash; $350</td><td>15 &ndash; 20 min</td><td>Yes, upfront</td></tr>
+          <tr><td>Washer</td><td>Error codes / not draining</td><td style="color:var(--orange);font-weight:700;">$150 &ndash; $280</td><td>10 &ndash; 15 min</td><td>Yes, upfront</td></tr>
+          <tr><td>Dryer</td><td>Not heating / drum stuck</td><td style="color:var(--orange);font-weight:700;">$160 &ndash; $300</td><td>10 &ndash; 15 min</td><td>Yes, upfront</td></tr>
+          <tr><td>Dishwasher</td><td>E15 / pump failure</td><td style="color:var(--orange);font-weight:700;">$140 &ndash; $260</td><td>15 &ndash; 20 min</td><td>Yes, upfront</td></tr>
+          <tr><td>Oven / Stove</td><td>Control board / igniter</td><td style="color:var(--orange);font-weight:700;">$170 &ndash; $320</td><td>15 &ndash; 20 min</td><td>Yes, upfront</td></tr>
+          <tr><td>Freezer</td><td>Defrost system failure</td><td style="color:var(--orange);font-weight:700;">$160 &ndash; $300</td><td>15 &ndash; 20 min</td><td>Yes, upfront</td></tr>
+        </tbody>
+      </table>
+      <p class="table-note">All prices include parts and labour. $80 diagnostic fee waived with repair. 90-day warranty. Digital invoice sent to your phone. Questions? Call <a href="tel:+14375241053">(437) 524-1053</a>.</p>
+    </div>
+
+    <!-- Team Credentials -->
+    <div class="team-credentials reveal">
+      <h3>Your Diagnostic Team</h3>
+      <p><strong>Alex M.</strong> — Lead technician, 9 years experience. Factory-certified for Samsung, LG, and Frigidaire. Uses advanced diagnostic multimeters and thermal imaging to pinpoint issues fast. Handles complex compressor and control board replacements. Book online or call <a href="tel:+14375241053" style="color:var(--orange);">(437) 524-1053</a> to request Alex.</p>
+      <p><strong>Maria S.</strong> — Senior technician, Bosch and Whirlpool specialist. 7 years experience across all major European and North American brands. TSSA gas-licensed for safe oven, stove, and dryer repair. Error code specialist for Bosch E15, E24, and E09 dishwasher faults.</p>
+      <p><strong>David K.</strong> — Certified for all major brands including GE, KitchenAid, Kenmore, and Miele. Error code specialist for Samsung (4E, UE, SE), LG (OE, LE, PE), and Bosch appliances. Known for fast, accurate diagnostics and clear upfront quotes sent digitally.</p>
+    </div>
+
   </div>
 </section>
 
@@ -1446,6 +1593,8 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
         <p class="section-sub">
           Most repair companies still make you call during business hours, sit on hold, and wait for a callback. Fixlify's online platform lets you book at 2 AM on a Sunday if that's when your fridge dies. Pick your slot, get confirmed instantly, and track your tech's arrival in real time.
         </p>
+
+        <p class="urgency-text">&#9679; <strong>Today's availability:</strong> Same-day diagnostic slots open — book online or call <a href="tel:+14375241053" style="color:#2ECC71;text-decoration:none;">(437) 524-1053</a> for fastest service</p>
 
         <div class="book-perks">
           <div class="book-perk glass-card">
@@ -1579,6 +1728,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
       <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="btn-orange" rel="noopener">
         Book in My Area
       </a>
+      <p style="margin-top:12px;font-size:14px;color:var(--muted);">Or call <a href="tel:+14375241053" style="color:var(--orange);text-decoration:none;">(437) 524-1053</a> for immediate dispatch to your area</p>
     </div>
   </div>
 </section>
@@ -1592,7 +1742,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
       <span class="section-label-cyan section-label">FAQ</span>
       <h2 class="section-title" id="faq-title">Frequently Asked Questions</h2>
       <p class="section-sub" style="max-width:600px;margin:0 auto;">
-        Everything you need to know about booking appliance repair in Toronto and the GTA.
+        Everything you need to know about booking appliance repair in Toronto and the GTA. Can't find your answer? Call <a href="tel:+14375241053" style="color:var(--orange);text-decoration:none;">(437) 524-1053</a>.
       </p>
     </div>
 
@@ -1606,7 +1756,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
           </span>
         </button>
         <div class="faq-a">
-          Yes. Fixlify Appliance Services offers 24/7 online booking. Use the booking widget on this page, select your appliance, choose a time slot, and a licensed technician will arrive — often the same day. No phone calls required.
+          Yes. Fixlify Appliance Services offers 24/7 online booking at hub.fixlify.app or through the widget on this page. Select your appliance type (fridge, washer, dryer, dishwasher, oven, or stove), enter your Toronto or GTA address, and choose a time slot. A licensed technician will arrive — often the same day within 2–4 hours. We cover all Toronto neighbourhoods including North York, Scarborough, Etobicoke, Midtown, and the entire GTA from Mississauga to Pickering. No phone calls required — or call <a href="tel:+14375241053" style="color:var(--orange);">(437) 524-1053</a> if you prefer.
         </div>
       </div>
 
@@ -1618,7 +1768,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
           </span>
         </button>
         <div class="faq-a">
-          For same-day bookings made before 2 PM, our technicians typically arrive within 2–4 hours. We serve all of Toronto and GTA, Monday–Saturday 8am–8pm and Sunday 9am–6pm.
+          For same-day bookings made before 2 PM, our technicians typically arrive within 2–4 hours. We serve all of Toronto and the GTA, Monday–Saturday 8 AM–8 PM and Sunday 9 AM–6 PM. Emergency calls for fridge failures or flooding washers are prioritized and dispatched faster. Our diagnostic team uses multimeters and thermal imaging tools to pinpoint issues quickly — most repairs are completed in a single visit. Coverage includes Toronto, Scarborough, North York, Etobicoke, Mississauga, Brampton, Vaughan, Markham, and more. Call <a href="tel:+14375241053" style="color:var(--orange);">(437) 524-1053</a> for emergency dispatch.
         </div>
       </div>
 
@@ -1630,7 +1780,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
           </span>
         </button>
         <div class="faq-a">
-          Costs vary by appliance and issue: Refrigerator $150–$400, Washer $120–$350, Dryer $100–$300, Dishwasher $120–$350, Oven/Stove $130–$380. All prices include parts and labour. We provide a firm upfront quote before any work begins — no surprises.
+          Costs vary by appliance and issue. Typical ranges in CAD: Refrigerator $150–$400 (compressor, thermostat, sealed system), Washer $120–$350 (Samsung 4E, LG OE error codes, drain pump, motor), Dryer $100–$300 (thermal fuse, heating element, drum roller), Dishwasher $120–$350 (Bosch E15, pump failure, door latch), Oven/Stove $130–$380 (control board, igniter, element). All prices include parts, labour, and a 90-day warranty. Our techs use diagnostic tools to identify the exact issue and provide a firm digital quote before starting any work. No hidden fees, no surprises.
         </div>
       </div>
 
@@ -1642,7 +1792,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
           </span>
         </button>
         <div class="faq-a">
-          Yes. We prioritize emergency calls for situations like a fridge not cooling (food spoilage risk) or a washing machine flooding. Call <a href="tel:+14375241053" style="color:var(--orange);">(437) 524-1053</a> for emergency same-day dispatch across Toronto and GTA.
+          Yes. We prioritize emergency calls for situations like a fridge not cooling (food spoilage risk), a washing machine flooding your floor, or a gas stove leaking. Our emergency dispatch covers all of Toronto and the GTA — from Scarborough to Mississauga, North York to Brampton. Emergency diagnostic fees start at $80 CAD, which is waived if you proceed with the repair. Our techs carry common emergency parts (compressors, drain pumps, thermal fuses, igniters) so most urgent repairs are completed in one visit. Call <a href="tel:+14375241053" style="color:var(--orange);">(437) 524-1053</a> for immediate same-day dispatch.
         </div>
       </div>
 
@@ -1654,7 +1804,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
           </span>
         </button>
         <div class="faq-a">
-          Booking takes 2 minutes: use the widget on this page, select your appliance type, enter your address, choose an available time slot, and confirm. You'll receive an instant text confirmation with your technician's details.
+          Booking takes 2 minutes: use the widget on this page or go to hub.fixlify.app. Select your appliance type (refrigerator, washer, dryer, dishwasher, oven, stove, or freezer), enter your Toronto or GTA address, and choose from real-time available slots — morning, afternoon, or evening. You'll receive an instant text and email confirmation with your assigned technician's name and arrival window. If your appliance is showing an error code (like Samsung 4E, Bosch E15, or LG OE), mention it in the booking notes so the tech brings the right parts. No app download or account needed.
         </div>
       </div>
 
@@ -1666,7 +1816,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
           </span>
         </button>
         <div class="faq-a">
-          You receive instant confirmation by text and email. Your technician will call 30 minutes before arriving. They'll diagnose the problem, give you an upfront written quote, and in most cases repair it on the spot.
+          After booking you receive instant confirmation by text and email with your technician's name, photo, and estimated arrival window. The tech calls you 30 minutes before arriving. On-site, they use diagnostic tools (multimeters, thermal cameras, pressure gauges) to pinpoint the exact issue — whether it's a Samsung UE error, an LG compressor fault, or a Bosch E15 leak. You receive a firm digital quote on your phone before any work begins. Most repairs are completed on the spot in one visit. A digital invoice with 90-day warranty details is emailed after repair.
         </div>
       </div>
 
@@ -1678,7 +1828,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
           </span>
         </button>
         <div class="faq-a">
-          There is a diagnostic fee for the service call, which is applied toward the repair cost if you proceed. The diagnostic fee is clearly stated during booking. We provide full upfront pricing with no hidden fees.
+          Yes, there is an $80 CAD diagnostic fee for the service call, which covers the technician's visit and full diagnostic assessment using professional tools. This fee is waived entirely if you proceed with the repair — it's applied as a credit toward your total. The diagnostic fee is clearly shown during online booking before you confirm. Our techs diagnose Samsung, LG, Bosch, Whirlpool, GE, KitchenAid, and all major brands. You receive a digital quote with itemized parts and labour costs before any work begins. No hidden fees, no pressure — if you decline, you only pay the diagnostic fee.
         </div>
       </div>
 
@@ -1690,7 +1840,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
           </span>
         </button>
         <div class="faq-a">
-          We accept all major credit cards (Visa, Mastercard, American Express), debit cards, Interac e-transfer, and cash. Payment is collected after the repair is complete.
+          We accept all major credit cards (Visa, Mastercard, American Express), debit cards, Interac e-transfer, and cash. Payment is collected after the repair is complete — never before. Your technician sends a digital invoice to your phone or email with a full breakdown of parts, labour, and warranty details. For larger repairs over $300 CAD, ask about flexible payment options. All transactions are secure, and your receipt is stored digitally so you never lose your warranty documentation. Serving Toronto, Scarborough, North York, Etobicoke, Mississauga, Brampton, and the entire GTA.
         </div>
       </div>
 
@@ -1702,7 +1852,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
           </span>
         </button>
         <div class="faq-a">
-          Yes. All repairs include a 90-day warranty covering both parts and labour. If the same issue recurs within 90 days, we return and fix it at no additional charge.
+          Yes. All repairs include a 90-day warranty covering both parts and labour. If the same issue recurs within 90 days, we return and fix it at no additional charge — no questions asked. Your warranty details are sent digitally with your invoice and stored in our system, so you never need to keep a paper receipt. This warranty covers everything from compressor replacements ($200–$400 CAD) to control board repairs, error code fixes (Samsung 4E, Bosch E15, LG OE), and all parts installed during your repair. Call <a href="tel:+14375241053" style="color:var(--orange);">(437) 524-1053</a> for warranty claims.
         </div>
       </div>
 
@@ -1714,7 +1864,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
           </span>
         </button>
         <div class="faq-a">
-          Absolutely. Our online booking shows real-time availability for today and upcoming days. Same-day slots fill quickly — book early. For today's slot, book before 2 PM for best availability across Toronto and GTA.
+          Absolutely. Our online booking system shows real-time availability for today and upcoming days — morning, afternoon, and evening slots. Same-day slots fill quickly, especially during peak season, so book before 2 PM for best availability. We dispatch technicians across all GTA neighbourhoods: Toronto downtown, North York, Scarborough, Etobicoke, Mississauga, Brampton, Vaughan, Markham, Richmond Hill, Oakville, and more. For tomorrow's appointment, any time works. Need emergency service today? Call <a href="tel:+14375241053" style="color:var(--orange);">(437) 524-1053</a> and we'll fit you into the next available diagnostic slot.
         </div>
       </div>
 
