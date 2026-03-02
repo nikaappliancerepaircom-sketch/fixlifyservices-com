@@ -457,15 +457,22 @@ body::before {
 }
 
 .tech-avatar {
-  width: 80px; height: 80px;
+  width: 96px; height: 96px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--orange-dim), var(--cyan-dim));
   border: 2px solid rgba(255,107,53,0.3);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 32px;
   margin: 0 auto 16px;
+  overflow: hidden;
+}
+.tech-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
 }
 
 .tech-name {
@@ -870,7 +877,7 @@ body::before {
 
     <div class="tech-grid">
       <div class="tech-card glass-card reveal">
-        <div class="tech-avatar" aria-hidden="true">👨‍🔧</div>
+        <div class="tech-avatar"><img src="/img/team-fx-alex.jpg" alt="Alex M. - Lead Technician" loading="lazy" /></div>
         <div class="tech-name">Alex M.</div>
         <div class="tech-role">Lead Technician</div>
         <p class="tech-bio">Alex brings 14 years of hands-on experience and specializes in refrigeration systems and premium European brands like Miele, Bosch, and Liebherr. He oversees quality standards across the team and handles the most technically challenging diagnostic cases in Toronto and the GTA.</p>
@@ -882,7 +889,7 @@ body::before {
       </div>
 
       <div class="tech-card glass-card reveal">
-        <div class="tech-avatar" aria-hidden="true">👩‍🔧</div>
+        <div class="tech-avatar"><img src="/img/team-fx-maria.jpg" alt="Maria S. - Senior Technician" loading="lazy" /></div>
         <div class="tech-name">Maria S.</div>
         <div class="tech-role">Senior Technician</div>
         <p class="tech-bio">Maria is our laundry systems expert with a decade of field work across Samsung, LG, Whirlpool, and Kenmore washers and dryers. She maintains a first-visit resolution rate above 95 percent and is trained on the latest smart washer control board diagnostics.</p>
@@ -894,7 +901,7 @@ body::before {
       </div>
 
       <div class="tech-card glass-card reveal">
-        <div class="tech-avatar" aria-hidden="true">👨‍🔧</div>
+        <div class="tech-avatar"><img src="/img/team-fx-david.jpg" alt="David K. - Appliance Technician" loading="lazy" /></div>
         <div class="tech-name">David K.</div>
         <div class="tech-role">Appliance Technician</div>
         <p class="tech-bio">David is our cooking and dishwasher specialist with 7 years repairing gas and electric ovens, cooktops, stoves, and dishwashers. TSSA-licensed for gas work in Ontario, he is known for taking the time to explain repair options and help homeowners make informed decisions.</p>
