@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Field Service Management for Appliance Repair Companies | Fixlify</title>
+<meta name="description" content="How Fixlify field service management software helps appliance repair companies manage dispatch, scheduling, invoicing, customer communication, and lead pipelines — from solo operators to multi-tech shops.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://fixlifyservices.com/for-businesses">
+
+<meta property="og:title" content="Field Service Management for Appliance Repair Companies | Fixlify">
+<meta property="og:description" content="Fixlify is purpose-built field service management software for appliance repair businesses. AI Dispatcher, online booking, job management, CRM, invoicing, and automated communications.">
+<meta property="og:url" content="https://fixlifyservices.com/for-businesses">
+<meta property="og:type" content="article">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/tokens.css">
+
+<style>
+  :root { --fx-font-head: 'Outfit', sans-serif; --fx-font-body: 'Plus Jakarta Sans', sans-serif; }
+  *, *::before, *::after { box-sizing: border-box; }
+  body { font-family: var(--fx-font-body); color: #E8F4FD; line-height: 1.7; margin: 0; background: #030810; }
+
+  .biz-hero { background: linear-gradient(135deg, #030810 0%, #0a1628 60%, #0d1f40 100%); color: #fff; padding: 80px 24px 64px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.06); position: relative; }
+  .biz-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(0,194,255,0.07), transparent); pointer-events: none; }
+  .biz-hero .label { display: inline-block; border: 1px solid rgba(255,107,53,0.4); background: rgba(255,107,53,0.08); color: #FF6B35; font-family: var(--fx-font-head); font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; padding: 5px 18px; border-radius: 100px; margin-bottom: 24px; }
+  .biz-hero h1 { font-family: var(--fx-font-head); font-size: clamp(28px, 5vw, 52px); font-weight: 800; margin: 0 0 16px; line-height: 1.1; letter-spacing: -0.02em; }
+  .biz-hero h1 span { color: #FF6B35; }
+  .biz-hero p { font-size: 18px; color: rgba(232,244,253,0.6); max-width: 640px; margin: 0 auto 36px; }
+  .biz-cta-btn { display: inline-block; background: #FF6B35; color: #000; font-family: var(--fx-font-head); font-weight: 800; font-size: 15px; padding: 14px 32px; border-radius: 100px; text-decoration: none; transition: background 0.2s, box-shadow 0.2s; }
+  .biz-cta-btn:hover { background: #ff8050; box-shadow: 0 0 30px rgba(255,107,53,0.4); }
+
+  .biz-container { max-width: 860px; margin: 0 auto; padding: 60px 24px; }
+  .biz-container h2 { font-family: var(--fx-font-head); font-size: 26px; font-weight: 800; color: #E8F4FD; margin: 52px 0 12px; letter-spacing: -0.02em; }
+  .biz-container h3 { font-family: var(--fx-font-head); font-size: 20px; font-weight: 700; color: #E8F4FD; margin: 36px 0 10px; }
+  .biz-container p { margin: 0 0 16px; color: rgba(232,244,253,0.65); }
+  .biz-container ul { color: rgba(232,244,253,0.65); padding-left: 20px; margin: 0 0 16px; }
+  .biz-container ul li { margin-bottom: 10px; }
+  .biz-container a { color: #00C2FF; }
+
+  .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; margin: 36px 0; }
+  .feature-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 24px; transition: border-color 0.2s; }
+  .feature-card:hover { border-color: rgba(255,107,53,0.3); }
+  .feature-card .icon { font-size: 26px; margin-bottom: 12px; }
+  .feature-card h4 { font-family: var(--fx-font-head); font-size: 15px; font-weight: 700; color: #E8F4FD; margin: 0 0 6px; }
+  .feature-card p { font-size: 13px; color: rgba(232,244,253,0.45); margin: 0; line-height: 1.55; }
+
+  .stat-row { display: flex; gap: 16px; flex-wrap: wrap; margin: 32px 0; }
+  .stat-box { flex: 1; min-width: 140px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 20px 16px; text-align: center; }
+  .stat-box .val { font-family: var(--fx-font-head); font-size: 32px; font-weight: 800; color: #00C2FF; line-height: 1; margin-bottom: 6px; }
+  .stat-box .lbl { font-size: 12px; color: rgba(232,244,253,0.4); text-transform: uppercase; letter-spacing: 0.8px; font-weight: 600; }
+
+  blockquote { border-left: 3px solid #FF6B35; margin: 32px 0; padding: 18px 24px; background: rgba(255,107,53,0.05); border-radius: 0 10px 10px 0; font-style: italic; color: rgba(232,244,253,0.8); }
+
+  .workflow-list { list-style: none; padding: 0; margin: 20px 0; counter-reset: step; }
+  .workflow-list li { counter-increment: step; display: flex; align-items: flex-start; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.05); color: rgba(232,244,253,0.7); }
+  .workflow-list li::before { content: counter(step); display: flex; align-items: center; justify-content: center; min-width: 30px; height: 30px; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); border-radius: 50%; font-family: var(--fx-font-head); font-weight: 800; font-size: 13px; color: #FF6B35; flex-shrink: 0; margin-top: 2px; }
+  .workflow-list li strong { display: block; color: #E8F4FD; font-size: 15px; margin-bottom: 3px; }
+
+  .biz-cta-box { background: linear-gradient(135deg, rgba(255,107,53,0.12), rgba(0,194,255,0.08)); border: 1px solid rgba(255,107,53,0.2); border-radius: 18px; padding: 48px 40px; text-align: center; margin: 52px 0 0; }
+  .biz-cta-box h2 { color: #E8F4FD; margin-top: 0; font-family: var(--fx-font-head); font-size: 30px; }
+  .biz-cta-box p { color: rgba(232,244,253,0.6); font-size: 17px; }
+  .biz-cta-box a { display: inline-block; background: #FF6B35; color: #000; font-family: var(--fx-font-head); font-weight: 800; font-size: 16px; padding: 15px 36px; border-radius: 100px; text-decoration: none; margin-top: 20px; transition: background 0.2s, box-shadow 0.2s; }
+  .biz-cta-box a:hover { background: #ff8050; box-shadow: 0 0 30px rgba(255,107,53,0.4); }
+  .biz-cta-note { font-size: 13px; color: rgba(232,244,253,0.35); margin-top: 14px; }
+
+  @media (max-width: 600px) { .biz-hero { padding: 48px 16px 48px; } .biz-container { padding: 40px 16px; } .biz-cta-box { padding: 32px 20px; } .stat-row { gap: 10px; } }
+</style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+<script src="/includes/header-loader.js" defer></script>
+
+<section class="biz-hero">
+    <span class="label">For Business Owners</span>
+    <h1>Field Service Management<br>for <span>Appliance Repair</span> Companies</h1>
+    <p>How appliance repair businesses stop losing jobs to missed calls, reduce admin overhead, and scale without chaos — using Fixlify field service software.</p>
+    <a href="https://fixlify.app" target="_blank" rel="nofollow" class="biz-cta-btn">Try Fixlify Free &rarr;</a>
+</section>
+
+<div class="biz-container">
+
+    <p>If you're here because you run an appliance repair business and you're looking for software to help manage it, this page is for you. We know the field service space — we're in it — and we've seen firsthand how the right tools change what a repair operation can do.</p>
+
+    <p>This isn't a generic software review. It's a practical breakdown of what Fixlify does, why it matters for appliance repair specifically, and what kind of impact you can realistically expect from adopting it.</p>
+
+    <div class="stat-row">
+        <div class="stat-box"><div class="val">0%</div><div class="lbl">Missed leads with AI Dispatcher</div></div>
+        <div class="stat-box"><div class="val">35%</div><div class="lbl">Avg. online bookings increase</div></div>
+        <div class="stat-box"><div class="val">3x</div><div class="lbl">More reviews with auto follow-up</div></div>
+        <div class="stat-box"><div class="val">2 hrs</div><div class="lbl">Daily admin time saved</div></div>
+    </div>
+
+    <h2>Why Appliance Repair Needs Purpose-Built Software</h2>
+
+    <p>Appliance repair has specific operational requirements that generic CRM tools or project management apps don't address well. You're dealing with same-day or next-day service windows. Parts availability affects job scheduling. Brand-specific warranty terms affect what you can charge. Technician routes need to be efficient across a geographic service area. Diagnostic fees need to be collected at the door, not after the fact.</p>
+
+    <p>Software built for sales teams or software adapted from HVAC or plumbing solves some of these problems but not all of them. Fixlify was built for field service businesses — appliance repair among them — and that specificity shows in how the workflows are structured.</p>
+
+    <h2>The Fixlify Platform: What It Does</h2>
+
+    <h3>AI Dispatcher — Capture Every Lead Automatically</h3>
+    <p>The AI Dispatcher is the most transformative feature for most appliance repair businesses. Here's the core problem it solves: customers call when technicians are in the middle of jobs, during hours when staff aren't available, or they submit online inquiries that get buried in email. Every missed contact is a lost job.</p>
+
+    <p>The AI Dispatcher captures every call and online inquiry. It extracts the relevant information — appliance type, brand, problem description, customer location, preferred time window — and creates a structured job record. For multi-tech operations, it routes the inquiry to the right technician based on availability, location, and job type. You stop competing on who answers the phone first and start winning on who actually does the best repair work.</p>
+
+    <h3>Online Booking for Modern Customers</h3>
+    <p>A growing segment of appliance repair customers prefer self-service booking over calling. An embeddable Fixlify widget lets customers book online, pick a time slot, describe their problem, and enter their appliance details — all without calling. The job appears in your system fully structured and ready for dispatch. For technicians, this means arriving at jobs with complete information: model number, problem description, address, and confirmed appointment time.</p>
+
+    <h3>End-to-End Job Management</h3>
+    <p>Job management in Fixlify covers the complete lifecycle:</p>
+
+    <ol class="workflow-list">
+        <li><strong>Inquiry captured</strong> Call, online request, or walk-in — all routes create a record.</li>
+        <li><strong>Job created and assigned</strong> Technician assigned based on skills, location, and availability.</li>
+        <li><strong>Customer notified</strong> Automatic SMS confirmation and reminder sent.</li>
+        <li><strong>Technician dispatched</strong> On-my-way notification sent to customer automatically.</li>
+        <li><strong>On-site updates</strong> Tech updates job status from mobile app in real time.</li>
+        <li><strong>Parts ordered (if needed)</strong> Parts request tied to job. Return visit scheduled automatically.</li>
+        <li><strong>Job completed</strong> Tech marks complete. Invoice auto-generates. Payment collected on-site.</li>
+        <li><strong>Review requested</strong> Automated follow-up SMS/email sent after completion.</li>
+    </ol>
+
+    <h3>Customer CRM That Builds Long-Term Value</h3>
+    <p>Every customer in Fixlify has a persistent profile. Every appliance they've had serviced is recorded. When a customer calls back — whether it's a warranty question sixty days later or a second appliance two years down the road — you have their complete history in front of you before the conversation starts.</p>
+
+    <p>For repeat business and referrals, this kind of institutional memory matters. Customers who feel recognized and valued refer more people. They're also easier to upsell on preventive maintenance or extended service plans when you can show them a clear history of what you've done for them.</p>
+
+    <h3>Invoicing and Payment That Close the Loop</h3>
+    <p>Appliance repair businesses lose money in two common ways: diagnostic fees that aren't collected because the collection process is awkward, and invoices that go out late because someone has to manually compile the job details after the fact. Fixlify's invoicing module auto-generates invoices when jobs are marked complete, with the correct line items already populated. Technicians can collect payment on-site via the mobile app — cash or card. Diagnostic fees become frictionless to collect.</p>
+
+    <h3>Automated SMS and Email Communication</h3>
+    <p>Appointment confirmations, reminders, on-my-way notifications, and post-job review requests all run automatically. You configure them once and they run without intervention. The review request automation alone consistently multiplies the monthly review volume for shops that implement it — and in local search, review volume and recency are among the most important ranking signals. More reviews from more satisfied customers in your service area means better visibility when someone searches for appliance repair near them.</p>
+
+    <h3>Lead Pipeline Management</h3>
+    <p>Not every inquiry converts to a booked job immediately. Some customers are getting multiple quotes. Some are waiting to see if their landlord will cover the repair. Some need time to decide between repair and replacement. Fixlify's lead pipeline tracks those conversations so they don't disappear. You follow up at the right time. More warm leads convert. Less revenue is lost to leads that went cold because no one remembered to call back.</p>
+
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="icon">🤖</div>
+            <h4>AI Dispatcher</h4>
+            <p>Captures every inquiry, extracts job details, routes to the right technician automatically.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">📅</div>
+            <h4>Online Booking</h4>
+            <p>Self-service widget. Customers book and confirm; job records create themselves.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🗂️</div>
+            <h4>Job Management</h4>
+            <p>Full lifecycle from inquiry to invoice. Real-time mobile updates from technicians.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">👥</div>
+            <h4>CRM</h4>
+            <p>Full customer and appliance history. Every context, always at hand.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🧾</div>
+            <h4>Invoicing</h4>
+            <p>Auto-generated invoices on job completion. On-site card and cash payment for techs.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">💬</div>
+            <h4>SMS & Email</h4>
+            <p>Automated reminders, dispatch alerts, and review requests. Runs itself.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">📊</div>
+            <h4>Lead Pipeline</h4>
+            <p>Track unconverted leads. Follow up at the right time. Close more of what you've already earned.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">📍</div>
+            <h4>Multi-Area Dispatch</h4>
+            <p>Route jobs efficiently across your entire service area. Built for multi-tech operations.</p>
+        </div>
+    </div>
+
+    <h2>Who Fixlify Is Right For</h2>
+
+    <p>Fixlify works across the range of appliance repair operation sizes:</p>
+
+    <ul>
+        <li><strong>Solo operators and new businesses:</strong> Build professional habits and systems from day one. The AI Dispatcher and automated communications make a one-person operation look and run like a larger company.</li>
+        <li><strong>Growing shops with 2-6 technicians:</strong> This is where Fixlify has the most immediate impact. The real-time job visibility, structured dispatch, and automated invoicing address the exact pain points that growth creates.</li>
+        <li><strong>Established multi-tech operations:</strong> Clean data, reliable systems, and a CRM that represents your real customer base make the business easier to manage, delegate, and eventually scale or sell.</li>
+    </ul>
+
+    <blockquote>
+        Field service is a coordination game. The best technician in your market won't consistently beat a competitor with average technicians and excellent coordination. Fixlify fixes the coordination layer.
+    </blockquote>
+
+    <h2>Implementation: What to Expect</h2>
+
+    <p>Getting started with Fixlify involves connecting your inbound phone line to the AI Dispatcher (or setting up a new number), embedding the booking widget on your website, and onboarding your technicians to the mobile app. The initial setup for a small operation typically takes one to two days. Most shops see the first meaningful results — fewer missed leads, cleaner job tracking — within the first week of use.</p>
+
+    <p>The review automation impact takes a few weeks to accumulate, but once it's running it operates indefinitely without any additional effort on your part.</p>
+
+    <p>Fixlify offers a free trial. There's no long-term contract required to get started. If you're running an appliance repair business and you're not using dedicated field service software yet — or if the software you're using wasn't built for this type of operation — it's worth spending an hour looking at what Fixlify can do for you.</p>
+
+    <div class="biz-cta-box">
+        <h2>Ready to Run a Tighter Operation?</h2>
+        <p>Fixlify is purpose-built field service management for appliance repair companies. AI Dispatcher, online booking, job management, CRM, invoicing, and automated communications — everything you need in one platform.</p>
+        <a href="https://fixlify.app" target="_blank" rel="nofollow">Get Started Free at Fixlify.app &rarr;</a>
+        <p class="biz-cta-note">No long-term contract required. Free trial available.</p>
+    </div>
+
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="/includes/footer-loader.js" defer></script>
+
+</body>
+</html>
