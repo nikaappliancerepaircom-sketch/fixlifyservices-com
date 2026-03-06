@@ -148,10 +148,8 @@ for (const file of files) {
     }
   }
 
-  // Step 5: Replace shared template sections in dishwasher-installation pages
-  if (file.startsWith('dishwasher-installation-')) {
-    html = replaceSharedSections(html, city);
-  }
+  // Step 5: Replace shared template sections (works on any page type, regex skips if not found)
+  html = replaceSharedSections(html, city);
 
   if (insertionDone) {
     fs.writeFileSync(filePath, html, 'utf-8');
@@ -172,19 +170,87 @@ if (fails.length) { console.log(`\nNot matched (${fails.length}):`); fails.slice
 
 function buildUniqueBlock(city, svc) {
   const n = city.neighborhoods;
+  const cn = city.name;
   const capSvc = svc.charAt(0).toUpperCase() + svc.slice(1);
+  const ps = 'margin:0 0 14px;color:#374151;line-height:1.7;font-size:0.9375rem;';
+
+  // Murmur-inspired hash for better distribution
+  let pickIdx = 0;
+  function mixHash(str, seed) {
+    let h = seed | 0;
+    for (let i = 0; i < str.length; i++) {
+      h = Math.imul(h ^ str.charCodeAt(i), 0x5bd1e995);
+      h ^= h >>> 15;
+    }
+    return h >>> 0;
+  }
+  const pick = (arr) => {
+    const idx = pickIdx++;
+    return arr[mixHash(cn + svc, idx * 0x9e3779b9) % arr.length];
+  };
+
+  // ─── Variant pools: different sentence structures per city ───
+  const p1variants = [
+    `Fixlify covers ${cn} with a transparent $65 diagnostic — ${n.slice(0,3).join(', ')}, and nearby areas all within our daily route. The technician inspects the problem, walks you through the findings, and hands you a line-item quote before picking up a tool. ${cn} homeowners with ${city.housing} rely on this process because there are zero surprise charges on the final invoice. Serving ${city.population} residents across ${city.area}, our dispatch system holds 2-4 hour arrival windows for every ${cn} booking.`,
+    `${cn} residents from ${n[0]} to ${n[2]} book Fixlify knowing every ${svc} call starts at $65 for the diagnostic and never goes higher without approval. Our technician examines the unit, identifies the root cause, and quotes parts and labour separately so you can compare options. Across ${city.area}'s ${city.population} households, we run dedicated ${cn} service routes that keep arrival windows under four hours on same-day requests.`,
+    `Every ${svc} appointment in ${cn} starts with a $65 flat-rate diagnostic. Our technician arrives at your ${n[0]} or ${n[1]} address, inspects the appliance, and provides a written breakdown of what the repair involves and what it costs. ${cn} homeowners with ${city.housing} appreciate that the diagnostic fee applies toward the repair if you approve the work. With ${city.population} residents across ${city.area}, our ${cn} scheduling keeps arrival windows tight — typically two to four hours from the time you book.`,
+    `Homeowners in ${cn}'s ${n[0]}, ${n[1]}, and ${n.length>4?n[4]:n[2]} neighbourhoods call Fixlify because we lead with honesty: $65 diagnostic, upfront quote, zero hidden fees. The technician arrives, runs a systematic check on the unit, and explains exactly what failed and why. You approve the quote or pay only the diagnostic — no pressure, no upselling. Our ${cn} routes through ${city.area} run daily, with ${city.population} residents in the service zone getting 2-4 hour arrival windows.`,
+  ];
+
+  const p2variants = [
+    `${cn}'s building stock shapes every ${svc} call we take. ${city.waterNote}. Technicians assigned to ${cn} know the ${city.era}-era construction and carry the exact parts, fittings, and diagnostic equipment these homes demand. That preparation produces higher first-visit completion rates and eliminates the repeat trips that frustrate homeowners and inflate costs.`,
+    `The infrastructure in ${cn} directly affects ${svc} outcomes. ${city.waterNote}. Our ${cn} crew understands the ${city.era} housing patterns and stocks the specific components these properties require. This targeted inventory means faster diagnosis, fewer callbacks, and lower overall costs for ${cn} homeowners compared to companies dispatching generalists with no knowledge of ${city.area} conditions.`,
+    `What makes ${svc} in ${cn} different from other markets is the housing. ${city.waterNote}. Fixlify technicians working ${cn} routes know the ${city.era}-era layouts intimately and bring purpose-selected parts and tools for the appliance configurations most common in ${n[0]}, ${n[1]}, and surrounding streets. The result: more problems solved on the first visit and fewer parts-related delays.`,
+    `Understanding ${cn}'s physical environment is central to quality ${svc} work. ${city.waterNote}. Because our ${cn} technicians service ${city.housing} daily, they arrive already knowing the common failure points, wiring standards, and plumbing quirks of ${city.era}-era construction. This local fluency converts directly into shorter appointment times and higher success rates across ${city.area}.`,
+  ];
+
+  const p3variants = [
+    `${city.localIssue}. Every completed ${svc} job in ${cn} comes with a 90-day parts and labour guarantee, a digital service summary emailed before our technician leaves, and live GPS tracking from the moment we dispatch. ${cn} households get the same service standard as downtown clients — at the same price, with the same warranty.`,
+    `${city.localIssue}. After finishing ${svc} work at your ${cn} property, we issue a digital report documenting the diagnosis, parts used, and warranty terms. The 90-day workmanship guarantee covers every component we install. From dispatch to departure, ${cn} customers get real-time tracking updates so you know exactly when your technician will arrive.`,
+    `${city.localIssue}. ${cn} customers receive a 90-day warranty on parts and labour, a digital service report accessible from any device, and GPS-based arrival tracking throughout the appointment window. We built this process specifically for ${city.area} homeowners who expect full accountability from their service providers.`,
+    `${city.localIssue}. Once the ${svc} is complete at your ${cn} home, you receive an emailed service report with diagnosis details, replacement parts listed by model number, and your 90-day warranty confirmation. We dispatch to ${cn} with live tracking enabled so you can follow your technician's approach in real time.`,
+  ];
+
+  const p4variants = [
+    `What separates Fixlify from other ${svc} companies operating in ${cn} is preparation. When our technician pulls up to your ${n[0]} or ${n[1]} property, they already know the standard plumbing layouts and electrical configurations found in ${cn}'s ${city.housing}. That familiarity translates into faster root-cause identification and more precise estimates. If a part needs to be ordered, we schedule the return visit at no additional charge — the follow-up is built into your original quote.`,
+    `${cn} homeowners pick Fixlify for three reasons: we know ${city.area} housing, we quote honestly, and we stand behind our work. A technician arriving in ${n[0]} or ${n[2]} already understands the plumbing and electrical patterns typical of ${cn}'s ${city.housing}. That knowledge eliminates guesswork, shortens diagnosis, and produces quotes that match the final bill. If we need to source a part, the return trip costs you nothing extra.`,
+    `For ${cn} residents, choosing Fixlify means choosing a company that invests in local expertise. Our technicians servicing ${n[0]}, ${n[1]}, and ${n.length>3?n[3]:n[2]} maintain detailed knowledge of the appliance brands, wiring vintages, and plumbing configurations prevalent across ${cn}'s ${city.housing}. The outcome is measurably faster diagnosis and reliable first-quote accuracy. Return visits for ordered parts are included at no added cost — a policy our ${cn} customers regularly cite as the reason they rebook.`,
+    `The Fixlify advantage in ${cn} comes from specialisation. Our technicians running ${city.area} routes have handled thousands of ${svc} calls in ${cn}'s ${city.housing}, building pattern-recognition that generalist companies cannot match. When they step into your ${n[0]} or ${n[1]} kitchen, the diagnosis is faster because they have seen the same model, same wiring, same plumbing many times before. If a part is not on the truck, we order it and return within 48 hours at no extra service charge.`,
+  ];
+
+  const p5variants = [
+    `Our ${svc} territory in ${cn} covers every pocket of ${city.area}: ${n.join(', ')}, and every street in between. Each ${cn} service vehicle carries a parts inventory selected from analysis of the appliance brands and common failures we encounter across this market. Specifically for ${svc}, our ${cn} completion rate on the initial appointment exceeds 85 percent. When we do need to order a component, we have it within 48 hours and return without adding a second service fee.`,
+    `Fixlify dispatches to every part of ${cn} — ${n.slice(0,3).join(', ')}, ${n.length>3?n[3]+',':''} and beyond. Our service vehicles carry a locally curated parts selection based on ${cn}'s most common appliance models and documented failure patterns. For ${svc} specifically, more than 85 percent of ${cn} appointments end with the job finished on the same visit. Parts that need ordering arrive within two business days, and the installation visit carries no additional fee.`,
+    `From ${n[0]} to ${n[n.length-1]}, Fixlify's ${cn} coverage is complete. We stock each service vehicle with parts selected from data on the appliance brands most installed in ${cn}'s ${city.housing}. This data-driven approach means our ${svc} first-visit success rate across ${cn} stays above 85 percent. For the small percentage of calls requiring a special-order part, we source and install within 48 hours — no repeat service charge.`,
+    `${cn} ${svc} service extends across all of ${city.area}: ${n.slice(0,4).join(', ')}, and every adjacent neighbourhood. The parts inventory on each ${cn}-bound vehicle reflects thousands of past service calls — we know which brands break, which components fail, and what tools are needed before we arrive. This produces a first-appointment completion rate above 85 percent for ${svc} across ${cn}. On the rare occasion we need to order a part, it arrives within two days and the follow-up appointment is free.`,
+  ];
+
+  const p6variants = [
+    `Most ${svc} calls from ${cn} homeowners involve units between three and eight years old. At this age, appliances have outlived their factory warranty but still have years of reliable service ahead. Targeted component replacement at $150-$250 is nearly always better economics than a $700-$1,100 new unit. We lay out both paths transparently: repair cost, expected remaining lifespan, and new-unit pricing. When a machine is genuinely beyond saving, we say so plainly — we would rather give you straight advice and earn a customer for life than sell a repair that will not last.`,
+    `The typical ${cn} ${svc} request involves a unit that is four to seven years old — past the manufacturer's coverage but nowhere near end of life. For these appliances, component-level repair at $140-$280 almost always makes better financial sense than spending $800-$1,200 on a replacement. We explain both options clearly, including expected remaining lifespan after repair. If the machine has reached the point where repair would be wasteful, our technician tells you directly. Honest recommendations build the trust that keeps ${cn} families rebooking Fixlify year after year.`,
+    `${cn} households most frequently call us for ${svc} on appliances in the four-to-nine-year range. These units sit in the sweet spot where factory warranties have expired but the machine still has significant useful life remaining. A $160-$300 repair that extends the unit's life by five to seven years beats purchasing a new $900-$1,300 appliance by any measure. We present the numbers honestly and let you choose. When an appliance is genuinely done, our technician says so — we prefer losing one repair fee to losing your trust.`,
+    `In ${cn}, the bulk of our ${svc} work involves appliances aged three to ten years. These are machines worth fixing: the components that typically fail — motors, pumps, control boards, heating elements — cost a fraction of a new appliance and restore the unit to full function. We quote the repair, explain the expected lifespan after the fix, and let you compare against replacement cost. If the math does not support a repair, we tell you before charging anything beyond the $65 diagnostic. ${cn} homeowners value this honesty.`,
+  ];
+
+  const p7variants = [
+    `Schedule ${svc} in ${cn} through our online portal — pick your appliance type, select a time slot, and get confirmation within seconds. ${cn} availability runs Monday to Saturday from 8 AM until 8 PM, and Sunday 9 AM to 6 PM. Morning slots for urgent work in ${n[0]} and other ${cn} neighbourhoods are released daily at 7 AM. Reach us at (437) 524-1053 if you prefer voice booking. Every appointment includes GPS-based arrival tracking.`,
+    `Booking ${svc} in ${cn} takes under two minutes on our website. Choose the appliance category, select a day and time that works for your ${n[0]} or ${n[1]} schedule, and receive instant digital confirmation. Our ${cn} technicians work Monday through Saturday 8 AM to 8 PM, with Sunday hours from 9 AM to 6 PM. Same-day openings appear each morning for ${cn} residents who need fast turnaround. Phone bookings at (437) 524-1053 include the same live arrival tracking.`,
+    `To book ${svc} in ${cn}, visit our scheduling page — select the appliance, choose your preferred time, and confirm. Done in under 120 seconds. ${cn} service hours: Monday-Saturday 8 AM-8 PM, Sunday 9 AM-6 PM. Urgent slots for ${n[0]}, ${n[1]}, and all ${cn} areas are posted every morning by 7 AM. You can also call (437) 524-1053 for same-day scheduling. GPS tracking is active from the moment dispatch confirms your appointment.`,
+    `Ready to book? ${cn} ${svc} appointments are available online — select appliance type, pick a slot, confirm. The whole process takes about ninety seconds. We service ${cn} Monday through Saturday from 8 AM to 8 PM and Sunday from 9 AM until 6 PM. Same-day openings for ${n[0]} and neighbouring areas appear each morning. Call (437) 524-1053 for phone booking with real-time schedule availability. All ${cn} appointments include live technician tracking.`,
+  ];
+
   const L = [];
   L.push(`<!-- UNIQUE-CITY-CONTENT -->`);
   L.push(`<div class="city-context" style="background:#F0F9FF;border-radius:8px;padding:24px 28px;margin:24px 0;">`);
-  L.push(`<h3 style="font-size:1.125rem;font-weight:700;color:#0A0A0A;margin:0 0 12px;">${capSvc} Service Across ${city.name}</h3>`);
-  L.push(`<p style="margin:0 0 14px;color:#374151;line-height:1.7;font-size:0.9375rem;">Fixlify serves ${city.name} residents across ${n.slice(0,4).join(', ')}, ${n.length>4?n[4]+',':''} and surrounding communities with a flat $65 diagnostic fee for ${svc}. No hidden charges, no upselling — our technician diagnoses the issue, explains exactly what needs to be done, and provides a written quote before any work begins. ${city.name} homeowners in ${city.housing} trust our transparent process because the price you see is the price you pay. With a population of ${city.population} across ${city.area}, we maintain dedicated service routes that ensure 2-4 hour arrival windows for same-day bookings.</p>`);
-  L.push(`<p style="margin:0 0 14px;color:#374151;line-height:1.7;font-size:0.9375rem;">Local infrastructure matters for ${svc} in ${city.name}. ${city.waterNote}. Our technicians are familiar with ${city.name}'s housing stock from the ${city.era} era and arrive prepared with the specific parts, adapters, and diagnostic tools needed for the appliance configurations common in this area. This local expertise means higher first-visit fix rates and fewer return trips — saving you time and money compared to companies that send generalist technicians unfamiliar with ${city.area}'s unique landscape.</p>`);
-  L.push(`<p style="margin:0 0 14px;color:#374151;line-height:1.7;font-size:0.9375rem;">${city.localIssue}. Every ${svc} job in ${city.name} includes our 90-day parts and labour warranty, a digital service report emailed on completion, and real-time arrival tracking from the moment your technician is dispatched. We believe ${city.name} residents deserve the same quality of ${svc} service available downtown — without the downtown pricing premium or the long wait times that come with companies that treat ${city.area} as an afterthought.</p>`);
-  L.push(`<h3 style="font-size:1.125rem;font-weight:700;color:#0A0A0A;margin:16px 0 12px;">Why ${city.name} Residents Choose Fixlify for ${capSvc}</h3>`);
-  L.push(`<p style="margin:0 0 14px;color:#374151;line-height:1.7;font-size:0.9375rem;">The difference between Fixlify and other ${svc} providers serving ${city.name} comes down to three things: local knowledge, honest pricing, and accountability. When our technician arrives at your ${n[0]} or ${n[1]} home for a ${svc} call, they already know the typical plumbing layout, electrical configuration, and appliance brands installed in ${city.name}'s ${city.housing}. That preparation translates directly into faster diagnosis and more accurate estimates. We do not charge for a second visit if we need to order a part — the follow-up is included in your original quote. Our ${city.name} customers tell us this policy alone sets Fixlify apart from competitors who charge a return trip fee every time.</p>`);
-  L.push(`<p style="margin:0 0 14px;color:#374151;line-height:1.7;font-size:0.9375rem;">Our ${svc} coverage in ${city.name} extends to every neighbourhood within ${city.area}, including ${n.join(', ')}. Technicians dispatched to ${city.name} carry a curated parts inventory based on the most common appliance brands and failure patterns documented across thousands of service calls in this market. For ${svc} specifically, our ${city.name} first-visit resolution rate exceeds 85% — meaning most jobs are completed in a single appointment without waiting for parts. When a part is not on the truck, we source it within 24-48 hours and schedule the follow-up with no additional service fee.</p>`);
-  L.push(`<p style="margin:0 0 14px;color:#374151;line-height:1.7;font-size:0.9375rem;">The most common ${svc} requests from ${city.name} homes involve appliances three to eight years old — past manufacturer warranty but well within expected service life. At this age, targeted component replacement is almost always more cost-effective than buying new. A $180 repair on a five-year-old appliance with ten more years of life is better than a $900 replacement. We present both options honestly and let you decide. When an appliance is genuinely at end of life, we tell you directly — we would rather earn your trust with honest advice than charge for a repair that fails again in six months.</p>`);
-  L.push(`<p style="margin:0;color:#374151;line-height:1.7;font-size:0.9375rem;">Book ${svc} in ${city.name} online in under two minutes — select your appliance, choose a time slot, and receive instant confirmation. Our ${city.name} technicians are available Monday through Saturday 8 AM to 8 PM and Sunday 9 AM to 6 PM. Same-day slots released each morning — check early if you need urgent ${svc} service in ${n[0]} or any other ${city.name} neighbourhood. Call (437) 524-1053 if you prefer to book by phone. All bookings include real-time arrival tracking.</p>`);
+  L.push(`<h3 style="font-size:1.125rem;font-weight:700;color:#0A0A0A;margin:0 0 12px;">${capSvc} Service Across ${cn}</h3>`);
+  L.push(`<p style="${ps}">${pick(p1variants)}</p>`);
+  L.push(`<p style="${ps}">${pick(p2variants)}</p>`);
+  L.push(`<p style="${ps}">${pick(p3variants)}</p>`);
+  L.push(`<h3 style="font-size:1.125rem;font-weight:700;color:#0A0A0A;margin:16px 0 12px;">Why ${cn} Residents Choose Fixlify for ${capSvc}</h3>`);
+  L.push(`<p style="${ps}">${pick(p4variants)}</p>`);
+  L.push(`<p style="${ps}">${pick(p5variants)}</p>`);
+  L.push(`<p style="${ps}">${pick(p6variants)}</p>`);
+  L.push(`<p style="margin:0;color:#374151;line-height:1.7;font-size:0.9375rem;">${pick(p7variants)}</p>`);
   L.push(`</div>`);
   L.push(`<!-- END-UNIQUE-CITY-CONTENT -->`);
   return '    ' + L.join('\n    ');
@@ -193,44 +259,203 @@ function buildUniqueBlock(city, svc) {
 function replaceSharedSections(html, city) {
   const n = city.neighborhoods;
   const cn = city.name;
+  const era = city.era;
+  const area = city.area;
+  const housing = city.housing;
 
-  // Replace "What Our Dishwasher Installation Service Includes"
+  // ─── 1. Replace "What Our Dishwasher Installation Service Includes" ───
   const includesRx = /<h2>What Our Dishwasher Installation Service Includes<\/h2>\s*<p>When you book dishwasher installation[\s\S]*?<\/ul>/;
   if (includesRx.test(html)) {
     html = html.replace(includesRx, `<h2>How Fixlify Handles Dishwasher Installation in ${cn}</h2>
-    <p>Dishwasher installation in ${cn}'s ${city.housing} follows a process refined across thousands of installations in ${city.area}. ${cn} homes present specific variables — ${city.waterNote} — and our technicians arrive prepared for conditions in ${n[0]}, ${n[1]}, and ${n[2]}. Here is what happens when our installer arrives at your ${cn} home:</p>
+    <p>Dishwasher installation in ${cn}'s ${housing} follows a process refined across thousands of installations in ${area}. ${cn} homes present specific variables — ${city.waterNote} — and our technicians arrive prepared for conditions in ${n[0]}, ${n[1]}, and ${n[2]}. Here is what happens when our installer arrives at your ${cn} home:</p>
     <ul>
-      <li><strong>Site assessment and old unit removal</strong> — Before touching a tool, our ${cn} installer checks water supply pressure, drain routing, and electrical circuit compatibility with your new dishwasher. If you have an old unit, we disconnect it, cap all connections, and remove it from your property. ${cn} homes from the ${city.era} era sometimes have corroded shut-off valves that we replace at no extra charge during removal.</li>
-      <li><strong>Water and drain connections for ${cn} conditions</strong> — We connect the hot water supply using braided stainless steel lines rated for ${city.area} water pressure. The drain hose gets a proper high loop under the countertop to prevent backflow — critical in ${cn} where ${city.waterNote.split(' — ')[0].toLowerCase()}. Every connection is pressure-tested before proceeding.</li>
-      <li><strong>Electrical hookup with local code compliance</strong> — Whether your ${cn} home requires hardwired or plug-in connection, our installer verifies circuit rating and tests for ground faults. ${cn} properties from the ${city.era} era sometimes need circuit upgrades that we coordinate when necessary.</li>
-      <li><strong>Precision leveling for ${cn} housing stock</strong> — Floor irregularities are common in ${cn}'s ${city.housing}. We adjust leveling feet until the unit is perfectly balanced, then secure with mounting brackets. Proper leveling extends bearing life and prevents premature door seal wear in ${cn}'s specific housing conditions.</li>
+      <li><strong>Site assessment and old unit removal</strong> — Before touching a tool, our ${cn} installer checks water supply pressure, drain routing, and electrical circuit compatibility with your new dishwasher. If you have an old unit, we disconnect it, cap all connections, and remove it from your property. ${cn} homes from the ${era} era sometimes have corroded shut-off valves that we replace at no extra charge during removal.</li>
+      <li><strong>Water and drain connections for ${cn} conditions</strong> — We connect the hot water supply using braided stainless steel lines rated for ${area} water pressure. The drain hose gets a proper high loop under the countertop to prevent backflow — critical in ${cn} where ${city.waterNote.split(' — ')[0].toLowerCase()}. Every connection is pressure-tested before proceeding.</li>
+      <li><strong>Electrical hookup with local code compliance</strong> — Whether your ${cn} home requires hardwired or plug-in connection, our installer verifies circuit rating and tests for ground faults. ${cn} properties from the ${era} era sometimes need circuit upgrades that we coordinate when necessary.</li>
+      <li><strong>Precision leveling for ${cn} housing stock</strong> — Floor irregularities are common in ${cn}'s ${housing}. We adjust leveling feet until the unit is perfectly balanced, then secure with mounting brackets. Proper leveling extends bearing life and prevents premature door seal wear in ${cn}'s specific housing conditions.</li>
       <li><strong>Complete test cycle with ${cn}-specific checks</strong> — We run a full wash cycle, inspect every connection for leaks, verify the drain pump engages, and confirm spray arms rotate freely. Your digital service report and 90-day warranty covering all workmanship are issued before we leave your ${cn} home.</li>
     </ul>`);
   }
 
-  // Replace "Common Dishwasher Types We Install"
+  // ─── 2. Replace "Common Dishwasher Types We Install" ───
   const typesRx = /<h2>Common Dishwasher Types We Install<\/h2>\s*<p>Our [\w\s]+ installers are experienced[\s\S]*?<\/ul>/;
   if (typesRx.test(html)) {
     html = html.replace(typesRx, `<h2>Dishwasher Types Popular in ${cn} Homes</h2>
-    <p>The dishwasher types installed most frequently in ${cn} reflect the neighbourhood's housing mix and homeowner priorities. ${cn}'s ${city.housing} create specific demands for different configurations, and choosing the right type for your kitchen is critical. Our ${cn} installers recommend based on actual kitchen dimensions in ${n[0]}, ${n[1]}, and surrounding areas:</p>
+    <p>The dishwasher types installed most frequently in ${cn} reflect the neighbourhood's housing mix and homeowner priorities. ${cn}'s ${housing} create specific demands for different configurations, and choosing the right type for your kitchen is critical. Our ${cn} installers recommend based on actual kitchen dimensions in ${n[0]}, ${n[1]}, and surrounding areas:</p>
     <ul>
-      <li><strong>Standard built-in 24-inch</strong> — The workhorse of ${cn} kitchens, especially in ${n[0]} and ${n[1]} homes. Samsung, LG, and Bosch are the most popular choices among ${cn} homeowners based on our installation data for ${city.area}.</li>
-      <li><strong>Panel-ready integrated models</strong> — Increasingly popular in ${cn} kitchen renovations. ${cn}'s renovation boom has made Bosch and Miele panel-ready units our fastest-growing installation category in ${city.area}. Requires precise panel alignment that general handymen often get wrong.</li>
+      <li><strong>Standard built-in 24-inch</strong> — The workhorse of ${cn} kitchens, especially in ${n[0]} and ${n[1]} homes. Samsung, LG, and Bosch are the most popular choices among ${cn} homeowners based on our installation data for ${area}.</li>
+      <li><strong>Panel-ready integrated models</strong> — Increasingly popular in ${cn} kitchen renovations. ${cn}'s renovation boom has made Bosch and Miele panel-ready units our fastest-growing installation category in ${area}. Requires precise panel alignment that general handymen often get wrong.</li>
       <li><strong>Compact 18-inch slimline</strong> — Essential for ${cn} condos, smaller homes in ${n[2]}, and secondary kitchens in basement apartments. Same connections as standard but with specialized mounting brackets that we carry for all compact models.</li>
       <li><strong>Drawer dishwashers</strong> — Fisher & Paykel units gaining traction in ${cn}'s premium kitchen market, particularly in ${n.length>3?n[3]:n[0]}. These require different mounting, drain, and electrical approaches — our installers are factory-trained on drawer dishwasher installation.</li>
     </ul>`);
   }
 
-  // Replace "Installation Types and Pricing in CITY"
+  // ─── 3. Replace "Installation Types and Pricing in CITY" ───
   const pricingRx = new RegExp('<h2>Installation Types and Pricing in ' + cn.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '</h2>\\s*<p>Dishwasher installation complexity varies[\\s\\S]*?</ul>');
   if (pricingRx.test(html)) {
     html = html.replace(pricingRx, `<h2>Dishwasher Installation Pricing for ${cn} Residents</h2>
-    <p>Installation costs in ${cn} depend on your home's existing infrastructure and job complexity. Homes in ${n[0]} and ${n[1]} with modern pre-plumbed layouts typically fall into standard installation pricing. Older ${cn} properties from the ${city.era} era or first-time installations require additional plumbing and electrical work. We provide a firm written quote specific to your ${cn} property before work begins — includes all labour, hardware, and supply lines with no add-on charges:</p>
+    <p>Installation costs in ${cn} depend on your home's existing infrastructure and job complexity. Homes in ${n[0]} and ${n[1]} with modern pre-plumbed layouts typically fall into standard installation pricing. Older ${cn} properties from the ${era} era or first-time installations require additional plumbing and electrical work. We provide a firm written quote specific to your ${cn} property before work begins — includes all labour, hardware, and supply lines with no add-on charges:</p>
     <ul>
       <li><strong>Standard installation for ${cn} homes with existing connections:</strong> $149 - $199 — Water supply, drain, and electrical already in place from a previous dishwasher or builder rough-in. Most ${cn} homes built after 1990 in ${n[0]} and ${n[1]} qualify.</li>
-      <li><strong>Replacement installation with old unit removal in ${cn}:</strong> $199 - $249 — We disconnect and remove the old dishwasher, connect the new unit, and run a complete test cycle. The most common installation type across ${city.area}.</li>
-      <li><strong>Complex installation for ${cn} properties:</strong> $299 - $399 — Required when your ${cn} home needs plumbing modifications, granite countertop mounting, panel-ready fitting, or first-time installation. Common in ${cn}'s older ${city.era} housing where kitchens did not originally include a dishwasher bay.</li>
+      <li><strong>Replacement installation with old unit removal in ${cn}:</strong> $199 - $249 — We disconnect and remove the old dishwasher, connect the new unit, and run a complete test cycle. The most common installation type across ${area}.</li>
+      <li><strong>Complex installation for ${cn} properties:</strong> $299 - $399 — Required when your ${cn} home needs plumbing modifications, granite countertop mounting, panel-ready fitting, or first-time installation. Common in ${cn}'s older ${era} housing where kitchens did not originally include a dishwasher bay.</li>
     </ul>`);
+  }
+
+  // ─── 4. Replace "Step-by-Step: How We Install Your Dishwasher in CITY" (257w identical) ───
+  const stepRx = new RegExp('<h2>Step-by-Step: How We Install Your Dishwasher in ' + cn.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '</h2>[\\s\\S]*?</ol>');
+  if (stepRx.test(html)) {
+    html = html.replace(stepRx, `<h2>Step-by-Step: How We Install Your Dishwasher in ${cn}</h2>
+      <p>Every dishwasher installation in ${cn} follows a systematic process developed from our experience with ${housing} across ${area}. ${cn} properties in ${n[0]} and ${n[1]} present specific plumbing and electrical configurations that our installers account for at each stage. Here is the complete sequence for a ${cn} installation:</p>
+      <ol>
+        <li><strong>Water supply isolation for ${cn} homes:</strong> We locate the hot water shutoff valve, typically under the kitchen sink in ${cn}'s ${era}-era homes. ${cn} properties frequently have quarter-turn ball valves in newer builds or gate valves in older ${n[2]} and ${n.length>3?n[3]:n[0]} homes. If the valve shows corrosion or fails to seal completely, we replace it before proceeding — preventing future flood risk in your ${cn} home.</li>
+        <li><strong>Old unit extraction in ${cn} kitchens:</strong> We detach the water supply line, drain hose, and power connection from the existing unit, then slide it out using felt pads to protect ${cn} homeowners' flooring. In ${n[0]} homes with hardwood or tile, we use extra protective layers during the removal process.</li>
+        <li><strong>Installation bay inspection:</strong> We measure the cabinet opening, verify floor level across the bay width, and examine all existing connection points. ${cn} homes from the ${era} era commonly show specific wear patterns — ${city.localIssue.split(' — ')[0].toLowerCase()} — that we address before the new unit goes in.</li>
+        <li><strong>New unit positioning in ${cn} cabinetry:</strong> The dishwasher slides into the opening with supply line, drain hose, and power cable routed through access holes. Our ${cn} installers leave service-access slack in every connection so future maintenance does not require full unit removal.</li>
+        <li><strong>Hot water supply connection for ${area} conditions:</strong> We install a new braided stainless steel supply line from the shutoff valve to the dishwasher inlet valve. ${city.waterNote} — our ${cn} installers use Teflon tape rated for ${area} water conditions on every threaded joint.</li>
+        <li><strong>Drain routing for ${cn} plumbing:</strong> The drain hose connects to the sink drain tailpiece or disposal inlet with a high loop secured to the underside of the countertop. This anti-siphon loop is critical in ${cn} homes where backflow prevention protects your kitchen from contaminated water return.</li>
+        <li><strong>Electrical connection per Ontario code:</strong> Whether your ${cn} home uses a hardwired junction box or a dedicated outlet, our installer verifies the circuit amperage and tests for proper grounding. ${cn} homes in ${n[0]} and ${n[1]} built during the ${era} era may require electrical verification specific to their construction period.</li>
+        <li><strong>Precision leveling for ${cn} floor conditions:</strong> ${cn}'s ${housing} often have slight floor variations. We adjust front and rear leveling feet until the unit reads perfectly level in both directions, then secure mounting brackets to the countertop underside or cabinet sides to prevent movement during operation.</li>
+        <li><strong>Full test cycle with ${cn}-area water:</strong> We run a complete wash cycle monitoring fill volume, spray arm rotation, heating element activation, drain pump engagement, and drying performance. Every connection point is inspected for leaks during the cycle. We remain on-site until the test completes successfully and issue your digital service report with 90-day installation warranty.</li>
+      </ol>`);
+  }
+
+  // ─── 5. Replace "When to Choose Professional Installation Over DIY" (131w identical) ───
+  const diyRx = /<h2>When to Choose Professional Installation Over DIY<\/h2>[\s\S]*?<\/ul>/;
+  if (diyRx.test(html)) {
+    html = html.replace(diyRx, `<h2>Why ${cn} Homeowners Choose Professional Dishwasher Installation</h2>
+      <p>While some homeowners attempt DIY dishwasher installation, ${cn} properties present specific challenges that make professional service the safer choice. Our experience with ${housing} across ${area} has shown these are the situations where DIY most commonly leads to problems:</p>
+      <ul>
+        <li><strong>First-time installation in ${cn} homes:</strong> Running new supply and drain lines in ${cn}'s ${era}-era construction requires knowledge of local plumbing configurations. Improper connections are the leading cause of kitchen water damage claims filed by ${area} homeowners with Ontario insurers.</li>
+        <li><strong>Stone countertop kitchens in ${n[0]} and ${n[1]}:</strong> Granite, quartz, and marble countertops — common in ${cn}'s renovated kitchens — cannot accept standard top-mount brackets. Our installers use side-mount cabinet brackets that eliminate any risk to your countertop investment.</li>
+        <li><strong>Panel-ready installations for ${cn} kitchen renovations:</strong> Integrated dishwashers from Bosch, Miele, and Thermador require precise door panel alignment specific to your ${cn} cabinetry. Misalignment causes both aesthetic issues and mechanical interference with door hinge mechanisms.</li>
+        <li><strong>${cn}'s older housing stock:</strong> Properties built during the ${era} era in ${n[2]} and surrounding ${cn} neighbourhoods may have galvanized steel drain pipes, older copper supply lines, or undersized electrical circuits that require professional assessment before connecting modern appliances.</li>
+        <li><strong>Condo installations in ${cn}:</strong> ${cn} building management companies typically require proof of professional installation and may hold unit owners liable for water damage from DIY connections. Our installation receipt satisfies building management requirements across ${area}.</li>
+      </ul>`);
+  }
+
+  // ─── 6. Replace "Brands We Install in CITY" (109w identical) ───
+  const brandsRx = new RegExp('<h2>Brands We Install in ' + cn.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '</h2>[\\s\\S]*?</ul>');
+  if (brandsRx.test(html)) {
+    html = html.replace(brandsRx, `<h2>Dishwasher Brands Our ${cn} Installers Handle</h2>
+      <p>Fixlify installs dishwashers from every manufacturer sold in ${area}. Our ${cn} service vehicles carry brand-specific mounting brackets, connection hardware, and panel-fitting tools. Based on our ${cn} installation data, here are the brands we install most frequently in ${n[0]}, ${n[1]}, and across ${cn}:</p>
+      <ul>
+        <li><strong>Bosch</strong> — 300, 500, 800, and Benchmark series installation in ${cn}. Panel-ready and freestanding configurations. AquaStop flood protection verification included with every ${cn} Bosch installation.</li>
+        <li><strong>Samsung</strong> — Linear Wash, StormWash, and Smart series. Wi-Fi connectivity setup included for ${cn} homeowners at no extra charge. Popular upgrade choice in ${n[0]} kitchen renovations.</li>
+        <li><strong>LG</strong> — QuadWash, TrueSteam, and Studio series installation across ${cn}. Smart ThinQ app connectivity configuration included. Growing in popularity among ${cn}'s tech-forward homeowners.</li>
+        <li><strong>Whirlpool</strong> — Standard, quiet-partner, and third-rack models. The most frequently replaced brand in ${cn}'s ${era}-era builder-grade kitchens across ${n[1]} and ${n[2]}.</li>
+        <li><strong>Miele</strong> — G7000, Classic, and ProfiLine series for ${cn}'s premium market. Requires specialized mounting procedure and AquaStop activation that general installers often miss.</li>
+        <li><strong>KitchenAid</strong> — FreeFlex, standard, and panel-ready configurations. A popular mid-range upgrade choice for ${cn} homeowners replacing older units in ${n[0]} and surrounding areas.</li>
+        <li><strong>GE and GE Profile</strong> — Standard, Fingerprint Resistant, and UltraFresh models. Common in ${cn}'s builder-grade homes across ${area}, especially in newer ${n.length>4?n[4]:n[2]} developments.</li>
+        <li><strong>Fisher & Paykel</strong> — Single and double drawer dishwashers for ${cn}'s premium and compact kitchen market. Unique drawer-pull mechanism requires specialized installation training.</li>
+      </ul>`);
+  }
+
+  // ─── 7. Replace "What We Handle During Installation" / problems-grid (81w identical) ───
+  const handleRx = /<h2 class="section-title">What We Handle During Installation<\/h2>\s*<div class="problems-grid">(?:\s*<div class="problem-card">[\s\S]*?<\/div>\s*<\/div>)+\s*<\/div>/;
+  if (handleRx.test(html)) {
+    html = html.replace(handleRx, `<h2 class="section-title">What Our ${cn} Installers Handle</h2>
+    <div class="problems-grid">
+      <div class="problem-card">
+        <div class="problem-name">Old Unit Removal in ${cn}</div>
+        <div class="problem-desc">We disconnect water, drain, and electrical from your existing dishwasher, remove and dispose of it. ${cn} homes from the ${era} era sometimes require extra care with corroded connection points.</div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-name">${cn} Plumbing Connection</div>
+        <div class="problem-desc">Hot water supply line installation, drain hose routing with anti-siphon high loop, and shutoff valve inspection. ${area} water conditions factored into material selection.</div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-name">Electrical for ${cn} Homes</div>
+        <div class="problem-desc">Hardwired or plug-in connection per Ontario Electrical Code, circuit amperage verification, and ground fault testing specific to ${cn}'s ${era}-era wiring standards.</div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-name">Leveling for ${cn} Floors</div>
+        <div class="problem-desc">Precision leveling with adjustable feet to compensate for floor variations common in ${cn}'s ${housing}. Mounting brackets secured to prevent movement.</div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-name">Panel-Ready Fitting in ${cn}</div>
+        <div class="problem-desc">Custom door panel alignment for integrated dishwashers matching your ${cn} kitchen cabinetry. Popular in ${n[0]} and ${n[1]} renovation projects.</div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-name">${cn} Test Cycle</div>
+        <div class="problem-desc">Complete wash cycle with ${area} water, leak inspection at every connection, spray arm verification, and drain pump test before sign-off at your ${cn} home.</div>
+      </div>
+    </div>`);
+  }
+
+  // ─── 8. Replace "After Installation: What to Expect" (79w identical) ───
+  const afterRx = /<h2>After Installation: What to Expect<\/h2>[\s\S]*?<\/ul>/;
+  if (afterRx.test(html)) {
+    html = html.replace(afterRx, `<h2>After Your ${cn} Dishwasher Installation</h2>
+      <p>Once your new dishwasher is installed in your ${cn} home and the test cycle confirms proper operation, follow these steps for optimal performance:</p>
+      <ul>
+        <li>Run two to three empty hot cycles with dishwasher cleaner to flush manufacturing residue and break in the spray arm bearings before loading dishes for the first time.</li>
+        <li>Add rinse aid from the very first loaded cycle — ${city.waterNote.split('.')[0]}. Without rinse aid, ${cn}'s water conditions will leave visible spots on glassware and flatware.</li>
+        <li>Check the door seal alignment after your first three loaded cycles. If you notice any moisture around the door edges in your ${cn} kitchen, call us for a complimentary adjustment — minor leveling tweaks resolve this in most ${area} installations.</li>
+        <li>Store your Fixlify service receipt from the ${cn} installation — it documents your 90-day workmanship warranty, the unit serial number, and all connection specifications for future reference by any service technician.</li>
+      </ul>`);
+  }
+
+  // ─── 9. Replace "Dishwasher Installation Cost in CITY" table (58w identical) ───
+  const costRx = new RegExp('<h2 class="section-title">Dishwasher Installation Cost in ' + cn.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '</h2>\\s*<table class="pricing-table"[\\s\\S]*?</table>\\s*<p class="pricing-note">[\\s\\S]*?</p>');
+  if (costRx.test(html)) {
+    html = html.replace(costRx, `<h2 class="section-title">Dishwasher Installation Cost in ${cn}</h2>
+    <table class="pricing-table" aria-label="Installation pricing for ${cn}">
+      <thead><tr><th>Installation Type for ${cn} Homes</th><th>Price Range</th></tr></thead>
+      <tbody>
+        <tr><td>Standard installation in ${cn} (existing water, drain, electrical connections from previous unit)</td><td>$149 &ndash; $199</td></tr>
+        <tr><td>Replacement installation in ${cn} (remove old dishwasher + install and connect new unit)</td><td>$199 &ndash; $249</td></tr>
+        <tr><td>Complex installation for ${cn} properties (plumbing modifications, stone countertop, panel-ready)</td><td>$299 &ndash; $399</td></tr>
+        <tr><td>First-time dishwasher installation in ${cn} (no previous unit, new plumbing and electrical required)</td><td>$299 &ndash; $399</td></tr>
+      </tbody>
+    </table>
+    <p class="pricing-note">All ${cn} installation prices include labour, mounting hardware, braided stainless steel supply line, and drain connection materials. Custom door panels for panel-ready units are sourced from your ${cn} cabinetmaker. Written quote provided before work begins — the price we quote is the price you pay for your ${n[0]} or ${n[1]} installation.</p>`);
+  }
+
+  // ─── 10. Replace FAQ section (185w identical) ───
+  // Use indexOf-based approach since regex escaping is tricky with nested divs
+  const faqHeader = 'Frequently Asked Questions \u2014 Dishwasher Installation in ' + cn;
+  const faqHeaderAlt = 'Frequently Asked Questions — Dishwasher Installation in ' + cn;
+  const faqRx = /<h2>Frequently Asked Questions[\s\S]*?<\/details>\s*<\/div>\s*<\/div>/;
+  if (faqRx.test(html)) {
+    html = html.replace(faqRx, `<h2>Frequently Asked Questions — Dishwasher Installation in ${cn}</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary class="faq-question"><span class="faq-q-text">How much does dishwasher installation cost in ${cn}?</span><span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer"><p>Standard dishwasher installation in ${cn} costs $149-$199 when connecting to existing plumbing in ${n[0]}, ${n[1]}, or other ${cn} neighbourhoods. Replacement installation removing an old unit and connecting a new one runs $199-$249. Complex installations in ${cn}'s ${era}-era homes that need plumbing modifications, stone countertop brackets, or panel-ready fitting cost $299-$399. We provide a written quote specific to your ${cn} property before starting.</p></div></details>
+        <details class="faq-item"><summary class="faq-question"><span class="faq-q-text">Can I get same-day dishwasher installation in ${cn}?</span><span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer"><p>Yes — call (437) 524-1053 before 2 PM to check same-day availability for ${cn}. Our ${area} installers carry all mounting brackets, supply lines, and connection hardware on every appointment so your ${cn} installation is completed in a single visit without waiting for parts or a follow-up trip.</p></div></details>
+        <details class="faq-item"><summary class="faq-question"><span class="faq-q-text">What is included in a ${cn} dishwasher installation?</span><span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer"><p>Our ${cn} installation includes: removal and disposal of your old dishwasher, positioning the new unit in the cabinet opening, connecting the hot water supply line from the shutoff valve, routing the drain hose with an anti-siphon high loop, making the electrical connection per Ontario code, precision leveling for ${cn}'s floor conditions, securing with mounting brackets, and running a complete test cycle to verify every connection.</p></div></details>
+        <details class="faq-item"><summary class="faq-question"><span class="faq-q-text">Can you install a dishwasher where there was never one in my ${cn} home?</span><span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer"><p>Yes — first-time dishwasher installation is one of our specialties across ${cn}. We create the cabinet opening if your ${cn} kitchen needs one, run a hot water supply line from the under-sink shutoff to the dishwasher location, route a drain connection to the sink drain, and verify the electrical circuit capacity meets the unit's requirements. First-time installations in ${cn} typically cost $299-$399 and take 2-3 hours to complete properly.</p></div></details>
+        <details class="faq-item"><summary class="faq-question"><span class="faq-q-text">Do I need to buy my own dishwasher before booking ${cn} installation?</span><span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer"><p>Yes — purchase your new dishwasher from any retailer and have it delivered to your ${cn} home. We handle the professional installation only. If you need sizing advice for your ${cn} kitchen layout — especially in ${n[0]} or ${n[1]} homes with non-standard cabinet dimensions — call (437) 524-1053 and our team can recommend the right measurements before you buy.</p></div></details>
+        <details class="faq-item"><summary class="faq-question"><span class="faq-q-text">What warranty covers the ${cn} installation work?</span><span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer"><p>Every ${cn} installation by Fixlify includes a 90-day warranty covering our workmanship — all plumbing connections, electrical connections, and mounting brackets installed at your ${cn} property. If any connection we made develops an issue within 90 days, we return to your ${cn} home and fix it at no additional charge. The dishwasher itself remains covered by the manufacturer's warranty.</p></div></details>
+      </div>
+    </div>`);
+  }
+
+  // ─── 11. Replace answer-box text (46w identical) ───
+  const answerBoxRx = /class="answer-box">Need dishwasher installation in [^?]+\?[^<]+<\/div>/;
+  if (answerBoxRx.test(html)) {
+    const answerVariants = [
+      `class="answer-box">Looking for professional dishwasher installation in ${cn}? Fixlify handles same-day dishwasher fitting across ${n[0]}, ${n[1]}, and all ${cn} neighbourhoods. Pricing: standard hookup $149-$199, full replacement $199-$249, complex jobs $299-$399. We install Samsung, LG, Bosch, Whirlpool, Miele, KitchenAid, and more. Fully licensed, insured, 90-day warranty on all connections. Book now: (437) 524-1053.</div>`,
+      `class="answer-box">${cn} dishwasher installation by Fixlify — available same-day in ${n[0]}, ${n[1]}, ${n[2]}, and surrounding ${cn} areas. Standard install from $149, replacement from $199, complex from $299. Every major brand: Samsung, LG, Bosch, Whirlpool, Miele, KitchenAid. Licensed technicians, insured service, 90-day workmanship guarantee. Call (437) 524-1053 to schedule.</div>`,
+      `class="answer-box">Fixlify installs dishwashers across ${cn} — ${n[0]}, ${n[1]}, ${n[2]} and beyond. Same-day appointments available. Standard installation $149-$199, replacement with old unit removal $199-$249, complex installations $299-$399. All major dishwasher brands serviced. Licensed, insured, with a 90-day installation warranty. Schedule today: (437) 524-1053.</div>`,
+      `class="answer-box">Professional dishwasher installation for ${cn} homes — Fixlify covers ${n[0]}, ${n[1]}, and every ${cn} neighbourhood. Same-day service available. Install pricing: basic $149-$199, replacement $199-$249, complex $299-$399. Samsung, LG, Bosch, Whirlpool, Miele, and all other brands. Licensed, insured, 90-day guarantee. Reach us: (437) 524-1053.</div>`,
+    ];
+    let abHash = 0;
+    for (let i = 0; i < cn.length; i++) abHash = ((abHash << 3) + cn.charCodeAt(i)) | 0;
+    html = html.replace(answerBoxRx, answerVariants[((abHash >>> 0) + 5) % answerVariants.length]);
+  }
+
+  // ─── 12. Replace "Book Dishwasher Installation in CITY" text ───
+  const bookRx = new RegExp('<h2>Book Dishwasher Installation in ' + cn.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '</h2>\\s*<p>Choose a convenient time');
+  if (bookRx.test(html)) {
+    const bookVariants = [
+      `<h2>Schedule Your ${cn} Dishwasher Installation</h2>\n    <p>Pick a time that works for your ${n[0]} or ${n[1]} schedule &mdash; our online booking shows real-time availability with instant confirmation.</p>`,
+      `<h2>Book Dishwasher Installation in ${cn} Online</h2>\n    <p>Select your preferred installation date and time slot below &mdash; live availability for all ${cn} neighbourhoods with instant booking confirmation.</p>`,
+      `<h2>Reserve Your ${cn} Installation Appointment</h2>\n    <p>Choose a convenient day and time for your ${cn} dishwasher installation &mdash; see what is available right now and confirm in seconds.</p>`,
+      `<h2>Get Your ${cn} Dishwasher Installed</h2>\n    <p>Book online below for same-day or next-day installation across ${cn} &mdash; real-time scheduling with immediate confirmation for ${n[0]}, ${n[1]}, and all areas.</p>`,
+    ];
+    let bkHash = 0;
+    for (let i = 0; i < cn.length; i++) bkHash = ((bkHash << 4) + cn.charCodeAt(i)) | 0;
+    html = html.replace(bookRx, bookVariants[((bkHash >>> 0) + 3) % bookVariants.length]);
   }
 
   return html;
