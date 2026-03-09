@@ -204,6 +204,13 @@ body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-i
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Appliance Repair Services Toronto & GTA | Fixlify">
 <meta name="twitter:description" content="Professional appliance repair services in Toronto & GTA. Refrigerator, washer, dryer, dishwasher, oven & stove repair. Licensed technicians, 90-day warranty.">
+<style>
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px}
+.related-card{display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:10px 14px;transition:background .2s;text-decoration:none}
+.related-card:hover{background:rgba(255,255,255,.08)}
+.related-card-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#F59E0B;margin-bottom:3px}
+.related-card-title{font-size:14px;font-weight:600;color:#e2e8f0}
+</style>
 </head>
 <body>
 
@@ -373,6 +380,109 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
 .faq-item{border-radius:12px;overflow:hidden}.faq-q{width:100%;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 20px;text-align:left;font-family:var(--font-head);font-weight:700;font-size:14px;color:var(--text);transition:color 0.2s}.faq-q:hover{color:var(--orange)}.faq-chevron{flex-shrink:0;width:18px;height:18px;border-radius:50%;background:var(--glass-bg);border:1px solid var(--glass-border);display:flex;align-items:center;justify-content:center;transition:transform 0.3s,background 0.2s}.faq-item.open .faq-chevron{transform:rotate(180deg);background:var(--orange-dim);border-color:rgba(255,107,53,0.3)}.faq-a{display:none;padding:0 20px 16px;font-size:13px;color:var(--muted);line-height:1.7}.faq-item.open .faq-a{display:block}
 </style>
 
+
+<!-- Related Links Section -->
+<section class="related-links-section" style="background:var(--surface,#0f1523);padding:40px 0">
+  <div class="container" style="max-width:1200px;margin:0 auto;padding:0 24px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px">
+      <div>
+        <h3 style="font-family:var(--font-head);font-weight:800;font-size:18px;margin-bottom:6px;color:var(--text,#e2e8f0);">Our Services</h3>
+        <div class="related-grid">
+          <a href="/fridge-repair-toronto" class="related-card glass-card">
+  <div class="related-card-label">Service</div>
+  <div class="related-card-title">Refrigerator Repair</div>
+</a>
+          <a href="/washer-repair-toronto" class="related-card glass-card">
+  <div class="related-card-label">Service</div>
+  <div class="related-card-title">Washer Repair</div>
+</a>
+          <a href="/dryer-repair-toronto" class="related-card glass-card">
+  <div class="related-card-label">Service</div>
+  <div class="related-card-title">Dryer Repair</div>
+</a>
+          <a href="/dishwasher-repair-toronto" class="related-card glass-card">
+  <div class="related-card-label">Service</div>
+  <div class="related-card-title">Dishwasher Repair</div>
+</a>
+          <a href="/oven-repair-toronto" class="related-card glass-card">
+  <div class="related-card-label">Service</div>
+  <div class="related-card-title">Oven Repair</div>
+</a>
+          <a href="/stove-repair-toronto" class="related-card glass-card">
+  <div class="related-card-label">Service</div>
+  <div class="related-card-title">Stove Repair</div>
+</a>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-family:var(--font-head);font-weight:800;font-size:18px;margin-bottom:6px;color:var(--text,#e2e8f0);">Nearby Areas</h3>
+        <div class="related-grid">
+          <a href="/toronto" class="related-card glass-card">
+  <div class="related-card-label">Location</div>
+  <div class="related-card-title">Toronto</div>
+</a>
+          <a href="/scarborough" class="related-card glass-card">
+  <div class="related-card-label">Location</div>
+  <div class="related-card-title">Scarborough</div>
+</a>
+          <a href="/north-york" class="related-card glass-card">
+  <div class="related-card-label">Location</div>
+  <div class="related-card-title">North York</div>
+</a>
+          <a href="/etobicoke" class="related-card glass-card">
+  <div class="related-card-label">Location</div>
+  <div class="related-card-title">Etobicoke</div>
+</a>
+          <a href="/mississauga" class="related-card glass-card">
+  <div class="related-card-label">Location</div>
+  <div class="related-card-title">Mississauga</div>
+</a>
+          <a href="/brampton" class="related-card glass-card">
+  <div class="related-card-label">Location</div>
+  <div class="related-card-title">Brampton</div>
+</a>
+          <a href="/vaughan" class="related-card glass-card">
+  <div class="related-card-label">Location</div>
+  <div class="related-card-title">Vaughan</div>
+</a>
+          <a href="/richmond-hill" class="related-card glass-card">
+  <div class="related-card-label">Location</div>
+  <div class="related-card-title">Richmond Hill</div>
+</a>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-family:var(--font-head);font-weight:800;font-size:18px;margin-bottom:6px;color:var(--text,#e2e8f0);">Brands We Repair</h3>
+        <div class="related-grid">
+          <a href="/samsung-appliance-repair" class="related-card glass-card">
+  <div class="related-card-label">Brand</div>
+  <div class="related-card-title">Samsung</div>
+</a>
+          <a href="/lg-appliance-repair" class="related-card glass-card">
+  <div class="related-card-label">Brand</div>
+  <div class="related-card-title">LG</div>
+</a>
+          <a href="/whirlpool-appliance-repair" class="related-card glass-card">
+  <div class="related-card-label">Brand</div>
+  <div class="related-card-title">Whirlpool</div>
+</a>
+          <a href="/ge-appliance-repair" class="related-card glass-card">
+  <div class="related-card-label">Brand</div>
+  <div class="related-card-title">GE</div>
+</a>
+          <a href="/bosch-appliance-repair" class="related-card glass-card">
+  <div class="related-card-label">Brand</div>
+  <div class="related-card-title">Bosch</div>
+</a>
+          <a href="/frigidaire-appliance-repair" class="related-card glass-card">
+  <div class="related-card-label">Brand</div>
+  <div class="related-card-title">Frigidaire</div>
+</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <div id="footer-placeholder"></div>
 <script src="/includes/footer-loader.js" defer></script>
 
