@@ -329,11 +329,13 @@ body::before {
 }
 .content-body li { line-height: 1.6; }
 
-.content-sidebar { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 16px; }
+.content-sidebar { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 16px;   max-height: calc(100vh - 110px);
+  overflow-y: auto;
+}
 .sidebar-book-card {
   background: rgba(13,27,42,0.82);
   border: 1px solid rgba(255,107,53,0.22);
-  border-radius: var(--radius-card); overflow: hidden;
+  border-radius: var(--radius-card); overflow: visible;
 }
 .sidebar-book-header {
   padding: 16px 18px 12px;
@@ -342,7 +344,10 @@ body::before {
 }
 .sidebar-book-title { font-family: var(--font-head); font-weight: 800; font-size: 16px; color: var(--text); margin-bottom: 3px; }
 .sidebar-book-sub { font-size: 12px; color: var(--muted); }
-.sidebar-book-iframe { height: 380px; }
+.sidebar-book-iframe {
+  height: 540px;
+  overflow-y: auto;
+}
 .sidebar-book-iframe iframe { width: 100%; height: 100%; border: none; display: block; background: #060C14; }
 .sidebar-phone-card {
   background: var(--glass-bg); border: 1px solid var(--glass-border);
@@ -462,7 +467,7 @@ body::before {
   .page-hero { padding: 48px 0 40px; }
   .trust-strip-inner { gap: 16px; }
   .page-cta-row { flex-direction: column; align-items: flex-start; }
-  .sidebar-book-iframe { height: 340px; }
+  .sidebar-book-iframe { height: 460px; overflow-y: auto; }
   .book-mid-iframe-wrap { height: 380px; }
 }
 @media (max-width: 480px) {

@@ -501,13 +501,15 @@ body::before {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  max-height: calc(100vh - 110px);
+  overflow-y: auto;
 }
 
 .sidebar-book-card {
   background: rgba(13,27,42,0.82);
   border: 1px solid rgba(255,107,53,0.22);
   border-radius: var(--radius-card);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .sidebar-book-header {
@@ -530,7 +532,8 @@ body::before {
 }
 
 .sidebar-book-iframe {
-  height: 380px;
+  height: 540px;
+  overflow-y: auto;
 }
 
 .sidebar-book-iframe iframe {
@@ -817,7 +820,7 @@ body::before {
   .page-hero { padding: 48px 0 40px; }
   .trust-strip-inner { gap: 16px; }
   .page-cta-row { flex-direction: column; align-items: flex-start; }
-  .sidebar-book-iframe { height: 340px; }
+  .sidebar-book-iframe { height: 460px; overflow-y: auto; }
   .book-mid-iframe-wrap { height: 380px; }
 }
 
