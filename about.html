@@ -59,7 +59,8 @@
   "openingHours": ["Mo-Sa 08:00-20:00", "Su 09:00-18:00"],
   "priceRange": "$$",
   "description": "Certified appliance repair technicians serving Toronto and the Greater Toronto Area. Same-day booking, transparent pricing, 90-day warranty.",
-  "areaServed": ["Toronto", "Scarborough", "North York", "Etobicoke", "Mississauga", "Brampton", "Vaughan", "Markham", "Richmond Hill", "Oakville", "Burlington", "Pickering", "Ajax", "Whitby", "Oshawa"]
+  "serviceArea": {"@type": "GeoCircle", "geoMidpoint": {"@type": "GeoCoordinates", "latitude": 43.65, "longitude": -79.38}, "geoRadius": "50000"},
+    "areaServed": ["Toronto", "Scarborough", "North York", "Etobicoke", "Mississauga", "Brampton", "Vaughan", "Markham", "Richmond Hill", "Oakville", "Burlington", "Pickering", "Ajax", "Whitby", "Oshawa"]
 }
 </script>
 
@@ -715,7 +716,7 @@ body::before {
     <h1 class="page-hero-title">
       About <span>Fixlify Appliance</span><br>Services
     </h1>
-    <p class="page-hero-sub">
+    <p class="page-hero-sub">Need appliance repair in About? Call <a href="tel:+14375241053">(437) 524-1053</a> — same-day, 90-day warranty. 
       We replaced the old-school appliance repair playbook with modern diagnostic technology, real-time online booking, and a fully digital workflow. Fixlify exists because Toronto homeowners deserve a repair service that runs on precision, not guesswork.
     </p>
 
