@@ -24,7 +24,8 @@
 <link rel="stylesheet" href="/tokens.css">
 
 <!-- Schema JSON-LD -->
-<script type="application/ld+json">{
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -49,7 +50,15 @@
       "openingHours": [
         "Mo-Sa 08:00-20:00",
         "Su 09:00-18:00"
-      ]
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Alex"
+      },
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": 6
+      }
     },
     {
       "@type": "Service",
@@ -59,8 +68,16 @@
         "@type": "LocalBusiness",
         "name": "Fixlify Appliance Services"
       },
-      "serviceArea": {"@type": "GeoCircle", "geoMidpoint": {"@type": "GeoCoordinates", "latitude": 43.65, "longitude": -79.38}, "geoRadius": "50000"},
-    "areaServed": {
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 43.65,
+          "longitude": -79.38
+        },
+        "geoRadius": "50000"
+      },
+      "areaServed": {
         "@type": "AdministrativeArea",
         "name": "Bradford",
         "containedInPlace": {
@@ -100,7 +117,8 @@
       ]
     }
   ]
-}</script>
+}
+</script>
 
 <style>
 /* ============================================================
@@ -807,6 +825,7 @@ body::before {
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Stove Repair Toronto | From $65 | (437) 524-1053">
   <meta name="twitter:description" content="Expert stove repair in Toronto. $89 flat diagnostic, transparent pricing. All brands — Samsung, LG, Bosch &amp; more. Same-day service. Book today!">
+<!-- SCHEMA-ENRICH-v1 -->
 </head>
 <body>
 

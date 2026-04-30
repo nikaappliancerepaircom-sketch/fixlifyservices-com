@@ -42,8 +42,16 @@
         "addressRegion": "Ontario",
         "addressCountry": "CA"
       },
-      "serviceArea": {"@type": "GeoCircle", "geoMidpoint": {"@type": "GeoCoordinates", "latitude": 43.65, "longitude": -79.38}, "geoRadius": "50000"},
-    "areaServed": {
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 43.65,
+          "longitude": -79.38
+        },
+        "geoRadius": "50000"
+      },
+      "areaServed": {
         "@type": "City",
         "name": "Toronto"
       },
@@ -56,18 +64,62 @@
         "@type": "OfferCatalog",
         "name": "Appliance Repair Services",
         "itemListElement": [
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Refrigerator Repair"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Washer Repair"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Dryer Repair"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Dishwasher Repair"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Oven Repair"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Stove Repair"}}
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Refrigerator Repair"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Washer Repair"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Dryer Repair"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Dishwasher Repair"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Oven Repair"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Stove Repair"
+            }
+          }
         ]
       },
       "openingHours": [
         "Mo-Sa 08:00-20:00",
         "Su 09:00-18:00"
-      ]
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Alex"
+      },
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": 6
+      }
     },
     {
       "@type": "FAQPage",
@@ -815,6 +867,7 @@ body::before {
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Emergency Appliance Repair Toronto | (437) 524-1053">
   <meta name="twitter:description" content="24/7 emergency appliance repair in Toronto. $89 flat diagnostic, transparent pricing. Rapid response for all brands. Call (437) 524-1053!">
+<!-- SCHEMA-ENRICH-v1 -->
 </head>
 <body>
 
