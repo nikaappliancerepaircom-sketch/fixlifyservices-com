@@ -18,6 +18,7 @@
 <meta name="twitter:description" content="Fridge repair in Greektown. $89 flat diagnostic, transparent pricing. Samsung, LG, Bosch &amp; all brands, same-day service. Book today!">
 <script type="application/ld+json">
 {
+  "@id": "https://fixlifyservices.com/#business",
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Fixlify Appliance Services",
@@ -69,9 +70,89 @@
   }
 }
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Refrigerator Repair in Greektown","serviceType":"Refrigerator Repair","provider":{"@type":"LocalBusiness","name":"Fixlify Appliance Services","telephone":"+14375241053"},"serviceArea": {"@type": "GeoCircle", "geoMidpoint": {"@type": "GeoCoordinates", "latitude": 43.65, "longitude": -79.38}, "geoRadius": "50000"},
-    "areaServed":{"@type":"Place","name":"Greektown, Toronto"},"hasOfferCatalog":{"@type":"OfferCatalog","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Diagnostic"},"priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","price":"119"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Standard Repair"},"priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","price":"120-250"}}]}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fixlifyservices.com/"},{"@type":"ListItem","position":2,"name":"Greektown","item":"https://fixlifyservices.com/greektown"},{"@type":"ListItem","position":3,"name":"Refrigerator Repair Greektown","item":"https://fixlifyservices.com/fridge-repair-greektown"}]}</script>
+<script type="application/ld+json">
+{
+  "@id": "https://fixlifyservices.com/fridge-repair-greektown#service",
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Refrigerator Repair in Greektown",
+  "serviceType": "Refrigerator Repair",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Fixlify Appliance Services",
+    "telephone": "+14375241053"
+  },
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.65,
+      "longitude": -79.38
+    },
+    "geoRadius": "50000"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Greektown, Toronto"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Diagnostic"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "CAD",
+          "price": "119"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Standard Repair"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "CAD",
+          "price": "120-250"
+        }
+      }
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@id": "https://fixlifyservices.com/fridge-repair-greektown#breadcrumb",
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://fixlifyservices.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Greektown",
+      "item": "https://fixlifyservices.com/greektown"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Refrigerator Repair Greektown",
+      "item": "https://fixlifyservices.com/fridge-repair-greektown"
+    }
+  ]
+}
+</script>
 
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -139,18 +220,54 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-    {"@type":"Question","name":"Do you repair ovens used heavily for Greek cooking? +","acceptedAnswer":{"@type":"Answer","text":"Yes. We regularly see oven element burnouts, thermostat failures, and door seal deterioration in Greektown homes directly related to intensive cooking. Common oven elements are stocked in our vehicles for same-day fixes."}},
-    {"@type":"Question","name":"My dishwasher in Greektown runs 2 to 3 times a day and is failing. Is this normal? +","acceptedAnswer":{"@type":"Answer","text":"High-use dishwashers wear pumps, spray arms, and door latches much faster than average. A repair is almost always more economical than replacement. We service all brands in Greektown homes."}},
-    {"@type":"Question","name":"How quickly can you arrive in Greektown? +","acceptedAnswer":{"@type":"Answer","text":"Greektown on the Danforth is a core service area. We typically arrive within 2 to 4 hours same-day, Monday through Saturday. Sunday service is available 9am to 6pm."}},
-    {"@type":"Question","name":"Could my always-full Greektown fridge cause cooling problems? +","acceptedAnswer":{"@type":"Answer","text":"Yes. A heavily stocked refrigerator restricts internal airflow and strains the compressor over time. We check for blocked vents, dirty condenser coils, and refrigerant levels on every Greektown fridge call."}},
-    {"@type":"Question","name":"Do you repair LG appliances in Greektown? +","acceptedAnswer":{"@type":"Answer","text":"Yes. LG is very popular in Greektown households. We are experienced with all LG appliance lines including InstaView refrigerators and ThinQ series washers."}}
-    ]
-  }
-  </script>
+{
+  "@id": "https://fixlifyservices.com/fridge-repair-greektown#faq",
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you repair ovens used heavily for Greek cooking? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We regularly see oven element burnouts, thermostat failures, and door seal deterioration in Greektown homes directly related to intensive cooking. Common oven elements are stocked in our vehicles for same-day fixes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My dishwasher in Greektown runs 2 to 3 times a day and is failing. Is this normal? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "High-use dishwashers wear pumps, spray arms, and door latches much faster than average. A repair is almost always more economical than replacement. We service all brands in Greektown homes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly can you arrive in Greektown? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Greektown on the Danforth is a core service area. We typically arrive within 2 to 4 hours same-day, Monday through Saturday. Sunday service is available 9am to 6pm."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Could my always-full Greektown fridge cause cooling problems? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A heavily stocked refrigerator restricts internal airflow and strains the compressor over time. We check for blocked vents, dirty condenser coils, and refrigerant levels on every Greektown fridge call."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you repair LG appliances in Greektown? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. LG is very popular in Greektown households. We are experienced with all LG appliance lines including InstaView refrigerators and ThinQ series washers."
+      }
+    }
+  ]
+}
+</script>
 <!-- SCHEMA-ENRICH-v1 -->
 </head>
 <body>
