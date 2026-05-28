@@ -5,3 +5,10 @@ Thumbs.db
 .vercel
 gen-suburb-pages.js
 _patch-suburb-hubs.js
+
+# .env protection (added 2026-05)
+.env
+.env.local
+.env.*
+.env*.local
+gen-sitemap-clean.js
