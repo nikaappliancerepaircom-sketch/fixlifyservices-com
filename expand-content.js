@@ -60,7 +60,7 @@ function getSections(service, N, idx) {
     <p style="margin:0;color:#374151;font-size:.9375rem;line-height:1.65">Select your ${N} address, describe the symptom, and choose a same-day or next-day window. You get instant confirmation by email with your technician's estimated arrival window.</p>
   </div>
   <div style="padding:16px 20px;background:#f9fafb;border-radius:6px;border-left:3px solid #2563eb">
-    <div style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#2563eb;margin-bottom:6px">Step 2 — Flat $65 Diagnostic</div>
+    <div style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#2563eb;margin-bottom:6px">Step 2 — Flat $89 Diagnostic</div>
     <p style="margin:0;color:#374151;font-size:.9375rem;line-height:1.65">Our technician arrives at your ${N} home, runs a full component-level diagnostic, identifies the root cause, and provides a written quote. The $65 fee is waived when you proceed with the repair.</p>
   </div>
   <div style="padding:16px 20px;background:#f9fafb;border-radius:6px;border-left:3px solid #2563eb">
@@ -95,7 +95,7 @@ function getSections(service, N, idx) {
   <li style="padding-left:22px;position:relative;color:#374151;line-height:1.65;font-size:.9375rem"><span style="position:absolute;left:0;top:0;color:#2563eb;font-weight:700">Quarterly:</span> Check the door gasket for cracks or brittleness. ${N} winters mean the door seal experiences temperature cycling — a cracked gasket leads to leaks that damage kitchen floors.</li>
   <li style="padding-left:22px;position:relative;color:#374151;line-height:1.65;font-size:.9375rem"><span style="position:absolute;left:0;top:0;color:#2563eb;font-weight:700">Always:</span> Use rinse aid. In ${C}'s hard water, rinse aid is not optional — it prevents scale spotting on glassware and helps the drying cycle perform correctly. Refill every 3–4 weeks.</li>
 </ul>
-<p style="color:#374151;line-height:1.75;font-size:.9375rem">If you notice any change in cleaning quality, draining, or unusual sounds, call us early. A $65 diagnostic caught before failure is far less expensive than a $280 pump replacement after it seizes.</p>
+<p style="color:#374151;line-height:1.75;font-size:.9375rem">If you notice any change in cleaning quality, draining, or unusual sounds, call us early. A $89 diagnostic caught before failure is far less expensive than a $280 pump replacement after it seizes.</p>
 </section>`
   ];
 
@@ -128,7 +128,7 @@ function getSections(service, N, idx) {
     <tr><td style="padding:10px 14px;border-bottom:1px solid #e5e7eb;color:#374151">Control board replacement</td><td style="padding:10px 14px;border-bottom:1px solid #e5e7eb;color:#2563eb;font-weight:600">$220–$420</td></tr>
   </tbody>
 </table>
-<p style="color:#374151;line-height:1.75;font-size:.9375rem">All prices include the flat $65 diagnostic (waived with repair), parts, labour, and 90-day warranty. ${N} customers receive a written quote before any work begins — you approve the price before we touch the machine.</p>
+<p style="color:#374151;line-height:1.75;font-size:.9375rem">All prices include the flat $89 diagnostic (waived with repair), parts, labour, and 90-day warranty. ${N} customers receive a written quote before any work begins — you approve the price before we touch the machine.</p>
 <p style="color:#374151;line-height:1.75;font-size:.9375rem;margin-top:10px">Note: drum bearing replacements on front-loaders require significant disassembly (the drum must be fully removed). If your bearing quote seems high, it reflects 2–3 hours of labour, not a parts markup.</p>
 </section>`,
 
@@ -137,7 +137,7 @@ function getSections(service, N, idx) {
 <p style="color:#374151;line-height:1.75;margin-bottom:14px">We keep the washer repair process straightforward for ${N} homeowners. From booking to a working machine, here is what to expect:</p>
 <div style="display:grid;gap:14px;margin:0 0 14px">
   <div style="display:flex;gap:16px;align-items:flex-start"><div style="width:32px;height:32px;background:#2563eb;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:700;color:#fff;font-size:.875rem">1</div><div><p style="margin:0;font-weight:600;color:#0a0a0a;margin-bottom:4px">Book online in 2 minutes</p><p style="margin:0;color:#374151;font-size:.9375rem;line-height:1.65">Select washer repair, describe the symptom (not spinning, not draining, leaking, noisy, error code), and pick a same-day or next-day arrival window. Instant email confirmation.</p></div></div>
-  <div style="display:flex;gap:16px;align-items:flex-start"><div style="width:32px;height:32px;background:#2563eb;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:700;color:#fff;font-size:.875rem">2</div><div><p style="margin:0;font-weight:600;color:#0a0a0a;margin-bottom:4px">$65 flat diagnostic — waived with repair</p><p style="margin:0;color:#374151;font-size:.9375rem;line-height:1.65">The technician arrives at your ${N} home and diagnoses the root cause at the component level. No extra charge for weekend or evening visits. Written quote provided before any work begins.</p></div></div>
+  <div style="display:flex;gap:16px;align-items:flex-start"><div style="width:32px;height:32px;background:#2563eb;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:700;color:#fff;font-size:.875rem">2</div><div><p style="margin:0;font-weight:600;color:#0a0a0a;margin-bottom:4px">$89 flat diagnostic — waived with repair</p><p style="margin:0;color:#374151;font-size:.9375rem;line-height:1.65">The technician arrives at your ${N} home and diagnoses the root cause at the component level. No extra charge for weekend or evening visits. Written quote provided before any work begins.</p></div></div>
   <div style="display:flex;gap:16px;align-items:flex-start"><div style="width:32px;height:32px;background:#2563eb;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:700;color:#fff;font-size:.875rem">3</div><div><p style="margin:0;font-weight:600;color:#0a0a0a;margin-bottom:4px">Repair with OEM parts, same visit</p><p style="margin:0;color:#374151;font-size:.9375rem;line-height:1.65">We carry bearings, pump assemblies, door seals, switches, and control boards for all major platforms. Most ${N} washer repairs are completed in a single visit — no waiting for parts to be ordered.</p></div></div>
   <div style="display:flex;gap:16px;align-items:flex-start"><div style="width:32px;height:32px;background:#2563eb;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:700;color:#fff;font-size:.875rem">4</div><div><p style="margin:0;font-weight:600;color:#0a0a0a;margin-bottom:4px">Test + 90-day warranty</p><p style="margin:0;color:#374151;font-size:.9375rem;line-height:1.65">We run a full wash and spin cycle before leaving your ${N} home. 90-day parts and labour warranty on every repair — same fault returns within 90 days, we come back at no charge.</p></div></div>
 </div>
@@ -185,7 +185,7 @@ function getSections(service, N, idx) {
     <tr><td style="padding:10px 14px;border-bottom:1px solid #e5e7eb;color:#374151">Compressor replacement</td><td style="padding:10px 14px;border-bottom:1px solid #e5e7eb;color:#2563eb;font-weight:600">$400–$750</td></tr>
   </tbody>
 </table>
-<p style="color:#374151;line-height:1.75;font-size:.9375rem">All prices include the $65 diagnostic (waived with repair), parts, labour, and 90-day warranty. Compressor replacements are at the high end — if your fridge is over 12 years old and needs a new compressor, we will tell you honestly if replacement makes more economic sense.</p>
+<p style="color:#374151;line-height:1.75;font-size:.9375rem">All prices include the $89 diagnostic (waived with repair), parts, labour, and 90-day warranty. Compressor replacements are at the high end — if your fridge is over 12 years old and needs a new compressor, we will tell you honestly if replacement makes more economic sense.</p>
 </section>`,
 
     `<section style="margin-top:48px;padding-top:40px;border-top:1px solid #e5e7eb">
@@ -231,7 +231,7 @@ function getSections(service, N, idx) {
 <p style="color:#374151;line-height:1.75;margin-bottom:14px">Every ${C} repair includes:</p>
 <ul style="list-style:none;padding:0;display:grid;gap:10px;margin:0 0 14px">
   <li style="padding-left:22px;position:relative;color:#374151;line-height:1.65;font-size:.9375rem"><span style="position:absolute;left:0;top:0;color:#2563eb;font-weight:700">→</span><strong>Same-day service</strong> — book before noon Monday through Saturday and we aim to arrive that afternoon</li>
-  <li style="padding-left:22px;position:relative;color:#374151;line-height:1.65;font-size:.9375rem"><span style="position:absolute;left:0;top:0;color:#2563eb;font-weight:700">→</span><strong>Flat $65 diagnostic</strong> — waived when you proceed with repair; no hidden call-out or travel fees</li>
+  <li style="padding-left:22px;position:relative;color:#374151;line-height:1.65;font-size:.9375rem"><span style="position:absolute;left:0;top:0;color:#2563eb;font-weight:700">→</span><strong>Flat $89 diagnostic</strong> — waived when you proceed with repair; no hidden call-out or travel fees</li>
   <li style="padding-left:22px;position:relative;color:#374151;line-height:1.65;font-size:.9375rem"><span style="position:absolute;left:0;top:0;color:#2563eb;font-weight:700">→</span><strong>Written quote before any work</strong> — you approve the price before we touch the appliance</li>
   <li style="padding-left:22px;position:relative;color:#374151;line-height:1.65;font-size:.9375rem"><span style="position:absolute;left:0;top:0;color:#2563eb;font-weight:700">→</span><strong>OEM parts</strong> — factory-specification components, not generic substitutes that void manufacturer warranties</li>
   <li style="padding-left:22px;position:relative;color:#374151;line-height:1.65;font-size:.9375rem"><span style="position:absolute;left:0;top:0;color:#2563eb;font-weight:700">→</span><strong>90-day parts and labour warranty</strong> — same fault returns within 90 days, we come back at no charge</li>

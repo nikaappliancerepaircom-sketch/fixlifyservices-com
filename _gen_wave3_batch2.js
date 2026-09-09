@@ -197,7 +197,7 @@ const SERVICES = {
     faqs: (hood, hoodData) => [
       {
         q: `How much does refrigerator repair cost in ${hood}?`,
-        a: `Refrigerator repair in ${hood} typically costs ${hoodData.priceRange.fridge}. The exact amount depends on the brand, model, and failure type. ${BRAND} provides an upfront quote before any work starts — confirmed on-site before the technician touches your refrigerator. No diagnostic fees, no surprise charges. Call ${PHONE} for a free phone estimate.`
+        a: `Refrigerator repair in ${hood} typically costs ${hoodData.priceRange.fridge}. The exact amount depends on the brand, model, and failure type. ${BRAND} provides an upfront quote before any work starts — confirmed on-site before the technician touches your refrigerator. $89 diagnostic fee, waived with repair, no surprise charges. Call ${PHONE} for a free phone estimate.`
       },
       {
         q: `Do you offer same-day refrigerator repair in ${hood}?`,
@@ -242,7 +242,7 @@ const SERVICES = {
     faqs: (hood, hoodData) => [
       {
         q: `How much does washer repair cost in ${hood}?`,
-        a: `Washer repair in ${hood} typically costs ${hoodData.priceRange.washer}. The exact cost depends on the brand, model, and specific fault. ${BRAND} provides a firm upfront quote before any work begins — no diagnostic fees and no hidden charges. Call ${PHONE} for a free phone estimate.`
+        a: `Washer repair in ${hood} typically costs ${hoodData.priceRange.washer}. The exact cost depends on the brand, model, and specific fault. ${BRAND} provides a firm upfront quote before any work begins — $89 diagnostic fee, waived with repair and no hidden charges. Call ${PHONE} for a free phone estimate.`
       },
       {
         q: `Do you offer same-day washer repair in ${hood}?`,
@@ -287,7 +287,7 @@ const SERVICES = {
     faqs: (hood, hoodData) => [
       {
         q: `How much does dryer repair cost in ${hood}?`,
-        a: `Dryer repair in ${hood} typically costs ${hoodData.priceRange.dryer}. Cost depends on brand, model, and fault type. ${BRAND} gives you a firm upfront quote before work begins — no diagnostic fees. Call ${PHONE} for a free phone estimate.`
+        a: `Dryer repair in ${hood} typically costs ${hoodData.priceRange.dryer}. Cost depends on brand, model, and fault type. ${BRAND} gives you a firm upfront quote before work begins — $89 diagnostic fee, waived with repair. Call ${PHONE} for a free phone estimate.`
       },
       {
         q: `Do you offer same-day dryer repair in ${hood}?`,
@@ -332,7 +332,7 @@ const SERVICES = {
     faqs: (hood, hoodData) => [
       {
         q: `How much does dishwasher repair cost in ${hood}?`,
-        a: `Dishwasher repair in ${hood} typically costs ${hoodData.priceRange.dishwasher}. The exact amount depends on brand, model, and fault. ${BRAND} provides an upfront quote before any work starts. No diagnostic fees, no surprises. Call ${PHONE} for a free phone estimate.`
+        a: `Dishwasher repair in ${hood} typically costs ${hoodData.priceRange.dishwasher}. The exact amount depends on brand, model, and fault. ${BRAND} provides an upfront quote before any work starts. $89 diagnostic fee, waived with repair, no surprises. Call ${PHONE} for a free phone estimate.`
       },
       {
         q: `Do you offer same-day dishwasher repair in ${hood}?`,
@@ -377,7 +377,7 @@ const SERVICES = {
     faqs: (hood, hoodData) => [
       {
         q: `How much does oven repair cost in ${hood}?`,
-        a: `Oven repair in ${hood} typically costs ${hoodData.priceRange.oven}. Cost varies by brand, model, and fault. ${BRAND} provides an upfront quote before work begins — no diagnostic fees. Call ${PHONE} for a free phone estimate.`
+        a: `Oven repair in ${hood} typically costs ${hoodData.priceRange.oven}. Cost varies by brand, model, and fault. ${BRAND} provides an upfront quote before work begins — $89 diagnostic fee, waived with repair. Call ${PHONE} for a free phone estimate.`
       },
       {
         q: `Do you offer same-day oven repair in ${hood}?`,
@@ -422,7 +422,7 @@ const SERVICES = {
     faqs: (hood, hoodData) => [
       {
         q: `How much does stove repair cost in ${hood}?`,
-        a: `Stove repair in ${hood} typically costs ${hoodData.priceRange.stove}. The exact amount depends on brand, model, and fault type. ${BRAND} provides a firm upfront quote before any work begins — no diagnostic fees. Call ${PHONE} for a free estimate.`
+        a: `Stove repair in ${hood} typically costs ${hoodData.priceRange.stove}. The exact amount depends on brand, model, and fault type. ${BRAND} provides a firm upfront quote before any work begins — $89 diagnostic fee, waived with repair. Call ${PHONE} for a free estimate.`
       },
       {
         q: `Do you offer same-day stove repair in ${hood}?`,
@@ -1285,7 +1285,7 @@ body::before {
         <p>${escHtml(body4)}</p>
 
         <h2>Pricing for ${escHtml(serviceLabel)} in ${escHtml(hoodLabel)}</h2>
-        <p>Typical cost for ${applianceLabel} repair in ${escHtml(hoodLabel)}: <strong>${price}</strong>. All prices include parts and labour. ${BRAND} provides a firm upfront quote before any work begins — no diagnostic fees, no surprise charges. If the repair cost exceeds 50% of the appliance's replacement value, we tell you honestly. Call ${PHONE} for a free phone estimate or book online at fixlifyservices.com.</p>
+        <p>Typical cost for ${applianceLabel} repair in ${escHtml(hoodLabel)}: <strong>${price}</strong>. All prices include parts and labour. ${BRAND} provides a firm upfront quote before any work begins — $89 diagnostic fee, waived with repair, no surprise charges. If the repair cost exceeds 50% of the appliance's replacement value, we tell you honestly. Call ${PHONE} for a free phone estimate or book online at fixlifyservices.com.</p>
 
         <!-- Problems Table -->
         <div class="pricing-card glass-card" style="margin-top:32px;">

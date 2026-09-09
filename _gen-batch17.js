@@ -324,7 +324,7 @@ function getFridgeProblems(n) {
 }
 
 function getWasherPriceTable() {
-  return `<tr><td>Diagnostic visit (waived with repair)</td><td>$65</td></tr>
+  return `<tr><td>Diagnostic visit (waived with repair)</td><td>$89</td></tr>
         <tr><td>Drive belt replacement</td><td>$120&ndash;$200</td></tr>
         <tr><td>Drain pump replacement</td><td>$150&ndash;$260</td></tr>
         <tr><td>Door boot seal (front-load)</td><td>$180&ndash;$320</td></tr>
@@ -335,7 +335,7 @@ function getWasherPriceTable() {
 }
 
 function getFridgePriceTable() {
-  return `<tr><td>Diagnostic visit (waived with repair)</td><td>$65</td></tr>
+  return `<tr><td>Diagnostic visit (waived with repair)</td><td>$89</td></tr>
         <tr><td>Compressor replacement</td><td>$420&ndash;$780</td></tr>
         <tr><td>Evaporator fan motor</td><td>$150&ndash;$260</td></tr>
         <tr><td>Condenser fan motor</td><td>$120&ndash;$220</td></tr>
@@ -346,7 +346,7 @@ function getFridgePriceTable() {
 }
 
 function getDishwasherPriceTable() {
-  return `<tr><td>Diagnostic visit (waived with repair)</td><td>$65</td></tr>
+  return `<tr><td>Diagnostic visit (waived with repair)</td><td>$89</td></tr>
         <tr><td>Drain pump replacement</td><td>$180&ndash;$280</td></tr>
         <tr><td>Door latch / door switch</td><td>$90&ndash;$150</td></tr>
         <tr><td>Heating element replacement</td><td>$150&ndash;$240</td></tr>
@@ -360,7 +360,7 @@ function getWasherFAQ(n) {
   return [
     { q: `How fast can you reach ${n.name} for a washer repair?`, a: `Our technicians reach ${n.name} from the Edmonton hub at 10025 102A Avenue NW in approximately 20–25 minutes via the Whitemud Freeway. Same-day washer repair is standard when you book before 12 PM Monday–Saturday. We also offer Sunday appointments (10 AM–6 PM Mountain Time).` },
     { q: `What brands of washers do you repair in ${n.name}?`, a: `We repair all major washer brands in ${n.name} — Samsung, LG, Whirlpool, Kenmore, Maytag, GE, Frigidaire, Bosch, and more. Both top-load and front-load configurations are serviced with OEM parts and a 90-day warranty.` },
-    { q: `How much does washer repair cost in ${n.name}?`, a: `Washer repair in ${n.name} typically runs $120–$380 CAD including parts and labour. Common repairs: drain pump $150–$260, door boot seal $180–$320, drive belt $120–$200, drum bearings $280–$480. Flat $65 diagnostic waived with repair. 90-day warranty on all repairs.` }
+    { q: `How much does washer repair cost in ${n.name}?`, a: `Washer repair in ${n.name} typically runs $120–$380 CAD including parts and labour. Common repairs: drain pump $150–$260, door boot seal $180–$320, drive belt $120–$200, drum bearings $280–$480. Flat $89 diagnostic waived with repair. 90-day warranty on all repairs.` }
   ];
 }
 
@@ -368,7 +368,7 @@ function getFridgeFAQ(n) {
   return [
     { q: `How fast can you reach ${n.name} for a fridge repair?`, a: `Our technicians reach ${n.name} from the Edmonton hub at 10025 102A Avenue NW in approximately 20–25 minutes via the Whitemud Freeway. Same-day fridge repair is standard when you book before 12 PM Monday–Saturday. We also offer Sunday appointments (10 AM–6 PM Mountain Time).` },
     { q: `What brands of fridges do you repair in ${n.name}?`, a: `We repair all major refrigerator brands in ${n.name} — Samsung, LG, Whirlpool, Kenmore, GE, Frigidaire, Bosch, KitchenAid, Maytag, and more. French door, side-by-side, and top-mount configurations all serviced with OEM parts and a 90-day warranty.` },
-    { q: `How much does fridge repair cost in ${n.name}?`, a: `Fridge repair in ${n.name} typically runs $120–$420 CAD depending on the fault. Common repairs: compressor $420–$780, evaporator fan motor $150–$260, ice maker $180–$320, water inlet valve $100–$180. Flat $65 diagnostic waived with repair. 90-day warranty on all repairs.` }
+    { q: `How much does fridge repair cost in ${n.name}?`, a: `Fridge repair in ${n.name} typically runs $120–$420 CAD depending on the fault. Common repairs: compressor $420–$780, evaporator fan motor $150–$260, ice maker $180–$320, water inlet valve $100–$180. Flat $89 diagnostic waived with repair. 90-day warranty on all repairs.` }
   ];
 }
 
@@ -376,7 +376,7 @@ function getDishwasherFAQ(n) {
   return [
     { q: `How fast can you reach ${n.name} for a dishwasher repair?`, a: `Our technicians reach ${n.name} from the Edmonton hub at 10025 102A Avenue NW in approximately 20–25 minutes via the Whitemud Freeway. Same-day dishwasher repair is standard when you book before 12 PM Monday–Saturday. We also offer Sunday appointments (10 AM–6 PM Mountain Time).` },
     { q: `Does Edmonton's hard water affect dishwashers in ${n.name}?`, a: `Yes — EPCOR's Edmonton water supply runs at 170–200 mg/L hardness, which is in the hard range. This accelerates calcium scaling in spray arm nozzles, heating elements, and circulation pump seals. We address hard water deposits during every dishwasher service visit in ${n.name}.` },
-    { q: `How much does dishwasher repair cost in ${n.name}?`, a: `Dishwasher repair in ${n.name} typically runs $120–$350 CAD including parts and labour. Common repairs: drain pump $180–$280, heating element $150–$240, door latch $90–$150, control board $240–$420. Flat $65 diagnostic waived with repair. 90-day warranty on all repairs.` }
+    { q: `How much does dishwasher repair cost in ${n.name}?`, a: `Dishwasher repair in ${n.name} typically runs $120–$350 CAD including parts and labour. Common repairs: drain pump $180–$280, heating element $150–$240, door latch $90–$150, control board $240–$420. Flat $89 diagnostic waived with repair. 90-day warranty on all repairs.` }
   ];
 }
 
@@ -410,8 +410,8 @@ function buildPage(n, svc) {
   const slug = `${svc.serviceSlugPart}-${n.slug}`;
   const title = `${svc.serviceName} ${n.name} Edmonton | Fixlify`;
   const metaDesc = svc.type === 'dishwasher'
-    ? `${svc.serviceName} in ${n.name}, Edmonton — same-day service, flat $65 diagnostic, 90-day warranty. EPCOR hard water expertise. All major brands. Book online.`
-    : `${svc.serviceName} in ${n.name}, Edmonton — same-day service, flat $65 diagnostic, 90-day warranty. All major brands. Book online or email edmonton@fixlifyservices.com.`;
+    ? `${svc.serviceName} in ${n.name}, Edmonton — same-day service, flat $89 diagnostic, 90-day warranty. EPCOR hard water expertise. All major brands. Book online.`
+    : `${svc.serviceName} in ${n.name}, Edmonton — same-day service, flat $89 diagnostic, 90-day warranty. All major brands. Book online or email edmonton@fixlifyservices.com.`;
 
   const problems = svc.type === 'washer' ? getWasherProblems(n)
     : svc.type === 'fridge' ? getFridgeProblems(n)
@@ -573,7 +573,7 @@ footer.fx-footer{background:#0a0a0a;color:rgba(255,255,255,.7);padding:40px 0;ma
   "@type": "ProfessionalService",
   "@id": "https://fixlifyservices.com/${slug}#business",
   "name": "${svc.serviceName} ${n.name} Edmonton",
-  "description": "${svc.serviceName} in ${n.name}, Edmonton by certified technicians. Same-day service, $65 diagnostic, 90-day parts and labour warranty.",
+  "description": "${svc.serviceName} in ${n.name}, Edmonton by certified technicians. Same-day service, $89 diagnostic, 90-day parts and labour warranty.",
   "url": "https://fixlifyservices.com/${slug}",
   "image": "https://fixlifyservices.com/og-image.jpg",
   "priceRange": "$",
@@ -657,7 +657,7 @@ ${renderFAQ(faqItems)}
 
 <div class="trust-bar" role="complementary" aria-label="Trust signals">
   <div class="trust-bar-inner">
-    <div class="trust-item">&#128176; $65 flat diagnostic</div>
+    <div class="trust-item">&#128176; $89 flat diagnostic</div>
     <div class="trust-item">&#10003; No Hidden Fees</div>
     <div class="trust-item">&#9873; Same-Day Service</div>
     <div class="trust-item">&#128737; 90-Day Warranty</div>
@@ -667,7 +667,7 @@ ${renderFAQ(faqItems)}
 <main class="page-main container" id="main-content">
   <div class="content-intro fade-in">
     <h2>${svc.serviceName} in ${n.name} &mdash; ${n.era} SW Edmonton</h2>
-    <p>Who fixes ${svc.serviceShort}s in ${n.name}? <strong>Fixlify Appliance Services Edmonton</strong> &mdash; we provide same-day ${svc.hubService} throughout ${n.name} and adjacent SW Edmonton communities. Book online or email <a href="mailto:edmonton@fixlifyservices.com">edmonton@fixlifyservices.com</a>. Flat <strong>$65 diagnostic</strong>, Mon&ndash;Sat 8AM&ndash;8PM, Sun 10AM&ndash;6PM Mountain Time. Typical ${svc.serviceShort} repair cost: <strong>${svc.priceRange}</strong>. <strong>90-day parts &amp; labour warranty</strong> on every repair.</p>
+    <p>Who fixes ${svc.serviceShort}s in ${n.name}? <strong>Fixlify Appliance Services Edmonton</strong> &mdash; we provide same-day ${svc.hubService} throughout ${n.name} and adjacent SW Edmonton communities. Book online or email <a href="mailto:edmonton@fixlifyservices.com">edmonton@fixlifyservices.com</a>. Flat <strong>$89 diagnostic</strong>, Mon&ndash;Sat 8AM&ndash;8PM, Sun 10AM&ndash;6PM Mountain Time. Typical ${svc.serviceShort} repair cost: <strong>${svc.priceRange}</strong>. <strong>90-day parts &amp; labour warranty</strong> on every repair.</p>
     <p>${n.context}</p>
     ${hardWaterNote}
   </div>
@@ -693,7 +693,7 @@ ${renderBrands(n.brands)}
   <section aria-label="${svc.serviceName} pricing in ${n.name}" style="margin-top:56px">
     <div class="section-label">Transparent pricing</div>
     <h2 class="section-title">${svc.serviceName} Pricing in ${n.name}</h2>
-    <p style="max-width:760px;color:#374151;line-height:1.7;margin-bottom:20px">All ${n.name} ${svc.serviceShort} repairs start with a flat <strong>$65 diagnostic</strong>, waived when you proceed with the repair. Written quote before any work begins.</p>
+    <p style="max-width:760px;color:#374151;line-height:1.7;margin-bottom:20px">All ${n.name} ${svc.serviceShort} repairs start with a flat <strong>$89 diagnostic</strong>, waived when you proceed with the repair. Written quote before any work begins.</p>
     <table class="pricing-table" style="max-width:760px">
       <thead><tr><th>Repair type</th><th>Typical range (parts + labour)</th></tr></thead>
       <tbody>
@@ -737,7 +737,7 @@ ${renderRelated(relatedLinks)}
 
   <section aria-label="Book ${n.name} ${svc.serviceShort} repair" style="margin-top:56px;padding:40px;background:#0a0a0a;border-radius:8px;text-align:center;color:#fff">
     <h2 style="font-size:1.75rem;font-weight:700;color:#fff;margin-bottom:12px;letter-spacing:-.02em">Ready to book ${svc.hubService} in ${n.name}?</h2>
-    <p style="color:rgba(255,255,255,.8);margin-bottom:24px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Same-day service, $65 flat diagnostic, written quote before any work, 90-day warranty. Book online for instant confirmation.</p>
+    <p style="color:rgba(255,255,255,.8);margin-bottom:24px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Same-day service, $89 flat diagnostic, written quote before any work, 90-day warranty. Book online for instant confirmation.</p>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
       <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="btn-primary" target="_blank" rel="noopener">Book Online &rarr;</a>
       <a href="mailto:edmonton@fixlifyservices.com" class="btn-secondary">Email Edmonton Team</a>

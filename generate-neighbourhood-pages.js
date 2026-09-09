@@ -204,7 +204,7 @@ const services = {
           },
           {
             title: `Refrigerator Repair Cost in ${n.name}`,
-            text: `Refrigerator repair in ${n.name} typically costs $150 to $450, depending on the brand, age, and specific failure. A straightforward thermostat replacement on a standard Whirlpool or GE runs $100 to $180, while a sealed-system repair on a Sub-Zero or Miele can exceed $500. Fixlify provides an upfront price estimate before any work begins — you see the cost on your booking confirmation and the technician confirms it on-site before touching the machine. No diagnostic fees, no surprise charges. If the repair cost exceeds 50% of the refrigerator's replacement value, we tell you honestly and help you make the right decision.`
+            text: `Refrigerator repair in ${n.name} typically costs $150 to $450, depending on the brand, age, and specific failure. A straightforward thermostat replacement on a standard Whirlpool or GE runs $100 to $180, while a sealed-system repair on a Sub-Zero or Miele can exceed $500. Fixlify provides an upfront price estimate before any work begins — you see the cost on your booking confirmation and the technician confirms it on-site before touching the machine. $89 diagnostic fee, waived with repair, no surprise charges. If the repair cost exceeds 50% of the refrigerator's replacement value, we tell you honestly and help you make the right decision.`
           },
           {
             title: `Why ${n.name} Residents Choose Fixlify`,
@@ -246,7 +246,7 @@ const services = {
           },
           {
             title: `Washer Repair Cost in ${n.name}`,
-            text: `Washing machine repair in ${n.name} typically costs $120 to $350. A simple drain pump clean-out or inlet screen clearing runs $80 to $130. Drive belt and motor coupling replacements fall in the $100 to $220 range. Control board replacements — the most expensive common repair — run $180 to $350 depending on the brand and model. Fixlify shows you the estimated cost at booking and the technician confirms the exact price before beginning work. No surprises, no diagnostic fees. For washers over 10 years old where the repair cost approaches 50% of replacement value, we provide an honest recommendation.`
+            text: `Washing machine repair in ${n.name} typically costs $120 to $350. A simple drain pump clean-out or inlet screen clearing runs $80 to $130. Drive belt and motor coupling replacements fall in the $100 to $220 range. Control board replacements — the most expensive common repair — run $180 to $350 depending on the brand and model. Fixlify shows you the estimated cost at booking and the technician confirms the exact price before beginning work. No surprises, $89 diagnostic fee, waived with repair. For washers over 10 years old where the repair cost approaches 50% of replacement value, we provide an honest recommendation.`
           },
           {
             title: `Why ${n.name} Homeowners Trust Fixlify`,
@@ -372,7 +372,7 @@ const services = {
           },
           {
             title: `Oven Repair Cost in ${n.name}`,
-            text: `Oven repair in ${n.name} typically costs $130 to $400. Electric heating element replacement runs $120 to $250. Gas igniter replacement costs $110 to $230. Temperature sensor or thermostat replacement falls in the $90 to $200 range. Control board replacement — the most expensive common repair — runs $180 to $350. For professional-grade ranges (Wolf, Viking, Thermador), repair costs are higher due to specialized parts, typically $250 to $600. Fixlify provides upfront pricing: you see the estimate at booking, confirm on-site, and approve before work begins. No diagnostic fees, no hidden charges.`
+            text: `Oven repair in ${n.name} typically costs $130 to $400. Electric heating element replacement runs $120 to $250. Gas igniter replacement costs $110 to $230. Temperature sensor or thermostat replacement falls in the $90 to $200 range. Control board replacement — the most expensive common repair — runs $180 to $350. For professional-grade ranges (Wolf, Viking, Thermador), repair costs are higher due to specialized parts, typically $250 to $600. Fixlify provides upfront pricing: you see the estimate at booking, confirm on-site, and approve before work begins. $89 diagnostic fee, waived with repair, no hidden charges.`
           },
           {
             title: `Gas vs. Electric Oven Repair in ${n.name}`,
@@ -394,7 +394,7 @@ function generateFAQs(neighbourhood, service) {
   const faqs = [
     {
       q: `How much does ${s.appliance} repair cost in ${n.name}?`,
-      a: `${s.appliance_cap} repair in ${n.name} typically costs ${s.price_range}. The exact cost depends on the brand, model, and specific problem. ${BRAND} provides upfront pricing — you see the estimate when you book online at ${DOMAIN} and the technician confirms the exact cost before beginning work. No diagnostic fees, no surprise charges. Call ${PHONE} for a free phone estimate.`
+      a: `${s.appliance_cap} repair in ${n.name} typically costs ${s.price_range}. The exact cost depends on the brand, model, and specific problem. ${BRAND} provides upfront pricing — you see the estimate when you book online at ${DOMAIN} and the technician confirms the exact cost before beginning work. $89 diagnostic fee, waived with repair, no surprise charges. Call ${PHONE} for a free phone estimate.`
     },
     {
       q: `Do you offer same-day ${s.appliance} repair in ${n.name}?`,

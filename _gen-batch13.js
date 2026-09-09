@@ -182,7 +182,7 @@ function buildWasherPricing(n) {
   const isNew = n.era.includes('2000');
   if (isNew) {
     return `
-        <tr><td>Diagnostic visit (waived with repair)</td><td>$65</td></tr>
+        <tr><td>Diagnostic visit (waived with repair)</td><td>$89</td></tr>
         <tr><td>Door boot seal replacement</td><td>$180&ndash;$300</td></tr>
         <tr><td>Drum bearing + tub seal</td><td>$280&ndash;$420</td></tr>
         <tr><td>Drain pump replacement</td><td>$160&ndash;$260</td></tr>
@@ -191,7 +191,7 @@ function buildWasherPricing(n) {
         <tr><td>Motor / hall sensor</td><td>$220&ndash;$360</td></tr>`;
   }
   return `
-        <tr><td>Diagnostic visit (waived with repair)</td><td>$65</td></tr>
+        <tr><td>Diagnostic visit (waived with repair)</td><td>$89</td></tr>
         <tr><td>Transmission coupling replacement</td><td>$120&ndash;$200</td></tr>
         <tr><td>Lid switch replacement</td><td>$100&ndash;$160</td></tr>
         <tr><td>Water inlet valve replacement</td><td>$120&ndash;$200</td></tr>
@@ -202,7 +202,7 @@ function buildWasherPricing(n) {
 
 function buildFridgePricing() {
   return `
-        <tr><td>Diagnostic visit (waived with repair)</td><td>$65</td></tr>
+        <tr><td>Diagnostic visit (waived with repair)</td><td>$89</td></tr>
         <tr><td>Defrost heater + thermostat</td><td>$160&ndash;$280</td></tr>
         <tr><td>Evaporator fan motor</td><td>$140&ndash;$240</td></tr>
         <tr><td>Compressor start relay</td><td>$120&ndash;$200</td></tr>
@@ -235,7 +235,7 @@ function buildPage(n, service, title, metaDesc, h1, breadcrumbParent, breadcrumb
 <meta property="og:site_name" content="Fixlify Appliance Services">
 <meta property="og:image" content="https://fixlifyservices.com/og-image.jpg">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","@id":"${url}#business","name":"${serviceTypeSchema} ${n.name} Edmonton","description":"${serviceTypeSchema} in ${n.name}, Edmonton. Same-day service, $65 diagnostic, 90-day warranty.","url":"${url}","priceRange":"$","address":{"@type":"PostalAddress","streetAddress":"10025 102A Avenue NW Suite 1000","addressLocality":"Edmonton","addressRegion":"AB","postalCode":"T5J 2Z2","addressCountry":"CA"},"areaServed":[{"@type":"City","name":"Edmonton"},{"@type":"Neighborhood","name":"${n.name}"}],"serviceType":"${serviceTypeSchema}"}
+{"@context":"https://schema.org","@type":"ProfessionalService","@id":"${url}#business","name":"${serviceTypeSchema} ${n.name} Edmonton","description":"${serviceTypeSchema} in ${n.name}, Edmonton. Same-day service, $89 diagnostic, 90-day warranty.","url":"${url}","priceRange":"$","address":{"@type":"PostalAddress","streetAddress":"10025 102A Avenue NW Suite 1000","addressLocality":"Edmonton","addressRegion":"AB","postalCode":"T5J 2Z2","addressCountry":"CA"},"areaServed":[{"@type":"City","name":"Edmonton"},{"@type":"Neighborhood","name":"${n.name}"}],"serviceType":"${serviceTypeSchema}"}
 <\/script>
 </head>
 <body>
@@ -278,11 +278,11 @@ function buildPage(n, service, title, metaDesc, h1, breadcrumbParent, breadcrumb
   <div style="font-size:.7rem;font-weight:700;letter-spacing:.08em;color:#2563eb;text-transform:uppercase;margin-bottom:.4rem">Quick Answer</div>
   <p style="margin:0;color:#1e3a5f;font-size:.9rem;line-height:1.6">${quickAnswerText}</p>
 </div>
-<div class="trust-bar"><div class="trust-bar-inner"><div class="trust-item">&#128176; $65 flat diagnostic</div><div class="trust-item">&#10003; No Hidden Fees</div><div class="trust-item">&#9873; Same-Day Service</div><div class="trust-item">&#128737; 90-Day Warranty</div></div></div>
+<div class="trust-bar"><div class="trust-bar-inner"><div class="trust-item">&#128176; $89 flat diagnostic</div><div class="trust-item">&#10003; No Hidden Fees</div><div class="trust-item">&#9873; Same-Day Service</div><div class="trust-item">&#128737; 90-Day Warranty</div></div></div>
 <main class="page-main container" id="main-content">
   <div class="fade-in" style="max-width:760px;font-size:1.0625rem;color:#374151;line-height:1.75;margin-bottom:56px">
     <h2 style="font-size:1.375rem;font-weight:700;color:#0a0a0a;margin-bottom:16px">${h2Text}</h2>
-    <p>Who fixes ${serviceLabel.toLowerCase()}s in ${n.name}? <strong>Fixlify Appliance Services Edmonton</strong> &mdash; same-day ${serviceLabel.toLowerCase()} repair throughout ${n.name} and surrounding Edmonton communities. Book online or email <a href="mailto:edmonton@fixlifyservices.com">edmonton@fixlifyservices.com</a>. Flat <strong>$65 diagnostic</strong>, Mon&ndash;Sat 8AM&ndash;8PM, Sun 10AM&ndash;6PM Mountain Time. Typical cost: <strong>$120&ndash;$380 CAD</strong>. <strong>90-day warranty</strong> on every repair.</p>
+    <p>Who fixes ${serviceLabel.toLowerCase()}s in ${n.name}? <strong>Fixlify Appliance Services Edmonton</strong> &mdash; same-day ${serviceLabel.toLowerCase()} repair throughout ${n.name} and surrounding Edmonton communities. Book online or email <a href="mailto:edmonton@fixlifyservices.com">edmonton@fixlifyservices.com</a>. Flat <strong>$89 diagnostic</strong>, Mon&ndash;Sat 8AM&ndash;8PM, Sun 10AM&ndash;6PM Mountain Time. Typical cost: <strong>$120&ndash;$380 CAD</strong>. <strong>90-day warranty</strong> on every repair.</p>
     <p>${introText}</p>
     <p>Our Edmonton hub at 10025 102A Avenue NW dispatches to ${n.name} in approximately ${n.dist} minutes via ${n.route}.</p>
   </div>
@@ -360,13 +360,13 @@ for (const n of neighborhoods) {
   const wBrands = n.brands_washer;
   const wProblems = buildWasherProblems(n);
   const wPricingRows = buildWasherPricing(n);
-  const wFaqSchema = JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":`How fast can you reach ${n.name}?`,"acceptedAnswer":{"@type":"Answer","text":`Approximately ${n.dist} minutes via ${n.route}. Same-day service when you book before 12 PM Monday–Saturday.`}},{"@type":"Question","name":`How much does washer repair cost in ${n.name}?`,"acceptedAnswer":{"@type":"Answer","text":`Typical washer repair in ${n.name} runs $120–$380 CAD. Flat $65 diagnostic waived with repair. 90-day warranty.`}}]});
+  const wFaqSchema = JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":`How fast can you reach ${n.name}?`,"acceptedAnswer":{"@type":"Answer","text":`Approximately ${n.dist} minutes via ${n.route}. Same-day service when you book before 12 PM Monday–Saturday.`}},{"@type":"Question","name":`How much does washer repair cost in ${n.name}?`,"acceptedAnswer":{"@type":"Answer","text":`Typical washer repair in ${n.name} runs $120–$380 CAD. Flat $89 diagnostic waived with repair. 90-day warranty.`}}]});
 
   const wHtml = buildPage(
     n,
     'washer-repair',
     `Washer Repair ${n.name} Edmonton | From $65 | Same-Day Service`,
-    `Washer Repair in ${n.name}, Edmonton — same-day service, flat $65 diagnostic, 90-day warranty. ${wBrands.slice(0,2).join(', ')} &amp; all brands. Book online or email edmonton@fixlifyservices.com.`,
+    `Washer Repair in ${n.name}, Edmonton — same-day service, flat $89 diagnostic, 90-day warranty. ${wBrands.slice(0,2).join(', ')} &amp; all brands. Book online or email edmonton@fixlifyservices.com.`,
     `Washer Repair in ${n.name}, Edmonton`,
     'Washer Repair Edmonton', '/washer-repair-edmonton',
     `Fixlify provides same-day washer repair in ${n.name}, Edmonton. We fix all brands &mdash; ${wBrands.slice(0,3).join(', ')} &amp; more. $120&ndash;$380 CAD typical cost, 90-day warranty. Book online or email edmonton@fixlifyservices.com.`,
@@ -376,18 +376,18 @@ for (const n of neighborhoods) {
     wProblems,
     wBrands,
     `Washer Repair Pricing in ${n.name}`,
-    `All ${n.name} repairs start with a flat <strong>$65 diagnostic</strong>, waived when you proceed with the repair. Written quote before any work begins.`,
+    `All ${n.name} repairs start with a flat <strong>$89 diagnostic</strong>, waived when you proceed with the repair. Written quote before any work begins.`,
     wPricingRows,
     `Book Washer Repair in ${n.name}`,
     `<details class="faq-item"><summary class="faq-question"><span>How fast can you reach ${n.name}?</span><span class="faq-icon">+</span></summary><div class="faq-answer"><p>Approximately ${n.dist} minutes from our Edmonton hub via ${n.route}. Same-day service when you book before 12 PM Monday&ndash;Saturday. Sunday crew available 10 AM&ndash;6 PM Mountain Time.</p></div></details>
     <details class="faq-item"><summary class="faq-question"><span>Do you repair ${wBrands[0]} washers in ${n.name}?</span><span class="faq-icon">+</span></summary><div class="faq-answer"><p>Yes &mdash; ${wBrands[0]} and ${wBrands[1]} are among the most common washer brands in ${n.name}. We carry OEM parts as standard truck stock for same-day repair on all major platforms.</p></div></details>
-    <details class="faq-item"><summary class="faq-question"><span>How much does washer repair cost in ${n.name}?</span><span class="faq-icon">+</span></summary><div class="faq-answer"><p>Typical washer repair in ${n.name} runs $120&ndash;$380 CAD including parts and labour. Flat $65 diagnostic waived when you proceed with the repair. Written quote before any work begins. 90-day parts and labour warranty.</p></div></details>
+    <details class="faq-item"><summary class="faq-question"><span>How much does washer repair cost in ${n.name}?</span><span class="faq-icon">+</span></summary><div class="faq-answer"><p>Typical washer repair in ${n.name} runs $120&ndash;$380 CAD including parts and labour. Flat $89 diagnostic waived when you proceed with the repair. Written quote before any work begins. 90-day parts and labour warranty.</p></div></details>
     <details class="faq-item"><summary class="faq-question"><span>Do you warranty washer repairs in ${n.name}?</span><span class="faq-icon">+</span></summary><div class="faq-answer"><p>Yes &mdash; every washer repair in ${n.name} includes a 90-day parts and labour warranty. Same fault within 90 days: we return at no charge.</p></div></details>`,
     `<a href="/dishwasher-repair-${n.slug}" class="related-link">Dishwasher Repair &mdash; ${n.name}</a>
       <a href="/fridge-repair-${n.slug}" class="related-link">Fridge Repair &mdash; ${n.name}</a>
       <a href="/washer-repair-edmonton" class="related-link">Washer Repair &mdash; Edmonton</a>`,
     `Ready to book washer repair in ${n.name}?`,
-    `Same-day service, $65 flat diagnostic, written quote before any work, 90-day warranty.`,
+    `Same-day service, $89 flat diagnostic, written quote before any work, 90-day warranty.`,
     'Washer Repair',
     wFaqSchema,
     `Book online &mdash; ${n.name} and all Edmonton CMA.`,
@@ -404,13 +404,13 @@ for (const n of neighborhoods) {
   const fBrands = n.brands_fridge;
   const fProblems = buildFridgeProblems(n);
   const fPricingRows = buildFridgePricing();
-  const fFaqSchema = JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":`How fast can you reach ${n.name}?`,"acceptedAnswer":{"@type":"Answer","text":`Approximately ${n.dist} minutes via ${n.route}. Same-day service when you book before 12 PM Monday–Saturday.`}},{"@type":"Question","name":`How much does fridge repair cost in ${n.name}?`,"acceptedAnswer":{"@type":"Answer","text":`Typical fridge repair in ${n.name} runs $120–$380 CAD. Flat $65 diagnostic waived with repair. 90-day warranty.`}}]});
+  const fFaqSchema = JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":`How fast can you reach ${n.name}?`,"acceptedAnswer":{"@type":"Answer","text":`Approximately ${n.dist} minutes via ${n.route}. Same-day service when you book before 12 PM Monday–Saturday.`}},{"@type":"Question","name":`How much does fridge repair cost in ${n.name}?`,"acceptedAnswer":{"@type":"Answer","text":`Typical fridge repair in ${n.name} runs $120–$380 CAD. Flat $89 diagnostic waived with repair. 90-day warranty.`}}]});
 
   const fHtml = buildPage(
     n,
     'fridge-repair',
     `Fridge Repair ${n.name} Edmonton | From $65 | Same-Day Service`,
-    `Fridge Repair in ${n.name}, Edmonton — same-day service, flat $65 diagnostic, 90-day warranty. ${fBrands.slice(0,2).join(', ')} &amp; all brands. Book online or email edmonton@fixlifyservices.com.`,
+    `Fridge Repair in ${n.name}, Edmonton — same-day service, flat $89 diagnostic, 90-day warranty. ${fBrands.slice(0,2).join(', ')} &amp; all brands. Book online or email edmonton@fixlifyservices.com.`,
     `Fridge Repair in ${n.name}, Edmonton`,
     'Fridge Repair Edmonton', '/fridge-repair-edmonton',
     `Fixlify provides same-day fridge repair in ${n.name}, Edmonton. We fix all brands &mdash; ${fBrands.slice(0,3).join(', ')} &amp; more. $120&ndash;$380 CAD typical cost, 90-day warranty. Book online or email edmonton@fixlifyservices.com.`,
@@ -420,18 +420,18 @@ for (const n of neighborhoods) {
     fProblems,
     fBrands,
     `Fridge Repair Pricing in ${n.name}`,
-    `All ${n.name} fridge repairs start with a flat <strong>$65 diagnostic</strong>, waived when you proceed with the repair. Written quote before any work begins.`,
+    `All ${n.name} fridge repairs start with a flat <strong>$89 diagnostic</strong>, waived when you proceed with the repair. Written quote before any work begins.`,
     fPricingRows,
     `Book Fridge Repair in ${n.name}`,
     `<details class="faq-item"><summary class="faq-question"><span>How fast can you reach ${n.name}?</span><span class="faq-icon">+</span></summary><div class="faq-answer"><p>Approximately ${n.dist} minutes from our Edmonton hub via ${n.route}. Same-day service when you book before 12 PM Monday&ndash;Saturday. Sunday crew available 10 AM&ndash;6 PM Mountain Time.</p></div></details>
     <details class="faq-item"><summary class="faq-question"><span>Do you repair ${fBrands[0]} refrigerators in ${n.name}?</span><span class="faq-icon">+</span></summary><div class="faq-answer"><p>Yes &mdash; ${fBrands[0]} and ${fBrands[1]} are among the most common refrigerator brands in ${n.name}. We carry OEM parts as standard truck stock for same-day repair on all major platforms.</p></div></details>
-    <details class="faq-item"><summary class="faq-question"><span>How much does fridge repair cost in ${n.name}?</span><span class="faq-icon">+</span></summary><div class="faq-answer"><p>Typical fridge repair in ${n.name} runs $120&ndash;$380 CAD including parts and labour. Flat $65 diagnostic waived when you proceed with the repair. Written quote before any work begins. 90-day parts and labour warranty.</p></div></details>
+    <details class="faq-item"><summary class="faq-question"><span>How much does fridge repair cost in ${n.name}?</span><span class="faq-icon">+</span></summary><div class="faq-answer"><p>Typical fridge repair in ${n.name} runs $120&ndash;$380 CAD including parts and labour. Flat $89 diagnostic waived when you proceed with the repair. Written quote before any work begins. 90-day parts and labour warranty.</p></div></details>
     <details class="faq-item"><summary class="faq-question"><span>Do you warranty fridge repairs in ${n.name}?</span><span class="faq-icon">+</span></summary><div class="faq-answer"><p>Yes &mdash; every fridge repair in ${n.name} includes a 90-day parts and labour warranty. Same fault within 90 days: we return at no charge.</p></div></details>`,
     `<a href="/dishwasher-repair-${n.slug}" class="related-link">Dishwasher Repair &mdash; ${n.name}</a>
       <a href="/washer-repair-${n.slug}" class="related-link">Washer Repair &mdash; ${n.name}</a>
       <a href="/fridge-repair-edmonton" class="related-link">Fridge Repair &mdash; Edmonton</a>`,
     `Ready to book fridge repair in ${n.name}?`,
-    `Same-day service, $65 flat diagnostic, written quote before any work, 90-day warranty.`,
+    `Same-day service, $89 flat diagnostic, written quote before any work, 90-day warranty.`,
     'Fridge Repair',
     fFaqSchema,
     `Book online &mdash; ${n.name} and all Edmonton CMA.`,

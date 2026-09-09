@@ -12,7 +12,7 @@ function makeHTML(opts) {
   const pageId = `${serviceSlug}-${slug}`;
   const canonicalURL = `https://fixlifyservices.com/${pageId}`;
   const title = `${serviceLabel} ${neighborhood} Edmonton | From $65 | Same-Day Service`;
-  const desc = `${serviceLabel} in ${neighborhood}, Edmonton -- same-day service, flat $65 diagnostic, 90-day warranty. ${brands}. Book online or email edmonton@fixlifyservices.com.`;
+  const desc = `${serviceLabel} in ${neighborhood}, Edmonton -- same-day service, flat $89 diagnostic, 90-day warranty. ${brands}. Book online or email edmonton@fixlifyservices.com.`;
   const h1 = `${serviceLabel} in ${neighborhood}, Edmonton`;
   const idSuffix = slug.replace(/-/g,'');
   const iframeId = `fxbk-${serviceSlug[0]}-${idSuffix}`;
@@ -44,12 +44,12 @@ function makeHTML(opts) {
 <style>${CSS}</style>
 <meta property="og:type" content="website">
 <meta property="og:title" content="${title}">
-<meta property="og:description" content="${serviceLabel} in ${neighborhood}, Edmonton. From $65 diagnostic, 90-day warranty.">
+<meta property="og:description" content="${serviceLabel} in ${neighborhood}, Edmonton. From $89 diagnostic, 90-day warranty.">
 <meta property="og:url" content="${canonicalURL}">
 <meta property="og:site_name" content="Fixlify Appliance Services">
 <meta property="og:image" content="https://fixlifyservices.com/og-image.jpg">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","@id":"${canonicalURL}#business","name":"${serviceLabel} ${neighborhood} Edmonton","description":"${serviceLabel} in ${neighborhood}, Edmonton. Same-day service, $65 diagnostic, 90-day warranty.","url":"${canonicalURL}","priceRange":"$","address":{"@type":"PostalAddress","streetAddress":"10025 102A Avenue NW Suite 1000","addressLocality":"Edmonton","addressRegion":"AB","postalCode":"T5J 2Z2","addressCountry":"CA"},"areaServed":[{"@type":"City","name":"Edmonton"},{"@type":"Neighborhood","name":"${neighborhood}"}],"serviceType":"${serviceLabel}"}
+{"@context":"https://schema.org","@type":"ProfessionalService","@id":"${canonicalURL}#business","name":"${serviceLabel} ${neighborhood} Edmonton","description":"${serviceLabel} in ${neighborhood}, Edmonton. Same-day service, $89 diagnostic, 90-day warranty.","url":"${canonicalURL}","priceRange":"$","address":{"@type":"PostalAddress","streetAddress":"10025 102A Avenue NW Suite 1000","addressLocality":"Edmonton","addressRegion":"AB","postalCode":"T5J 2Z2","addressCountry":"CA"},"areaServed":[{"@type":"City","name":"Edmonton"},{"@type":"Neighborhood","name":"${neighborhood}"}],"serviceType":"${serviceLabel}"}
 <\/script>
 </head>
 <body>
@@ -92,11 +92,11 @@ function makeHTML(opts) {
   <div style="font-size:.7rem;font-weight:700;letter-spacing:.08em;color:#2563eb;text-transform:uppercase;margin-bottom:.4rem">Quick Answer</div>
   <p style="margin:0;color:#1e3a5f;font-size:.9rem;line-height:1.6">Fixlify provides same-day ${service} repair in ${neighborhood}, Edmonton -- 7 days a week. ${answerCost} CAD typical cost. ${brands}. 90-day parts &amp; labour warranty.</p>
 </div>
-<div class="trust-bar"><div class="trust-bar-inner"><div class="trust-item">&#128176; $65 flat diagnostic</div><div class="trust-item">&#10003; No Hidden Fees</div><div class="trust-item">&#9873; Same-Day Service</div><div class="trust-item">&#128737; 90-Day Warranty</div></div></div>
+<div class="trust-bar"><div class="trust-bar-inner"><div class="trust-item">&#128176; $89 flat diagnostic</div><div class="trust-item">&#10003; No Hidden Fees</div><div class="trust-item">&#9873; Same-Day Service</div><div class="trust-item">&#128737; 90-Day Warranty</div></div></div>
 <main class="page-main container" id="main-content">
   <div class="fade-in" style="max-width:760px;font-size:1.0625rem;color:#374151;line-height:1.75;margin-bottom:56px">
     <h2 style="font-size:1.375rem;font-weight:700;color:#0a0a0a;margin-bottom:16px">${serviceLabel} in ${neighborhood} -- ${era}</h2>
-    <p>Who fixes ${service}s in ${neighborhood}? <strong>Fixlify Appliance Services Edmonton</strong> -- same-day ${service} repair throughout ${neighborhood} and surrounding Edmonton communities. Book online or email <a href="mailto:edmonton@fixlifyservices.com">edmonton@fixlifyservices.com</a>. Flat <strong>$65 diagnostic</strong>, Mon--Sat 8AM--8PM, Sun 10AM--6PM Mountain Time. Typical cost: <strong>${answerCost} CAD</strong>. <strong>90-day warranty</strong> on every repair.</p>
+    <p>Who fixes ${service}s in ${neighborhood}? <strong>Fixlify Appliance Services Edmonton</strong> -- same-day ${service} repair throughout ${neighborhood} and surrounding Edmonton communities. Book online or email <a href="mailto:edmonton@fixlifyservices.com">edmonton@fixlifyservices.com</a>. Flat <strong>$89 diagnostic</strong>, Mon--Sat 8AM--8PM, Sun 10AM--6PM Mountain Time. Typical cost: <strong>${answerCost} CAD</strong>. <strong>90-day warranty</strong> on every repair.</p>
     <p>${neighborhoodPara}</p>
   </div>
   <section style="padding:48px 0;border-top:1px solid #e5e7eb">
@@ -114,7 +114,7 @@ function makeHTML(opts) {
   <section style="margin-top:56px">
     <div class="section-label">Transparent pricing</div>
     <h2 class="section-title">${serviceLabel} Pricing in ${neighborhood}</h2>
-    <p style="max-width:760px;color:#374151;line-height:1.7;margin-bottom:20px">All ${neighborhood} repairs start with a flat <strong>$65 diagnostic</strong>, waived when you proceed with the repair. Written quote before any work begins.</p>
+    <p style="max-width:760px;color:#374151;line-height:1.7;margin-bottom:20px">All ${neighborhood} repairs start with a flat <strong>$89 diagnostic</strong>, waived when you proceed with the repair. Written quote before any work begins.</p>
     <table class="pricing-table" style="max-width:760px">
       <thead><tr><th>Repair type</th><th>Typical range (parts + labour)</th></tr></thead>
       <tbody>${pricingRows}
@@ -139,7 +139,7 @@ function makeHTML(opts) {
     <h2 style="font-size:clamp(1.5rem,3vw,2rem);font-weight:700;letter-spacing:-.03em;color:#0a0a0a;margin-bottom:32px">FAQ -- ${serviceLabel} in ${neighborhood}</h2>
     <details class="faq-item"><summary class="faq-question"><span>How fast can you reach ${neighborhood}?</span><span class="faq-icon">+</span></summary><div class="faq-answer"><p>Approximately ${travelTime} minutes from our Edmonton hub via ${travelRoute}. Same-day service when you book before 12 PM Monday--Saturday. Sunday crew available 10 AM--6 PM Mountain Time.</p></div></details>
     <details class="faq-item"><summary class="faq-question"><span>${faqQ2}</span><span class="faq-icon">+</span></summary><div class="faq-answer"><p>${faqA2}</p></div></details>
-    <details class="faq-item"><summary class="faq-question"><span>How much does ${service} repair cost in ${neighborhood}?</span><span class="faq-icon">+</span></summary><div class="faq-answer"><p>Typical ${service} repair in ${neighborhood} runs ${answerCost} CAD including parts and labour. Flat $65 diagnostic waived when you proceed. Written quote before any work. 90-day warranty.</p></div></details>
+    <details class="faq-item"><summary class="faq-question"><span>How much does ${service} repair cost in ${neighborhood}?</span><span class="faq-icon">+</span></summary><div class="faq-answer"><p>Typical ${service} repair in ${neighborhood} runs ${answerCost} CAD including parts and labour. Flat $89 diagnostic waived when you proceed. Written quote before any work. 90-day warranty.</p></div></details>
     <details class="faq-item"><summary class="faq-question"><span>Do you warranty ${service} repairs in ${neighborhood}?</span><span class="faq-icon">+</span></summary><div class="faq-answer"><p>Yes -- every ${service} repair in ${neighborhood} includes a 90-day parts and labour warranty. Same fault within 90 days: we return at no charge.</p></div></details>
   </section>
   <section style="margin-top:56px;padding:32px;background:#f9fafb;border-radius:8px">
@@ -153,7 +153,7 @@ function makeHTML(opts) {
   </section>
   <section style="margin-top:56px;padding:40px;background:#0a0a0a;border-radius:8px;text-align:center;color:#fff">
     <h2 style="font-size:1.75rem;font-weight:700;color:#fff;margin-bottom:12px">Ready to book ${service} repair in ${neighborhood}?</h2>
-    <p style="color:rgba(255,255,255,.8);margin-bottom:24px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Same-day service, $65 flat diagnostic, written quote before any work, 90-day warranty.</p>
+    <p style="color:rgba(255,255,255,.8);margin-bottom:24px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Same-day service, $89 flat diagnostic, written quote before any work, 90-day warranty.</p>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
       <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="btn-primary" target="_blank" rel="noopener">Book Online &rarr;</a>
       <a href="mailto:edmonton@fixlifyservices.com" class="btn-secondary">Email Edmonton Team</a>
@@ -161,7 +161,7 @@ function makeHTML(opts) {
   </section>
 </main>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How fast can you reach ${neighborhood}?","acceptedAnswer":{"@type":"Answer","text":"Approximately ${travelTime} minutes from our Edmonton hub via ${travelRoute}. Same-day service when you book before 12 PM Monday--Saturday."}},{"@type":"Question","name":"How much does ${service} repair cost in ${neighborhood}?","acceptedAnswer":{"@type":"Answer","text":"Typical ${service} repair in ${neighborhood} runs ${answerCost} CAD. Flat $65 diagnostic waived with repair. 90-day warranty."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How fast can you reach ${neighborhood}?","acceptedAnswer":{"@type":"Answer","text":"Approximately ${travelTime} minutes from our Edmonton hub via ${travelRoute}. Same-day service when you book before 12 PM Monday--Saturday."}},{"@type":"Question","name":"How much does ${service} repair cost in ${neighborhood}?","acceptedAnswer":{"@type":"Answer","text":"Typical ${service} repair in ${neighborhood} runs ${answerCost} CAD. Flat $89 diagnostic waived with repair. 90-day warranty."}}]}
 <\/script>
 <footer class="fx-footer" role="contentinfo"><div class="fx-footer-inner">
   <div class="fx-footer-cta-strip"><div class="fx-footer-cta-content"><div class="fx-footer-cta-text"><span class="fx-footer-cta-label">Edmonton Appliance Repair</span><p>Book online -- ${neighborhood} and all Edmonton CMA.</p></div><div class="fx-footer-cta-btns"><a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="fx-footer-btn-book" rel="noopener">Book Online Now</a><a href="mailto:edmonton@fixlifyservices.com" class="fx-footer-btn-call">edmonton@fixlifyservices.com</a></div></div></div>

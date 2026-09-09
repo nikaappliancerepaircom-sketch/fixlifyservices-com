@@ -68,7 +68,7 @@ const SUBURBS = {
       { title: 'LG ThinQ fridge linear compressor failure', body: 'Newer 2018+ Sherwood Park homes with LG French-door units. We document the diagnostic so you can claim LG\'s extended compressor warranty.' }
     ],
     faqs: [
-      { q: 'How much does Bosch dishwasher repair cost in Sherwood Park?', a: 'Bosch dishwasher repairs in Sherwood Park typically run $180&ndash;$340 for pump replacements (the most common fault we see in West Sherwood Park condos and Lakeland Ridge townhomes), $220&ndash;$360 for control board swaps, and $260&ndash;$420 for circulation motor work. Our flat $65 diagnostic is waived with repair, and we carry OEM Bosch pumps for one-visit fixes.' },
+      { q: 'How much does Bosch dishwasher repair cost in Sherwood Park?', a: 'Bosch dishwasher repairs in Sherwood Park typically run $180&ndash;$340 for pump replacements (the most common fault we see in West Sherwood Park condos and Lakeland Ridge townhomes), $220&ndash;$360 for control board swaps, and $260&ndash;$420 for circulation motor work. Our flat $89 diagnostic is waived with repair, and we carry OEM Bosch pumps for one-visit fixes.' },
       { q: 'Do you service Sub-Zero, Wolf, and Miele in Heritage Hills and Foxhaven?', a: 'Yes &mdash; we are one of a small number of Edmonton-area shops equipped to service Sub-Zero column refrigerators, Wolf gas ranges, and Miele dishwashers. We carry the specialty tools and have established parts channels for these brands. Heritage Hills, Foxhaven, and the executive homes in West Sherwood Park are regular service routes for us.' },
       { q: 'Can you reach Sherwood Park same-day from Edmonton?', a: 'Yes. Our Edmonton hub is 18&ndash;25 minutes from Sherwood Park via the Anthony Henday or Yellowhead Trail. Same-day service is standard when you book before 12 PM Monday&ndash;Saturday, and we run a smaller Sunday crew (10 AM&ndash;6 PM) for emergency cooling and laundry calls in Strathcona County.' },
       { q: 'My LG fridge is past its 1-year warranty &mdash; will LG still cover the linear compressor?', a: 'Possibly. LG offers an extended 5- or 10-year warranty on the linear compressor itself (varies by model and purchase date). When we diagnose a Sherwood Park LG French-door fridge with a compressor fault, we email you a written diagnostic that you can submit to LG for warranty consideration. Even if LG covers the part, our labour to install it is typically still your cost.' },
@@ -81,13 +81,13 @@ const SUBURBS = {
       { title: 'Premium brand certification', body: 'Bosch, Sub-Zero, Wolf, Miele, KitchenAid &mdash; we carry the specialty diagnostic tools and parts channels that most appliance shops don\'t.' },
       { title: '20-minute Edmonton dispatch', body: 'Anthony Henday or Yellowhead Trail puts us in Sherwood Park in 18&ndash;25 minutes. Most West Sherwood Park calls go same-day.' },
       { title: 'Heritage Hills executive estate access', body: 'Insured, bonded, background-checked technicians appropriate for executive estate work and gated communities.' },
-      { title: 'Flat $65 diagnostic, written quote', body: 'No hourly rates, no markup on parts, written quote before any work begins. Diagnostic waived when you proceed.' },
+      { title: 'Flat $89 diagnostic, written quote', body: 'No hourly rates, no markup on parts, written quote before any work begins. Diagnostic waived when you proceed.' },
       { title: '90-day warranty + service summary', body: 'Parts and labour covered for 90 days. Email summary with model number, fault code, parts replaced, and warranty terms after every visit.' }
     ],
     servicesIntro: `Sherwood Park's premium-appliance footprint means our service mix here skews toward higher-end brands: Bosch and Miele dishwashers, Sub-Zero and KitchenAid built-in fridges, Wolf and Thermador gas ranges. We also handle the broader brand spectrum &mdash; Whirlpool, GE, Frigidaire, Maytag, Samsung, LG &mdash; that you find throughout Strathcona County. Each service has a dedicated Sherwood Park page with brand-specific notes and pricing.`,
     neighborhoodsIntro: `Sherwood Park is divided into roughly 30 named neighborhoods within Strathcona County, ranging from the original 1970s-80s subdivisions in the centre to newer 2000s+ executive communities on the perimeter. Same-day routes regularly reach:`,
     neighborhoodsFooter: `Don\'t see your Sherwood Park neighborhood? We cover all of Strathcona County. Book online and we\'ll confirm your service window within minutes.`,
-    pricingIntro: `All Sherwood Park repairs start with a flat <strong>$65 diagnostic</strong>. Premium-brand work (Bosch, Sub-Zero, Wolf, Miele) follows the same pricing structure &mdash; we don\'t mark up labour for premium brands, only for genuinely longer or more complex jobs. The diagnostic is waived when you proceed with the repair. Written quote before any work; you decide whether to go ahead.`,
+    pricingIntro: `All Sherwood Park repairs start with a flat <strong>$89 diagnostic</strong>. Premium-brand work (Bosch, Sub-Zero, Wolf, Miele) follows the same pricing structure &mdash; we don\'t mark up labour for premium brands, only for genuinely longer or more complex jobs. The diagnostic is waived when you proceed with the repair. Written quote before any work; you decide whether to go ahead.`,
     brandsIntro: `Our Sherwood Park technicians are equipped for premium tiers (Bosch, Miele, Sub-Zero, Wolf, Thermador, JennAir) alongside mid-range and budget. Premium brands are not surcharged &mdash; we charge by job complexity, not by brand prestige.`
   },
 
@@ -135,7 +135,7 @@ const SUBURBS = {
       { title: 'Frigidaire glass cooktop infinite switch', body: 'Lacombe Park and Inglewood Frigidaire ranges: infinite switch arcing at the high-low position. Switch swap; $180-$220 typical.' }
     ],
     faqs: [
-      { q: 'How much does GE fridge repair cost in St. Albert?', a: 'GE fridge repairs in St. Albert typically range $180&ndash;$320 for defrost timer/heater fault (the most common pattern we see in Mission, Akinsdale, and Sturgeon Heights GSS-series fridges 18&ndash;22 years old), $220&ndash;$380 for evaporator fan, and $450&ndash;$850 for sealed-system work. Our flat $65 diagnostic is waived when you proceed.' },
+      { q: 'How much does GE fridge repair cost in St. Albert?', a: 'GE fridge repairs in St. Albert typically range $180&ndash;$320 for defrost timer/heater fault (the most common pattern we see in Mission, Akinsdale, and Sturgeon Heights GSS-series fridges 18&ndash;22 years old), $220&ndash;$380 for evaporator fan, and $450&ndash;$850 for sealed-system work. Our flat $89 diagnostic is waived when you proceed.' },
       { q: 'Should I repair my 20-year-old Whirlpool washer or buy new?', a: 'Honest answer: it depends on the fault. Drain pump, lid lock, or drive belt = repair (under $250). Direct-drive transmission seizure on a 2003&ndash;2010 Whirlpool/Maytag top-loader (common in Riel and Forest Lawn) = usually replace, because the transmission rebuild costs almost as much as a new mid-range washer. We lay out the math on every St. Albert call.' },
       { q: 'How quickly can you reach St. Albert from Edmonton?', a: 'Our techs reach St. Albert via St. Albert Trail or the Anthony Henday in 15&ndash;20 minutes from our Edmonton hub. Same-day service is available when you book before noon Monday&ndash;Saturday, and we run a Sunday crew 10 AM&ndash;6 PM for cooling and laundry emergencies. Routes regularly cover Erin Ridge, Heritage Lakes, Oakmont, Lacombe Park, and the older neighborhoods alike.' },
       { q: 'My garage freezer thawed in January &mdash; was the compressor damaged?', a: 'Possibly &mdash; many St. Albert garage freezers use compressors only rated for indoor temperatures. Below -25C, the compressor oil thickens and the unit stalls on startup. If the freezer warmed enough to thaw, we test the compressor first; if it\'s still healthy, we install a garage-rated kit (low-temperature thermostat + heater) so it works through Alberta winters. If the compressor is damaged, we lay out repair-vs-replace economics.' },
@@ -151,10 +151,10 @@ const SUBURBS = {
       { title: 'Repair vs. replace honesty', body: 'On 20-year-old Whirlpool transmissions, we tell you replace. On 5-year-old Samsung control boards, we tell you repair. Math first, opinion second.' },
       { title: '90-day warranty across all neighborhoods', body: 'Same warranty terms whether you\'re in Mission heritage core or Erin Ridge new-build. If the fault returns, we return.' }
     ],
-    servicesIntro: `St. Albert\'s housing-age split means we routinely run two completely different service routes here in a single day: vintage repair work in Mission and Akinsdale, and smart-appliance diagnostics in Erin Ridge and Heritage Lakes. Both routes use the same flat $65 diagnostic and 90-day warranty. Each service has a dedicated St. Albert page with neighborhood-specific notes.`,
+    servicesIntro: `St. Albert\'s housing-age split means we routinely run two completely different service routes here in a single day: vintage repair work in Mission and Akinsdale, and smart-appliance diagnostics in Erin Ridge and Heritage Lakes. Both routes use the same flat $89 diagnostic and 90-day warranty. Each service has a dedicated St. Albert page with neighborhood-specific notes.`,
     neighborhoodsIntro: `St. Albert covers a broad area along the Sturgeon River, divided into more than 25 named neighborhoods. Our St. Albert routes run daily through the established core and the newer subdivisions, with same-day service typically available in:`,
     neighborhoodsFooter: `Cover any St. Albert street not listed here? Yes. Book online and we\'ll dispatch the next available technician for your address along the Sturgeon River corridor.`,
-    pricingIntro: `St. Albert pricing follows our standard structure: flat <strong>$65 diagnostic</strong>, waived when you proceed with repair. Vintage work (NOS parts sourcing on 20+ year-old machines) sometimes carries a parts-procurement surcharge if we have to source from out-of-province distributors &mdash; this is always disclosed in the quote, not added later.`,
+    pricingIntro: `St. Albert pricing follows our standard structure: flat <strong>$89 diagnostic</strong>, waived when you proceed with repair. Vintage work (NOS parts sourcing on 20+ year-old machines) sometimes carries a parts-procurement surcharge if we have to source from out-of-province distributors &mdash; this is always disclosed in the quote, not added later.`,
     brandsIntro: `St. Albert\'s housing-age split puts us in front of every brand era: 1970s-80s GE, Whirlpool, Frigidaire vintage; 1990s-2000s Maytag, Kenmore, KitchenAid; 2010+ Samsung, LG, Bosch, Electrolux smart appliances. We service all of them with the same diagnostic depth.`
   },
 
@@ -221,7 +221,7 @@ const SUBURBS = {
     servicesIntro: `Most Spruce Grove service calls land on appliances under 6 years old, often just out of factory warranty. Whirlpool, LG, Samsung, and GE Profile dominate our Spruce Grove call sheet, with Bosch and KitchenAid in the higher-end Tonewood and Copperhaven builds. Each service has a dedicated Spruce Grove page with current pricing and brand-specific common faults.`,
     neighborhoodsIntro: `Spruce Grove\'s post-2010 growth has produced more than 15 named neighborhoods, most of them new-build subdivisions with similar housing styles and appliance packages. Our daily Spruce Grove routes cover:`,
     neighborhoodsFooter: `Live in a Spruce Grove pocket not listed here? We cover the entire Parkland County corridor including Stony Plain. Book online for confirmation.`,
-    pricingIntro: `Spruce Grove pricing matches our standard rate structure: flat <strong>$65 diagnostic</strong>, waived when you proceed. Most just-out-of-warranty fixes here land in the $150&ndash;$280 range &mdash; quick post-warranty work that rarely justifies appliance replacement. Installs are quoted separately.`,
+    pricingIntro: `Spruce Grove pricing matches our standard rate structure: flat <strong>$89 diagnostic</strong>, waived when you proceed. Most just-out-of-warranty fixes here land in the $150&ndash;$280 range &mdash; quick post-warranty work that rarely justifies appliance replacement. Installs are quoted separately.`,
     brandsIntro: `Builder-grade packages dominate the Spruce Grove brand mix: Whirlpool, LG, Samsung, GE in the volume new-builds; Bosch, KitchenAid, Café in the higher-end Tonewood and Copperhaven homes. We carry parts for all of them.`
   },
 
@@ -288,7 +288,7 @@ const SUBURBS = {
     servicesIntro: `Leduc\'s shift-work demographic and industrial proximity drive a service mix heavily weighted toward laundry appliances and refrigeration. Whirlpool, Maytag, Samsung, and Speed Queen dominate our Leduc washer/dryer call sheet. Each service has a dedicated Leduc page with high-cycle wear patterns and pricing.`,
     neighborhoodsIntro: `Leduc has grown rapidly over the past decade, particularly in the south and west: Robinson, Westpark, Linsford Park, Tribute, and Suntree are all 2010+ subdivisions, while Caledonia Park and Bridgeport date to the 1980s&ndash;90s. Our Leduc routes typically reach:`,
     neighborhoodsFooter: `If your Leduc address is south of the Telford Lake area or near the Nisku industrial corridor &mdash; we cover it. Book online for instant confirmation.`,
-    pricingIntro: `Leduc pricing follows the standard structure: flat <strong>$65 diagnostic</strong>, waived when you proceed. High-cycle dryer kit replacements (belt + idler + bearing) typically run $140&ndash;$220 all-in. Speed Queen service has the same pricing as standard residential brands &mdash; we don\'t surcharge for commercial-grade work.`,
+    pricingIntro: `Leduc pricing follows the standard structure: flat <strong>$89 diagnostic</strong>, waived when you proceed. High-cycle dryer kit replacements (belt + idler + bearing) typically run $140&ndash;$220 all-in. Speed Queen service has the same pricing as standard residential brands &mdash; we don\'t surcharge for commercial-grade work.`,
     brandsIntro: `Leduc\'s shift-work demographic skews the brand mix: heavier representation of Whirlpool, Maytag, Speed Queen, and Samsung in laundry; standard Whirlpool, GE, LG, Frigidaire across cooling and cooking. We carry parts for all of them.`
   },
 
@@ -355,7 +355,7 @@ const SUBURBS = {
     servicesIntro: `Fort Saskatchewan\'s industrial proximity makes ventilation-related repairs (refrigerator condensers, dryer vents, range hood filters) the dominant service pattern. Beyond the environmental factor, the brand mix is mainstream: Whirlpool, GE, Frigidaire, Samsung, LG. Each service has a dedicated Fort Saskatchewan page with industrial-zone-specific maintenance recommendations.`,
     neighborhoodsIntro: `Fort Saskatchewan has grown steadily along both sides of the North Saskatchewan River, with established neighborhoods near the historic core and newer subdivisions on the south and west sides. Our Fort Saskatchewan routes typically dispatch to:`,
     neighborhoodsFooter: `If your Fort Saskatchewan address is anywhere within the city limits or the immediate Industrial Heartland buffer zone, we cover it. Book online for confirmation.`,
-    pricingIntro: `Fort Saskatchewan pricing matches our standard rates: flat <strong>$65 diagnostic</strong>, waived when you proceed with the repair. Coil cleaning and dryer vent snake are included free with any fridge or dryer service call &mdash; we do these as preventive maintenance because Fort Saskatchewan industrial dust makes them critical.`,
+    pricingIntro: `Fort Saskatchewan pricing matches our standard rates: flat <strong>$89 diagnostic</strong>, waived when you proceed with the repair. Coil cleaning and dryer vent snake are included free with any fridge or dryer service call &mdash; we do these as preventive maintenance because Fort Saskatchewan industrial dust makes them critical.`,
     brandsIntro: `Fort Saskatchewan\'s brand mix is mostly mainstream &mdash; Whirlpool, GE, Frigidaire, Samsung, LG, Maytag, Bosch &mdash; with a slight bias toward more durable models given the heavier dust load. We carry parts for all of them.`
   },
 
@@ -422,7 +422,7 @@ const SUBURBS = {
     servicesIntro: `Beaumont\'s heritage-vs-new-build housing split makes our service mix here unusually broad: vintage Kenmore and Frigidaire in the older streets, smart Samsung and LG packages in the post-2010 subdivisions. Each service has a dedicated Beaumont page with both vintage repair and current-generation diagnostic notes.`,
     neighborhoodsIntro: `Beaumont\'s small footprint &mdash; about 21,000 residents across roughly 15 named neighborhoods &mdash; means our daily routes cover most of the community in a single morning. Same-day routes regularly reach:`,
     neighborhoodsFooter: `If your Beaumont address is in the heritage core, the post-2010 expansion, or the rural-fringe estates, we cover it. Book online &mdash; en français sur demande.`,
-    pricingIntro: `Beaumont pricing follows our standard rate structure: flat <strong>$65 diagnostic</strong>, waived when you proceed. Vintage NOS-parts work sometimes carries a parts-procurement surcharge (always disclosed in the quote, never added later) when sourcing 30+ year-old parts from out-of-province distributors. Newer smart-appliance work uses standard pricing.`,
+    pricingIntro: `Beaumont pricing follows our standard rate structure: flat <strong>$89 diagnostic</strong>, waived when you proceed. Vintage NOS-parts work sometimes carries a parts-procurement surcharge (always disclosed in the quote, never added later) when sourcing 30+ year-old parts from out-of-province distributors. Newer smart-appliance work uses standard pricing.`,
     brandsIntro: `Beaumont\'s brand mix is unusually broad given the housing-age split: vintage Kenmore, Frigidaire, Inglis, Hotpoint in the heritage core; modern Samsung, LG, Whirlpool, Bosch, KitchenAid in newer subdivisions. We service all of them.`
   }
 };
@@ -475,7 +475,7 @@ function buildMain(s, slug) {
   <!-- HERO ANSWER CAPSULE (visible quick-answer for AI search) -->
   <div class="content-intro fade-in">
     <h2>Same-day appliance repair in ${s.name} and the surrounding ${s.region}</h2>
-    <p style="font-size:1.0625rem;line-height:1.75;">Who repairs appliances in ${s.name}? <strong>Fixlify Appliance Repair Edmonton</strong> serves ${s.name} (population ${s.population}, postal codes ${s.postal}) and the broader ${s.cmaRole}. Book online or email <a href="mailto:edmonton@fixlifyservices.com">edmonton@fixlifyservices.com</a>. From <strong>$65 diagnostic</strong>, Mon&ndash;Sat 8AM&ndash;8PM, Sun 10AM&ndash;6PM. <strong>90-day parts &amp; labour warranty</strong> on every repair.</p>
+    <p style="font-size:1.0625rem;line-height:1.75;">Who repairs appliances in ${s.name}? <strong>Fixlify Appliance Repair Edmonton</strong> serves ${s.name} (population ${s.population}, postal codes ${s.postal}) and the broader ${s.cmaRole}. Book online or email <a href="mailto:edmonton@fixlifyservices.com">edmonton@fixlifyservices.com</a>. From <strong>$89 diagnostic</strong>, Mon&ndash;Sat 8AM&ndash;8PM, Sun 10AM&ndash;6PM. <strong>90-day parts &amp; labour warranty</strong> on every repair.</p>
 
     <p>${s.name} households call us when a fridge stops cooling, a washer won't drain, a dryer stops heating, or a dishwasher floods the kitchen. We dispatch licensed technicians from our Edmonton hub at 10025 102A Avenue NW, with parts pre-loaded for the most common ${s.name} service patterns. Most repairs are completed on the first visit. If we need to order a part, the return visit is included &mdash; no second diagnostic fee, no surprise add-ons.</p>
 
@@ -575,7 +575,7 @@ ${s.faultCards.map(f => `      <div style="padding:18px;background:#fff;border:1
         </tr>
       </thead>
       <tbody>
-        <tr><td>Diagnostic visit (waived with repair)</td><td>$65</td></tr>
+        <tr><td>Diagnostic visit (waived with repair)</td><td>$89</td></tr>
         <tr><td>Refrigerator defrost timer / control board</td><td>$180&ndash;$320</td></tr>
         <tr><td>Washer drain pump / lid lock</td><td>$160&ndash;$280</td></tr>
         <tr><td>Dryer heating element / thermal fuse</td><td>$140&ndash;$240</td></tr>
@@ -659,7 +659,7 @@ ${nearbyLinks}
   <!-- SECTION 10: FINAL CTA -->
   <section aria-label="Book ${s.name} appliance repair" style="margin-top:56px;padding:40px;background:#0a0a0a;border-radius:8px;text-align:center;color:#fff;">
     <h2 style="font-size:1.75rem;font-weight:700;color:#fff;margin-bottom:12px;letter-spacing:-.02em;">Ready to book ${s.name} appliance repair?</h2>
-    <p style="color:rgba(255,255,255,.8);margin-bottom:24px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6;">Same-day service, $65 flat diagnostic, written quote before any work, 90-day warranty on every repair. Book online for instant confirmation.</p>
+    <p style="color:rgba(255,255,255,.8);margin-bottom:24px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6;">Same-day service, $89 flat diagnostic, written quote before any work, 90-day warranty on every repair. Book online for instant confirmation.</p>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
       <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="btn-primary" target="_blank" rel="noopener">Book Online &rarr;</a>
       <a href="mailto:edmonton@fixlifyservices.com" class="btn-secondary">Email Edmonton Team</a>

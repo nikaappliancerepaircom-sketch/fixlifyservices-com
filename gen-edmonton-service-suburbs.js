@@ -461,7 +461,7 @@ function buildFaqs(serviceKey, suburbSlug) {
     return [
       {
         q: `How much does dishwasher repair cost in ${sName}?`,
-        a: `Dishwasher repair in ${sName} typically runs ${sv.typicalCost}. Common breakdowns: drain pump $180&ndash;$280, heating element $150&ndash;$240, control board $240&ndash;$420.${flavor.cost} Our flat $65 diagnostic is waived when you proceed with the repair. We provide a written quote before any work begins &mdash; no surprise charges, 90-day parts and labour warranty on every ${sName} repair.`
+        a: `Dishwasher repair in ${sName} typically runs ${sv.typicalCost}. Common breakdowns: drain pump $180&ndash;$280, heating element $150&ndash;$240, control board $240&ndash;$420.${flavor.cost} Our flat $89 diagnostic is waived when you proceed with the repair. We provide a written quote before any work begins &mdash; no surprise charges, 90-day parts and labour warranty on every ${sName} repair.`
       },
       {
         q: `How fast can you reach ${sName} for a dishwasher repair call?`,
@@ -486,7 +486,7 @@ function buildFaqs(serviceKey, suburbSlug) {
     return [
       {
         q: `How much does washer repair cost in ${sName}?`,
-        a: `Washer repair in ${sName} typically runs ${sv.typicalCost}. Common breakdowns: drain pump $180&ndash;$280, lid lock or door switch $140&ndash;$220, drum bearing kit (front-load) $380&ndash;$580, control board $240&ndash;$420.${flavor.cost} Our flat $65 diagnostic is waived when you proceed. Written quote before any work, 90-day parts and labour warranty on every ${sName} repair.`
+        a: `Washer repair in ${sName} typically runs ${sv.typicalCost}. Common breakdowns: drain pump $180&ndash;$280, lid lock or door switch $140&ndash;$220, drum bearing kit (front-load) $380&ndash;$580, control board $240&ndash;$420.${flavor.cost} Our flat $89 diagnostic is waived when you proceed. Written quote before any work, 90-day parts and labour warranty on every ${sName} repair.`
       },
       {
         q: `Should I repair my older washer or replace it in ${sName}?`,
@@ -511,7 +511,7 @@ function buildFaqs(serviceKey, suburbSlug) {
     return [
       {
         q: `How much does fridge repair cost in ${sName}?`,
-        a: `Fridge repair in ${sName} typically runs ${sv.typicalCost}. Common breakdowns: evaporator fan motor $180&ndash;$280, defrost heater + thermostat $200&ndash;$320, water inlet valve $160&ndash;$240, ice maker module $220&ndash;$340, control board $280&ndash;$450. Sealed-system / compressor work is more involved at $650&ndash;$1,200.${flavor.cost} Our flat $65 diagnostic is waived with repair. 90-day parts and labour warranty on every ${sName} repair.`
+        a: `Fridge repair in ${sName} typically runs ${sv.typicalCost}. Common breakdowns: evaporator fan motor $180&ndash;$280, defrost heater + thermostat $200&ndash;$320, water inlet valve $160&ndash;$240, ice maker module $220&ndash;$340, control board $280&ndash;$450. Sealed-system / compressor work is more involved at $650&ndash;$1,200.${flavor.cost} Our flat $89 diagnostic is waived with repair. 90-day parts and labour warranty on every ${sName} repair.`
       },
       {
         q: `My fridge isn't cooling but the freezer is cold &mdash; what's wrong?`,
@@ -615,7 +615,7 @@ function buildMain(serviceKey, suburbSlug) {
   <!-- INTRO + ANSWER CAPSULE -->
   <div class="content-intro fade-in">
     <h2>${svH1} in ${sName} &mdash; Same-Day Service from Your Edmonton CMA Specialists</h2>
-    <p style="font-size:1.0625rem;line-height:1.75;">Who fixes ${svName}s in ${sName}? <strong>Fixlify Appliance Services Edmonton</strong> &mdash; we provide same-day ${svName} repair throughout ${sName} (population ${sb.population}, ${sb.cmaRole}) and the broader Edmonton CMA. Book online or email <a href="mailto:edmonton@fixlifyservices.com">edmonton@fixlifyservices.com</a>. From <strong>$65 diagnostic</strong>, Mon&ndash;Sat 8AM&ndash;8PM, Sun 10AM&ndash;6PM Mountain Time. Typical ${svName} repair cost: <strong>${sv.typicalCost}</strong>. <strong>90-day parts &amp; labour warranty</strong> on every repair.</p>
+    <p style="font-size:1.0625rem;line-height:1.75;">Who fixes ${svName}s in ${sName}? <strong>Fixlify Appliance Services Edmonton</strong> &mdash; we provide same-day ${svName} repair throughout ${sName} (population ${sb.population}, ${sb.cmaRole}) and the broader Edmonton CMA. Book online or email <a href="mailto:edmonton@fixlifyservices.com">edmonton@fixlifyservices.com</a>. From <strong>$89 diagnostic</strong>, Mon&ndash;Sat 8AM&ndash;8PM, Sun 10AM&ndash;6PM Mountain Time. Typical ${svName} repair cost: <strong>${sv.typicalCost}</strong>. <strong>90-day parts &amp; labour warranty</strong> on every repair.</p>
 
     <p>We dispatch licensed technicians from our Edmonton hub at 10025 102A Avenue NW &mdash; ${sb.driveTime} from ${sName}. Trucks are pre-loaded with the parts most commonly needed for ${sName} ${svName} service: ${
       serviceKey === 'dishwasher' && suburbSlug === 'sherwood-park' ? 'OEM Bosch E15/E22/E24 service kits, Miele drain pumps, KitchenAid built-in heating elements, and inlet valves' :
@@ -692,7 +692,7 @@ ${brandChips}
   <section aria-label="${svH1.split(' ')[0]} pricing in ${sName}" style="margin-top:56px;">
     <div class="section-label">Transparent pricing</div>
     <h2 class="section-title">${svH1.split(' ')[0]} Repair Pricing in ${sName}</h2>
-    <p style="max-width:760px;color:#374151;line-height:1.7;margin-bottom:20px;">All ${sName} ${svName} repairs start with a flat <strong>$65 diagnostic</strong>, waived when you proceed with the repair. We provide a written quote before any work begins. Pricing is in CAD and reflects typical jobs in the ${sName} / Edmonton CMA market &mdash; final quote depends on your specific brand, model, and fault.</p>
+    <p style="max-width:760px;color:#374151;line-height:1.7;margin-bottom:20px;">All ${sName} ${svName} repairs start with a flat <strong>$89 diagnostic</strong>, waived when you proceed with the repair. We provide a written quote before any work begins. Pricing is in CAD and reflects typical jobs in the ${sName} / Edmonton CMA market &mdash; final quote depends on your specific brand, model, and fault.</p>
     <table class="pricing-table" style="max-width:760px;">
       <thead>
         <tr>
@@ -768,7 +768,7 @@ ${sameServiceOtherSuburbs}
   <!-- FINAL CTA -->
   <section aria-label="Book ${sName} ${svName} repair" style="margin-top:56px;padding:40px;background:#0a0a0a;border-radius:8px;text-align:center;color:#fff;">
     <h2 style="font-size:1.75rem;font-weight:700;color:#fff;margin-bottom:12px;letter-spacing:-.02em;">Ready to book ${svH1.toLowerCase()} in ${sName}?</h2>
-    <p style="color:rgba(255,255,255,.8);margin-bottom:24px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6;">Same-day service, $65 flat diagnostic, written quote before any work, 90-day warranty on every repair. Book online for instant confirmation.</p>
+    <p style="color:rgba(255,255,255,.8);margin-bottom:24px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6;">Same-day service, $89 flat diagnostic, written quote before any work, 90-day warranty on every repair. Book online for instant confirmation.</p>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
       <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="btn-primary" target="_blank" rel="noopener">Book Online &rarr;</a>
       <a href="mailto:edmonton@fixlifyservices.com" class="btn-secondary">Email Edmonton Team</a>
@@ -827,17 +827,17 @@ function processPage(serviceKey, suburbSlug) {
   // 3. Fix Toronto contamination in OG / Twitter meta
   html = html.replace(
     /<meta property="og:description" content="[^"]*Toronto[^"]*">/g,
-    `<meta property="og:description" content="Same-day ${sv.label.toLowerCase()} in ${sName}, Edmonton CMA. From $65 diagnostic, 90-day warranty. All major brands. Book online — fixlifyservices.com.">`
+    `<meta property="og:description" content="Same-day ${sv.label.toLowerCase()} in ${sName}, Edmonton CMA. From $89 diagnostic, 90-day warranty. All major brands. Book online — fixlifyservices.com.">`
   );
   html = html.replace(
     /<meta name="twitter:description" content="[^"]*Toronto[^"]*">/g,
-    `<meta name="twitter:description" content="Same-day ${sv.label.toLowerCase()} in ${sName}, Edmonton CMA. From $65 diagnostic, 90-day warranty.">`
+    `<meta name="twitter:description" content="Same-day ${sv.label.toLowerCase()} in ${sName}, Edmonton CMA. From $89 diagnostic, 90-day warranty.">`
   );
 
   // 4. Fix meta description "East GTA" / "Call ." stub
   html = html.replace(
     /<meta name="description" content="[^"]*">/,
-    `<meta name="description" content="${sv.h1Pattern} in ${sName} by certified Edmonton CMA techs. From $65 diagnostic, 90-day warranty. Same-day service, all major brands. Book online or email edmonton@fixlifyservices.com.">`
+    `<meta name="description" content="${sv.h1Pattern} in ${sName} by certified Edmonton CMA techs. From $89 diagnostic, 90-day warranty. Same-day service, all major brands. Book online or email edmonton@fixlifyservices.com.">`
   );
 
   // 5. Fix answer-box "Call ." stub
@@ -846,7 +846,7 @@ function processPage(serviceKey, suburbSlug) {
   // 6. Fix schema description Toronto / GTA contamination
   html = html.replace(
     /"description":\s*"[^"]*East GTA[^"]*"/g,
-    `"description": "${sv.label} in ${sName} by certified Edmonton CMA technicians. Same-day service, $65 diagnostic, 90-day parts and labour warranty. Updated 2026."`
+    `"description": "${sv.label} in ${sName} by certified Edmonton CMA technicians. Same-day service, $89 diagnostic, 90-day parts and labour warranty. Updated 2026."`
   );
 
   // 7. Fix Strathcona water hardness reference - if any page mentions it incorrectly
