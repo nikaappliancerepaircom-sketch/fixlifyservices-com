@@ -39,6 +39,8 @@
   ]
 }
 </script>
+<link rel="stylesheet" href="/css/site-booking.css">
+<script src="/js/site-booking.js" defer></script>
 </head>
 <body>
 <div id="header-placeholder"></div>
@@ -71,7 +73,7 @@
         <button type="submit" disabled class="lz-quick-submit">Request a callback</button>
       <label hidden aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
   <p data-callback-status role="status" aria-live="polite"></p>
-  <noscript><p>JavaScript is required for this form. <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce">Open online booking</a> or call the number on this page.</p></noscript>
+  <noscript><p>JavaScript is required for this form. <a href="/book">Open online booking</a> or call the number on this page.</p></noscript>
 </form>
 <script src="/js/callback-form.js" defer></script>
     </section>
@@ -79,7 +81,7 @@
       <strong>Quick Answer:</strong> Fixlify repairs fridges in Windermere South, Edmonton — Sub-Zero, KitchenAid built-in, Bosch, LG Signature in luxury lake community homes. $89 diagnostic, 90-day warranty. Email <a href="mailto:edmonton@fixlifyservices.com" style="color:#1e40af">edmonton@fixlifyservices.com</a> or book online below.
     </div>
     <div style="display:flex;gap:12px;flex-wrap:wrap">
-      <a href="#booking" class="btn-primary">Book Online</a>
+      <a href="/book" class="btn-primary">Book Online</a>
       <a href="mailto:edmonton@fixlifyservices.com" class="btn-secondary">Email Us</a>
     </div>
   </div>
@@ -130,7 +132,7 @@
     <section id="booking" style="margin-bottom:56px" aria-labelledby="booking-fridge-winder">
       <div class="section-label">Book a Repair</div>
       <h2 id="booking-fridge-winder" class="section-title">Schedule Fridge Repair in Windermere South</h2>
-      <iframe id="fxbk-f-winder" src="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce?embed=true" width="100%" height="600" style="border:none;border-radius:8px;display:block" title="Book fridge repair in Windermere South Edmonton" loading="lazy"></iframe>
+      <div class="site-booking-card" data-booking-card><h2>Book your appliance repair</h2><p>Complete your booking on our secure booking page. Diagnostic visit: $89, waived when we carry out the repair.</p><a class="site-booking-button" href="/book">Book repair online</a></div>
     </section>
     <section style="margin-bottom:56px" aria-labelledby="faq-fridge-winder">
       <div class="section-label">FAQ</div>
@@ -213,7 +215,7 @@
 </section>
 <footer class="fx-footer" role="contentinfo">
   <div class="fx-footer-inner">
-    <div class="fx-footer-cta-strip"><div class="fx-footer-cta-content"><div class="fx-footer-cta-text"><span class="fx-footer-cta-label">Need fridge repair in Windermere South?</span><p>Same-day service available &mdash; book online or email us now.</p></div><div class="fx-footer-cta-btns"><a href="#booking" class="fx-footer-btn-book">Book Online</a><a href="mailto:edmonton@fixlifyservices.com" class="fx-footer-btn-call">Email Us</a></div></div></div>
+    <div class="fx-footer-cta-strip"><div class="fx-footer-cta-content"><div class="fx-footer-cta-text"><span class="fx-footer-cta-label">Need fridge repair in Windermere South?</span><p>Same-day service available &mdash; book online or email us now.</p></div><div class="fx-footer-cta-btns"><a href="/book" class="fx-footer-btn-book">Book Online</a><a href="mailto:edmonton@fixlifyservices.com" class="fx-footer-btn-call">Email Us</a></div></div></div>
     <div class="fx-footer-columns">
       <div><div class="fx-footer-logo"><span class="fx-footer-logo-icon">&#9889;</span><span class="fx-footer-logo-name">Fixlify Appliance Services</span></div><p class="fx-footer-desc">Professional appliance repair across Edmonton &mdash; licensed technicians, 90-day warranty.</p><address class="fx-footer-address" style="font-style:normal">10025 102A Avenue NW Suite 1000<br>Edmonton, AB T5J 2Z2<br><a href="mailto:edmonton@fixlifyservices.com" style="color:rgba(255,255,255,.6)">edmonton@fixlifyservices.com</a></address><div class="fx-footer-hours"><strong>Hours:</strong><span>Mon&ndash;Fri 8 AM&ndash;7 PM</span><span>Sat 9 AM&ndash;5 PM</span></div></div>
       <div><div class="fx-footer-heading">Services</div><ul class="fx-footer-list"><li><a href="/fridge-repair-edmonton">Fridge Repair</a></li><li><a href="/washer-repair-edmonton">Washer Repair</a></li><li><a href="/dishwasher-repair-edmonton">Dishwasher Repair</a></li><li><a href="/dryer-repair-edmonton">Dryer Repair</a></li><li><a href="/stove-repair-edmonton">Stove Repair</a></li></ul></div>
@@ -223,7 +225,7 @@
     <div class="fx-footer-bottom"><p class="fx-copyright">&copy; <span id="fx-yr-f-winder"></span> Fixlify Appliance Services. All rights reserved.</p></div>
   </div>
 </footer>
-<div class="sticky-cta"><a href="#booking" class="sticky-btn sticky-book">&#128197; Book Repair</a></div>
+<div class="sticky-cta"><a href="/book" class="sticky-btn sticky-book">&#128197; Book Repair</a></div>
 <script>
 document.getElementById('fx-yr-f-winder').textContent=new Date().getFullYear();
 window.addEventListener('message',function(e){if(e.data&&e.data.type==='iframeResize'){var f=document.getElementById('fxbk-f-winder');if(f)f.style.height=e.data.height+'px'}});

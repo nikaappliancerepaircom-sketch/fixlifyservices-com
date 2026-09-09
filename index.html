@@ -1076,6 +1076,8 @@ body::before {
 }
 
 </script>
+<link rel="stylesheet" href="/css/site-booking.css">
+<script src="/js/site-booking.js" defer></script>
 </head>
 <body>
 
@@ -1132,7 +1134,7 @@ body::before {
     <button type="submit" disabled class="lz-quick-submit">Request a callback</button>
   <label hidden aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
   <p data-callback-status role="status" aria-live="polite"></p>
-  <noscript><p>JavaScript is required for this form. <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce">Open online booking</a> or call the number on this page.</p></noscript>
+  <noscript><p>JavaScript is required for this form. <a href="/book">Open online booking</a> or call the number on this page.</p></noscript>
 </form>
 <script src="/js/callback-form.js" defer></script>
 </section>
@@ -1168,11 +1170,11 @@ body::before {
         <p class="urgency-text">&#9679; <strong>Today's availability:</strong> Same-day diagnostic slots open — book online or call  for fastest service</p>
 
         <div class="hero-cta-row">
-          <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="btn-orange" rel="noopener">
+          <a href="/book" class="btn-orange" rel="noopener">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
             Book Same-Day Online
           </a>
-          
+
           </a>
         </div>
 
@@ -1207,10 +1209,8 @@ body::before {
             </div>
           </div>
           <div class="booking-iframe-wrap">
-            <iframe id="fixlify-booking-nicks-appliance-repair-b8c8ce" src="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce?embed=true" style="width:100%;height:650px;border:none;display:block;" title="Book a Service" loading="lazy" allowtransparency="true"></iframe>
-<script>
-window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-resize'){var el=document.getElementById('fixlify-booking-nicks-appliance-repair-b8c8ce');if(el)el.style.height=e.data.height+'px';}});
-</script>
+            <div class="site-booking-card" data-booking-card><h2>Book your appliance repair</h2><p>Complete your booking on our secure booking page. Diagnostic visit: $89, waived when we carry out the repair.</p><a class="site-booking-button" href="/book">Book repair online</a></div>
+
           </div>
           <div class="booking-panel-footer">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
@@ -1286,7 +1286,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
         <div class="service-name">Refrigerator Repair</div>
         <div class="service-price">$150 – $400</div>
         <p class="service-desc">Fridge not cooling? Select "Refrigerator Repair" in the booking widget, pick today's time slot, and your tech arrives with the right compressor and thermostat parts — all without a single phone call. Real-time slot availability shown instantly.</p>
-        <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="service-book-link" rel="noopener">
+        <a href="/book" class="service-book-link" rel="noopener">
           Book Online &rarr;
         </a>
       </div>
@@ -1296,7 +1296,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
         <div class="service-name">Washer Repair</div>
         <div class="service-price">$120 – $350</div>
         <p class="service-desc">Washer won't spin or drain? Book washer repair in 2 minutes: enter your address, pick morning or afternoon, get instant text confirmation with your tech's name. Front-load and top-load — all brands, real-time slot availability.</p>
-        <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="service-book-link" rel="noopener">
+        <a href="/book" class="service-book-link" rel="noopener">
           Book Online &rarr;
         </a>
       </div>
@@ -1306,7 +1306,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
         <div class="service-name">Dryer Repair</div>
         <div class="service-price">$100 – $300</div>
         <p class="service-desc">Dryer not heating or tumbling? Open the booking widget, tap "Dryer Repair," choose your preferred time window, and confirm in under 60 seconds. Instant text confirmation — gas and electric dryers, all major brands.</p>
-        <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="service-book-link" rel="noopener">
+        <a href="/book" class="service-book-link" rel="noopener">
           Book Online &rarr;
         </a>
       </div>
@@ -1316,7 +1316,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
         <div class="service-name">Dishwasher Repair</div>
         <div class="service-price">$120 – $350</div>
         <p class="service-desc">Dishwasher not draining or leaving dishes dirty? Book online — select your issue, enter your postal code, and the system shows same-day openings. No phone tag, no voicemails. Confirmation hits your phone in seconds.</p>
-        <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="service-book-link" rel="noopener">
+        <a href="/book" class="service-book-link" rel="noopener">
           Book Online &rarr;
         </a>
       </div>
@@ -1326,7 +1326,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
         <div class="service-name">Oven Repair</div>
         <div class="service-price">$130 – $380</div>
         <p class="service-desc">Oven not reaching temperature? Select "Oven Repair" online, pick a slot that fits your schedule, and lock it in. You'll see your technician's name and ETA before they even leave the shop. Digital invoice after repair.</p>
-        <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="service-book-link" rel="noopener">
+        <a href="/book" class="service-book-link" rel="noopener">
           Book Online &rarr;
         </a>
       </div>
@@ -1336,7 +1336,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
         <div class="service-name">Stove &amp; Range Repair</div>
         <div class="service-price">$130 – $380</div>
         <p class="service-desc">Burner won't ignite or cooktop cracked? Book stove repair the same way you'd order a ride — open the widget, tap your issue, pick a window, done. Licensed gas-certified techs dispatched automatically. Pay only after the fix.</p>
-        <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="service-book-link" rel="noopener">
+        <a href="/book" class="service-book-link" rel="noopener">
           Book Online &rarr;
         </a>
       </div>
@@ -1548,7 +1548,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
         </div>
 
         <div style="margin-top:28px;">
-          <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="btn-orange" rel="noopener">
+          <a href="/book" class="btn-orange" rel="noopener">
             Get a Free Estimate
           </a>
           <span style="display:block;margin-top:10px;font-size:13px;color:var(--muted);">Or call  for a phone quote</span>
@@ -1633,7 +1633,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
         </div>
 
         <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;">
-          
+
           </a>
         </div>
       </div>
@@ -1643,10 +1643,8 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
           <div class="book-iframe-title">Select a Time Slot</div>
         </div>
         <div class="book-iframe-wrap">
-          <iframe id="fixlify-booking-b8c8ce-2" src="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce?embed=true" style="width:100%;height:650px;border:none;display:block;" title="Book a Service" loading="lazy" allowtransparency="true"></iframe>
-<script>
-window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-resize'){var el2=document.getElementById('fixlify-booking-b8c8ce-2');if(el2)el2.style.height=e.data.height+'px';}});
-</script>
+          <div class="site-booking-card" data-booking-card><h2>Book your appliance repair</h2><p>Complete your booking on our secure booking page. Diagnostic visit: $89, waived when we carry out the repair.</p><a class="site-booking-button" href="/book">Book repair online</a></div>
+
         </div>
       </div>
     </div>
@@ -1728,7 +1726,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
     </div>
 
     <div style="text-align:center;margin-top:36px;">
-      <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="btn-orange" rel="noopener">
+      <a href="/book" class="btn-orange" rel="noopener">
         Book in My Area
       </a>
       <p style="margin-top:12px;font-size:14px;color:var(--muted);">Or call  for immediate dispatch to your area</p>
@@ -1983,7 +1981,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
           <p>Book your appointment online — confirmation by email within minutes. Edmonton, Sherwood Park, St. Albert and surrounding communities.</p>
         </div>
         <div class="fx-footer-cta-btns">
-          <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="fx-footer-btn-book" rel="noopener">
+          <a href="/book" class="fx-footer-btn-book" rel="noopener">
             Book Online
           </a>
           <a href="mailto:edmonton@fixlifyservices.com" class="fx-footer-btn-call">
@@ -2071,7 +2069,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
       <div class="fx-footer-col">
         <h4 class="fx-footer-heading">Quick Links</h4>
         <ul class="fx-footer-list">
-          <li><a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" rel="noopener">Book Online</a></li>
+          <li><a href="/book" rel="noopener">Book Online</a></li>
           <li><a href="/about/">About Us</a></li>
           <li><a href="/service-areas/">Service Areas</a></li>
           <li><a href="/privacy/">Privacy Policy</a></li>

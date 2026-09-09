@@ -40,6 +40,8 @@
   ]
 }
 </script>
+<link rel="stylesheet" href="/css/site-booking.css">
+<script src="/js/site-booking.js" defer></script>
 </head>
 <body>
 <div id="header-placeholder"></div>
@@ -72,14 +74,14 @@
         <button type="submit" disabled class="lz-quick-submit">Request a callback</button>
       <label hidden aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
   <p data-callback-status role="status" aria-live="polite"></p>
-  <noscript><p>JavaScript is required for this form. <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce">Open online booking</a> or call the number on this page.</p></noscript>
+  <noscript><p>JavaScript is required for this form. <a href="/book">Open online booking</a> or call the number on this page.</p></noscript>
 </form>
 <script src="/js/callback-form.js" defer></script>
     </section>
     <div class="answer-box" role="note">
       <strong>Quick answer:</strong> Fixlify provides same-day fridge repair in Glastonbury, West Edmonton — $89 flat diagnostic, parts on the truck, 90-day warranty. Email <a href="mailto:edmonton@fixlifyservices.com">edmonton@fixlifyservices.com</a> or book online below.
     </div>
-    <a href="#booking" class="btn-primary">Book Online — Same Day</a>
+    <a href="/book" class="btn-primary">Book Online — Same Day</a>
   </div>
 </section>
 <div class="trust-bar" aria-label="Trust signals">
@@ -144,7 +146,7 @@
   <section id="booking" style="margin-bottom:48px;" class="fade-in">
     <p class="section-label">Book a Repair</p>
     <h2 class="section-title">Schedule Your Glastonbury Fridge Repair</h2>
-    <iframe id="fixlify-booking-fr-gl" src="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce?embed=true" width="100%" height="700" style="border:none;border-radius:8px;" loading="lazy" title="Book fridge repair in Glastonbury"></iframe>
+    <div class="site-booking-card" data-booking-card><h2>Book your appliance repair</h2><p>Complete your booking on our secure booking page. Diagnostic visit: $89, waived when we carry out the repair.</p><a class="site-booking-button" href="/book">Book repair online</a></div>
   </section>
 
   <section style="margin-bottom:48px;" class="fade-in">
@@ -173,7 +175,7 @@
   <section style="background:#0a0a0a;color:#fff;padding:40px;border-radius:8px;text-align:center;margin-bottom:48px;" class="fade-in">
     <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:8px;">Glastonbury Fridge Not Cooling?</h2>
     <p style="color:rgba(255,255,255,.7);margin-bottom:20px;">Same-day service &middot; $89 diagnostic &middot; 90-day warranty</p>
-    <a href="#booking" class="btn-primary">Book a Repair Now</a>
+    <a href="/book" class="btn-primary">Book a Repair Now</a>
   </section>
 <section style="margin-top:48px;padding-top:40px;border-top:1px solid #e5e7eb">
 <h2 style="font-size:1.375rem;font-weight:700;letter-spacing:-.02em;color:#0a0a0a;margin-bottom:16px">Refrigerators in Edmonton Winters — What Glastonbury Homeowners Need to Know</h2>
@@ -242,7 +244,7 @@
     <div class="fx-footer-cta-strip">
       <div class="fx-footer-cta-content">
         <div class="fx-footer-cta-text"><span class="fx-footer-cta-label">Ready to Book?</span><p>Same-day fridge repair in Glastonbury, Edmonton.</p></div>
-        <div class="fx-footer-cta-btns"><a href="#booking" class="fx-footer-btn-book">Book Online</a><a href="mailto:edmonton@fixlifyservices.com" class="fx-footer-btn-call">Email Us</a></div>
+        <div class="fx-footer-cta-btns"><a href="/book" class="fx-footer-btn-book">Book Online</a><a href="mailto:edmonton@fixlifyservices.com" class="fx-footer-btn-call">Email Us</a></div>
       </div>
     </div>
     <div class="fx-footer-columns">
@@ -259,7 +261,7 @@
     <div class="fx-footer-bottom"><p class="fx-copyright">&copy; <span id="yr"></span> Fixlify Appliance Services. All rights reserved.</p></div>
   </div>
 </footer>
-<div class="sticky-cta"><a href="#booking" class="sticky-btn sticky-book">&#128197; Book Repair</a></div>
+<div class="sticky-cta"><a href="/book" class="sticky-btn sticky-book">&#128197; Book Repair</a></div>
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 <script>const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');obs.unobserve(el.target);}})},{threshold:0.1});document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));</script>
 </body>

@@ -181,6 +181,8 @@ body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-i
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="675" />
     <meta name="twitter:image" content="https://fixlifyservices.com/img/appliance-technician-hero.webp" />
+<link rel="stylesheet" href="/css/site-booking.css">
+<script src="/js/site-booking.js" defer></script>
 </head>
 <body>
 <div class="bg-atm" aria-hidden="true">
@@ -222,7 +224,7 @@ body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-i
     <button type="submit" disabled class="lz-quick-submit">Request a callback</button>
   <label hidden aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
   <p data-callback-status role="status" aria-live="polite"></p>
-  <noscript><p>JavaScript is required for this form. <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce">Open online booking</a> or call the number on this page.</p></noscript>
+  <noscript><p>JavaScript is required for this form. <a href="/book">Open online booking</a> or call the number on this page.</p></noscript>
 </form>
 <script src="/js/callback-form.js" defer></script>
 </section>
@@ -337,7 +339,7 @@ body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-i
       <p>Online booking, automated review requests, customer CRM, and digital invoicing — all in one platform built for appliance repair businesses.</p>
       <div class="cta-btns">
         <a href="https://fixlify.app" class="btn-orange" rel="noopener">Start Free with Fixlify</a>
-        
+
       </div>
     </div>
 
@@ -480,6 +482,7 @@ body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-i
   </div>
 </section>
 </main>
+<div class="site-booking-card" data-booking-card><h2>Book your appliance repair</h2><p>Complete your booking on our secure booking page. Diagnostic visit: $89, waived when we carry out the repair.</p><a class="site-booking-button" href="/book">Book repair online</a></div>
 <div id="footer-placeholder"><!-- Fixlify Appliance Services — Dark Cinematic Footer -->
 <!--
   ALBERTA FOOTER — EDMONTON (FIXLIFY)
@@ -500,7 +503,7 @@ body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-i
           <p>Book your appointment online — confirmation by email within minutes. Edmonton, Sherwood Park, St. Albert and surrounding communities.</p>
         </div>
         <div class="fx-footer-cta-btns">
-          <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="fx-footer-btn-book" rel="noopener">
+          <a href="/book" class="fx-footer-btn-book" rel="noopener">
             Book Online Now
           </a>
           <a href="mailto:edmonton@fixlifyservices.com" class="fx-footer-btn-call">
@@ -588,7 +591,7 @@ body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-i
       <div class="fx-footer-col">
         <h4 class="fx-footer-heading">Quick Links</h4>
         <ul class="fx-footer-list">
-          <li><a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" rel="noopener">Book Online</a></li>
+          <li><a href="/book" rel="noopener">Book Online</a></li>
           <li><a href="/about/">About Us</a></li>
           <li><a href="/service-areas/">Service Areas</a></li>
           <li><a href="/privacy/">Privacy Policy</a></li>

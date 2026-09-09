@@ -319,12 +319,14 @@ footer a { color: rgba(0,194,255,0.6); }</style>
 .related-card-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#F59E0B;margin-bottom:3px}
 .related-card-title{font-size:14px;font-weight:600;color:#e2e8f0}
 </style>
+<link rel="stylesheet" href="/css/site-booking.css">
+<script src="/js/site-booking.js" defer></script>
 </head>
 <body>
 <header>
   <div class="container header-inner">
     <span class="logo"><span>Fixlify</span> Appliance Services</span>
-    
+
   </div>
 </header>
 
@@ -354,7 +356,7 @@ footer a { color: rgba(0,194,255,0.6); }</style>
     <button type="submit" disabled class="lz-quick-submit">Request a callback</button>
   <label hidden aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
   <p data-callback-status role="status" aria-live="polite"></p>
-  <noscript><p>JavaScript is required for this form. <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce">Open online booking</a> or call the number on this page.</p></noscript>
+  <noscript><p>JavaScript is required for this form. <a href="/book">Open online booking</a> or call the number on this page.</p></noscript>
 </form>
 <script src="/js/callback-form.js" defer></script>
 </section>
@@ -381,8 +383,8 @@ footer a { color: rgba(0,194,255,0.6); }</style>
 
     <p><strong>Who does KitchenAid washer repair in Toronto?</strong> Fixlify Appliance Services does — call , Mon&ndash;Sat 8am&ndash;8pm, Sun 9am&ndash;6pm. Our technicians typically arrive within 2&ndash;4 hours and carry KitchenAid parts on every van.</p>
     <div>
-      <a class="btn-primary" href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" rel="noopener">Book KitchenAid Washer Repair</a>
-      
+      <a class="btn-primary" href="/book" rel="noopener">Book KitchenAid Washer Repair</a>
+
     </div>
     <div class="badge-row">
       <span class="badge">4.9&#9733; Rated</span>
@@ -423,7 +425,7 @@ footer a { color: rgba(0,194,255,0.6); }</style>
 <section>
   <div class="container">
     <h2>KitchenAid Washer Repair FAQ</h2>
-    
+
 <!-- VOICE-QA-v1 -->
 <section class="summary"  style="margin:2rem auto;max-width:920px;padding:0 1rem;font-family:Outfit,sans-serif" aria-label="Common questions about Washer repair in Toronto">
   <h2 style="font-size:1.35rem;font-weight:700;color:#F59E0B;margin:0 0 1.25rem;border-bottom:2px solid #F59E0B;padding-bottom:.5rem">Common Questions</h2>
@@ -454,8 +456,8 @@ footer a { color: rgba(0,194,255,0.6); }</style>
       <h2>Book KitchenAid Washer Repair Today</h2>
       <p>Same-day service across Toronto and the GTA. Our KitchenAid-stocked vans are ready to dispatch now.</p>
       <div>
-        <a class="btn-primary" href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" rel="noopener">Book Online</a>
-        
+        <a class="btn-primary" href="/book" rel="noopener">Book Online</a>
+
       </div>
     </div>
   </div>
@@ -541,10 +543,8 @@ footer a { color: rgba(0,194,255,0.6); }</style>
     <span style="display:inline-block;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#4f46e5;margin-bottom:12px;">Online Booking</span>
     <h2 style="font-size:1.8rem;margin-bottom:8px;color:#E8F4FD;">Book Your Repair Online</h2>
     <p style="color:#6b7280;margin-bottom:28px;font-size:15px;">Select a time that works — a certified technician will arrive and fix it right the first time.</p>
-    <iframe id="fixlify-booking-nicks-appliance-repair-b8c8ce" src="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce?embed=true" style="width:100%;height:600px;border:none;display:block;" title="Book a Service" loading="lazy" allowtransparency="true"></iframe>
-<script>
-window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-resize'){var el=document.getElementById('fixlify-booking-nicks-appliance-repair-b8c8ce');if(el)el.style.height=e.data.height+'px';}});
-</script>
+    <div class="site-booking-card" data-booking-card><h2>Book your appliance repair</h2><p>Complete your booking on our secure booking page. Diagnostic visit: $89, waived when we carry out the repair.</p><a class="site-booking-button" href="/book">Book repair online</a></div>
+
   </div>
 </section>
 
@@ -714,7 +714,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
           <p>Book your appointment online — confirmation by email within minutes. Edmonton, Sherwood Park, St. Albert and surrounding communities.</p>
         </div>
         <div class="fx-footer-cta-btns">
-          <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="fx-footer-btn-book" rel="noopener">
+          <a href="/book" class="fx-footer-btn-book" rel="noopener">
             Book Online Now
           </a>
           <a href="mailto:edmonton@fixlifyservices.com" class="fx-footer-btn-call">
@@ -802,7 +802,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
       <div class="fx-footer-col">
         <h4 class="fx-footer-heading">Quick Links</h4>
         <ul class="fx-footer-list">
-          <li><a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" rel="noopener">Book Online</a></li>
+          <li><a href="/book" rel="noopener">Book Online</a></li>
           <li><a href="/about/">About Us</a></li>
           <li><a href="/service-areas/">Service Areas</a></li>
           <li><a href="/privacy/">Privacy Policy</a></li>

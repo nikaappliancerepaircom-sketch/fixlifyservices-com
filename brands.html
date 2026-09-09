@@ -226,6 +226,8 @@ body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-i
 <meta name="twitter:title" content="Appliance Brands We Service | Fixlify">
 <meta name="twitter:description" content="Fixlify services all major appliance brands: Samsung, LG, Whirlpool, GE, Bosch, Frigidaire, Kenmore, Maytag, KitchenAid. Certified technicians in Toronto & GTA.">
 <!-- SCHEMA-ENRICH-v1 -->
+<link rel="stylesheet" href="/css/site-booking.css">
+<script src="/js/site-booking.js" defer></script>
 </head>
 <body>
 
@@ -281,7 +283,7 @@ body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-i
     <button type="submit" disabled class="lz-quick-submit">Request a callback</button>
   <label hidden aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
   <p data-callback-status role="status" aria-live="polite"></p>
-  <noscript><p>JavaScript is required for this form. <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce">Open online booking</a> or call the number on this page.</p></noscript>
+  <noscript><p>JavaScript is required for this form. <a href="/book">Open online booking</a> or call the number on this page.</p></noscript>
 </form>
 <script src="/js/callback-form.js" defer></script>
 </section>
@@ -385,8 +387,8 @@ body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-i
     <p style="font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:16px;">We stock genuine OEM and OEM-equivalent parts from authorized distributors. Using the right parts matters — aftermarket components often don't meet the original manufacturer's tolerances and can cause premature failure or void remaining warranty coverage. Whether your Miele dishwasher needs an original circulation pump or your Whirlpool dryer needs an original heating element assembly, we source correctly.</p>
     <p style="font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:16px;">Fixlify services all of Toronto and the Greater Toronto Area, including Mississauga, Brampton, Scarborough, North York, Etobicoke, Vaughan, Markham, Richmond Hill, Oakville, and Burlington. Same-day appliance repair is available for most areas when you book before 2 PM. Repair costs typically range from <strong style="color:var(--text);">$80 to $400</strong> depending on the brand, appliance type, and fault — with an upfront written quote provided before any work begins. Call  or book online at any time.</p>
     <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;">
-      <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" style="display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#000;font-family:var(--font-head);font-weight:800;font-size:15px;padding:14px 28px;border-radius:100px;text-decoration:none;" rel="noopener">Book Repair Online</a>
-      
+      <a href="/book" style="display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#000;font-family:var(--font-head);font-weight:800;font-size:15px;padding:14px 28px;border-radius:100px;text-decoration:none;" rel="noopener">Book Repair Online</a>
+
     </div>
   </div>
 </section>
@@ -396,10 +398,8 @@ body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-i
   <div class="container" style="max-width:700px;text-align:center;">
     <h2 style="font-family:var(--font-head);font-weight:800;font-size:clamp(22px,3vw,32px);color:var(--text);margin-bottom:10px;">Book Your Brand Repair Now</h2>
     <p style="font-size:15px;color:var(--muted);margin-bottom:24px;">Select your time slot — same-day available. Mention your brand and model when booking.</p>
-    <div style="margin:2rem 0"><iframe id="fixlify-booking-nicks-appliance-repair-b8c8ce" src="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce?embed=true" style="width:100%;height:600px;border:none;display:block;" title="Book a Service" loading="lazy" allowtransparency="true"></iframe>
-<script>
-window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-resize'){var el=document.getElementById('fixlify-booking-nicks-appliance-repair-b8c8ce');if(el)el.style.height=e.data.height+'px';}});
-</script></div>
+    <div style="margin:2rem 0"><div class="site-booking-card" data-booking-card><h2>Book your appliance repair</h2><p>Complete your booking on our secure booking page. Diagnostic visit: $89, waived when we carry out the repair.</p><a class="site-booking-button" href="/book">Book repair online</a></div>
+</div>
   </div>
 </section>
 
@@ -456,7 +456,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
           <p>Book your appointment online — confirmation by email within minutes. Edmonton, Sherwood Park, St. Albert and surrounding communities.</p>
         </div>
         <div class="fx-footer-cta-btns">
-          <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="fx-footer-btn-book" rel="noopener">
+          <a href="/book" class="fx-footer-btn-book" rel="noopener">
             Book Online Now
           </a>
           <a href="mailto:edmonton@fixlifyservices.com" class="fx-footer-btn-call">
@@ -544,7 +544,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
       <div class="fx-footer-col">
         <h4 class="fx-footer-heading">Quick Links</h4>
         <ul class="fx-footer-list">
-          <li><a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" rel="noopener">Book Online</a></li>
+          <li><a href="/book" rel="noopener">Book Online</a></li>
           <li><a href="/about/">About Us</a></li>
           <li><a href="/service-areas/">Service Areas</a></li>
           <li><a href="/privacy/">Privacy Policy</a></li>

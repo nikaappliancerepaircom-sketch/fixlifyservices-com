@@ -42,6 +42,8 @@
   ]
 }
 </script>
+<link rel="stylesheet" href="/css/site-booking.css">
+<script src="/js/site-booking.js" defer></script>
 </head>
 <body>
 <div id="header-placeholder"></div>
@@ -74,7 +76,7 @@
         <button type="submit" disabled class="lz-quick-submit">Request a callback</button>
       <label hidden aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
   <p data-callback-status role="status" aria-live="polite"></p>
-  <noscript><p>JavaScript is required for this form. <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce">Open online booking</a> or call the number on this page.</p></noscript>
+  <noscript><p>JavaScript is required for this form. <a href="/book">Open online booking</a> or call the number on this page.</p></noscript>
 </form>
 <script src="/js/callback-form.js" defer></script>
     </section>
@@ -82,7 +84,7 @@
       <strong>Quick Answer:</strong> Fixlify provides same-day washer repair in Kilkenny, Edmonton &mdash; $89 flat diagnostic, 90-day warranty, all brands. Email <a href="mailto:edmonton@fixlifyservices.com">edmonton@fixlifyservices.com</a> or book online.
     </div>
     <div style="display:flex;gap:12px;flex-wrap:wrap;">
-      <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="btn-primary">Book Online &rarr;</a>
+      <a href="/book" class="btn-primary">Book Online &rarr;</a>
       <a href="mailto:edmonton@fixlifyservices.com" class="btn-secondary">Email Us</a>
     </div>
   </div>
@@ -141,7 +143,7 @@
     <section aria-labelledby="booking-heading" style="margin-bottom:56px;">
       <div class="section-label">Book a Repair</div>
       <h2 class="section-title" id="booking-heading">Schedule Washer Repair in Kilkenny</h2>
-      <iframe src="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce?embed=true" width="100%" height="600" frameborder="0" style="border-radius:8px;border:1px solid #e5e7eb;" title="Book a washer repair appointment" loading="lazy"></iframe>
+      <div class="site-booking-card" data-booking-card><h2>Book your appliance repair</h2><p>Complete your booking on our secure booking page. Diagnostic visit: $89, waived when we carry out the repair.</p><a class="site-booking-button" href="/book">Book repair online</a></div>
     </section>
     <section aria-labelledby="faq-heading" style="margin-bottom:56px;">
       <div class="section-label">FAQ</div>
@@ -171,7 +173,7 @@
     <div class="container">
       <p style="color:#93c5fd;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;">Ready to Fix Your Washer?</p>
       <p style="color:#fff;font-size:1.25rem;font-weight:700;margin-bottom:20px;">Same-day service in Kilkenny &mdash; $89 diagnostic, 90-day warranty</p>
-      <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="btn-primary">Book Online &rarr;</a>
+      <a href="/book" class="btn-primary">Book Online &rarr;</a>
     </div>
   </div>
 <section style="margin-top:48px;padding-top:40px;border-top:1px solid #e5e7eb">
@@ -268,7 +270,7 @@
     <div class="fx-footer-cta-strip">
       <div class="fx-footer-cta-content">
         <div class="fx-footer-cta-text"><span class="fx-footer-cta-label">Kilkenny Washer Repair</span><p>Same-day service &mdash; book before noon for today's appointment</p></div>
-        <div class="fx-footer-cta-btns"><a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="fx-footer-btn-book">Book Online</a><a href="mailto:edmonton@fixlifyservices.com" class="fx-footer-btn-call">Email Us</a></div>
+        <div class="fx-footer-cta-btns"><a href="/book" class="fx-footer-btn-book">Book Online</a><a href="mailto:edmonton@fixlifyservices.com" class="fx-footer-btn-call">Email Us</a></div>
       </div>
     </div>
     <div class="fx-footer-columns">
@@ -285,7 +287,7 @@
     <div class="fx-footer-bottom"><p class="fx-copyright">&copy; 2026 Fixlify Appliance Services. All rights reserved.</p></div>
   </div>
 </footer>
-<div class="sticky-cta"><a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="sticky-btn sticky-book">Book Repair &rarr;</a></div>
+<div class="sticky-cta"><a href="/book" class="sticky-btn sticky-book">Book Repair &rarr;</a></div>
 <script>document.addEventListener('DOMContentLoaded',()=>{const els=document.querySelectorAll('.fade-in');const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:.1});els.forEach(el=>io.observe(el))});</script>
 </body>
 </html>

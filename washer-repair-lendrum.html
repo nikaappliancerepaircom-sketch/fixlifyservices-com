@@ -40,6 +40,8 @@
   ]
 }
 </script>
+<link rel="stylesheet" href="/css/site-booking.css">
+<script src="/js/site-booking.js" defer></script>
 </head>
 <body>
 <div id="header-placeholder"></div>
@@ -61,7 +63,7 @@
 </figure>
     <div class="answer-box">Fixlify Appliance Services provides same-day washer repair in Lendrum Place, SW Edmonton. A quiet 1950s neighbourhood where renovated homes often have Bosch front-loads alongside original-era GE and Kenmore top-loaders. $120&ndash;$420 CAD typical cost, 90-day warranty. Book online or email <a href="mailto:edmonton@fixlifyservices.com">edmonton@fixlifyservices.com</a>.</div>
     <div class="page-hero-ctas">
-      <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="btn-primary" target="_blank" rel="noopener">Book Online &rarr;</a>
+      <a href="/book" class="btn-primary" rel="noopener">Book Online &rarr;</a>
       <a href="mailto:edmonton@fixlifyservices.com" class="btn-secondary">Email Us</a>
     </div>
   </div>
@@ -165,7 +167,7 @@
       <h2 class="section-title">Book Washer Repair in Lendrum</h2>
       <p style="font-size:1.0625rem;color:#374151;line-height:1.75;margin-bottom:32px;max-width:640px">Select a time that works for you. Same-day slots available most days.</p>
       <div id="booking-widget" style="width:100%;max-width:820px;border-radius:8px;overflow:hidden;border:1px solid #e5e7eb">
-        <iframe src="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" width="100%" height="600" frameborder="0" loading="lazy" title="Book washer repair in Lendrum Edmonton" style="display:block"></iframe>
+        <div class="site-booking-card" data-booking-card><h2>Book your appliance repair</h2><p>Complete your booking on our secure booking page. Diagnostic visit: $89, waived when we carry out the repair.</p><a class="site-booking-button" href="/book">Book repair online</a></div>
       </div>
     </section>
 
@@ -210,7 +212,7 @@
       <h2 style="font-size:clamp(1.375rem,3vw,1.875rem);font-weight:700;letter-spacing:-.02em;margin-bottom:12px">Washer broken in Lendrum?</h2>
       <p style="font-size:1.0625rem;color:#6b7280;margin-bottom:28px">Book online now — same-day slots available. Or email us and we'll respond within the hour.</p>
       <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap">
-        <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="btn-primary" target="_blank" rel="noopener">Book Repair Online &rarr;</a>
+        <a href="/book" class="btn-primary" rel="noopener">Book Repair Online &rarr;</a>
         <a href="mailto:edmonton@fixlifyservices.com" class="btn-secondary">edmonton@fixlifyservices.com</a>
       </div>
     </section>
@@ -271,11 +273,8 @@
   </div>
 </footer>
 <div class="sticky-cta">
-  <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="sticky-btn sticky-book" target="_blank" rel="noopener">Book Repair &rarr;</a>
+  <a href="/book" class="sticky-btn sticky-book" rel="noopener">Book Repair &rarr;</a>
 </div>
-<script>
-window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-resize'){var f=document.querySelector('#booking-widget iframe');if(f)f.style.height=(e.data.height+40)+'px'}});
-document.querySelectorAll('.fade-in').forEach(function(el){var o=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');o.unobserve(e.target)}})},{threshold:0.1});o.observe(el)});
-</script>
+
 </body>
 </html>
