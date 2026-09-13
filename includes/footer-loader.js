@@ -2,6 +2,7 @@
 (function() {
   var el = document.getElementById('footer-placeholder');
   if (!el) return;
+  if (el.querySelector('footer')) return;
   fetch('/includes/footer.html')
     .then(function(r) { return r.text(); })
     .then(function(html) {
